@@ -1,0 +1,47 @@
+.button {
+  font: inherit;
+	line-height: inherit;
+	overflow: visible;
+	vertical-align:inherit;
+
+  position: relative;
+  box-sizing: border-box;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 14px 18px;
+  border: 0;
+  border-radius: 14px;
+  z-index: 2;
+
+  font: var(--textstyle-callout);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+  transition: color 300ms, background 100ms;
+  cursor: pointer;
+}
+
+.button[appearance='gray'] {
+  color: var(--color-text-primary);
+  background-color: var(--color-background-secondary);
+}
+@media (pointer: fine) {
+  .button[appearance='gray']:not(.disabled):hover {
+    background-color: var(--color-background-secondary-hovered);
+  }
+}
+@media (pointer: coarse) {
+  .button[appearance='gray']:not(.disabled):active {
+    background-color: var(--color-background-secondary-active);
+  }
+}
+.button[appearance='gray'].disabled {
+  color: var(--color-text-disabled);
+  cursor: default;
+}

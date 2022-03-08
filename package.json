@@ -1,0 +1,28 @@
+{
+  "name": "uikit-svelte",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "svelte-kit dev",
+    "build": "svelte-kit build",
+    "preview": "svelte-kit preview",
+    "package": "svelte-kit package",
+    "release": "npm run package && cd package && npm publish"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-auto": "next",
+    "@sveltejs/kit": "next",
+    "svelte": "^3.44.0",
+    "svelte2tsx": "^0.5.5",
+    "typescript": "^4.5.5"
+  },
+  "repository": "github:stuymedova/uikit-svelte",
+  "keywords": [
+    "uikit",
+    "ui components",
+    "svelte components",
+    "svelte",
+    "sveltejs"
+  ],
+  "license": "MIT",
+  "type": "module"
+}

@@ -1,0 +1,61 @@
+.segmented-control {
+  height: 44px;
+  position: relative;
+  box-sizing: border-box;
+  display: inline-flex;
+  margin: 0;
+  padding: 2px;
+  border-radius: 16px;
+  background-color: var(--color-background-secondary);
+}
+
+.segmented-control-background {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  z-index: 1;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  border-radius: 14px;
+  background-color: var(--color-background-primary);
+  transition: width 300ms, transform 300ms;
+}
+
+.segmented-control-item {
+	font: inherit;
+	line-height: inherit;
+	overflow: visible;
+	vertical-align:inherit;
+
+  position: relative;
+  box-sizing: border-box;
+  width: 75px;
+  margin: 0;
+  padding: 12px;
+  border: 0;
+  border-radius: 14px;
+  z-index: 2;
+
+  font: var(--textstyle-callout);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+  color: var(--color-text-primary);
+  transition: color 275ms;
+  background-color: transparent;
+  cursor: pointer;
+}
+.segmented-control-item.selected {
+  color: var(--color-accent);
+  cursor: default;
+}
+.segmented-control-item.disabled {
+  color: var(--color-text-disabled);
+  cursor: default;
+}

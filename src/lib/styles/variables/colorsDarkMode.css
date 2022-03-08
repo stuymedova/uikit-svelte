@@ -1,0 +1,12 @@
+:root {
+  --color-accent: rgb(0, 125, 255);
+  --color-primary: rgb(0, 0, 0);
+
+  --color-background-primary: rgb(25, 25, 25);
+  --color-background-secondary: rgb(35, 35, 35);
+  --color-background-secondary-hovered: rgb(40, 40, 40);
+  --color-background-secondary-active: rgb(45, 45, 45);
+
+  --color-text-primary: rgb(255, 255, 255);
+  --color-text-disabled: rgb(145, 145, 150);
+}
