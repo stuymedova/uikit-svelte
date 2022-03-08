@@ -1,5 +1,5 @@
 {
-  "name": "uikit-svelte",
+  "name": "@stuymedova/uikit-svelte",
   "version": "0.0.1",
   "scripts": {
     "dev": "svelte-kit dev",

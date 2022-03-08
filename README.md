@@ -1,6 +1,6 @@
 # UIKit Svelte
 
-Description (option to skip to the Installation and Usage segment)
+<!-- Description (option to skip to the Installation and Usage segment)
 
 **Design**
 
@@ -27,4 +27,4 @@ npm install uikit-svelte
 Import stylesheet (or use your own)
 Import components
 
-Use according to the each components' corresponding instructions.
+Use according to the each components' corresponding instructions. -->
