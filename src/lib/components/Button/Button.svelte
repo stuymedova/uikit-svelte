@@ -1,27 +1,27 @@
 <script>
   export let label = 'Button'
   export let appearance = 'gray' // Options: gray/plain/contoured/filled
-  export let purpose = undefined // Options: -/destructive
+  export let action = undefined // Options: -/primary/cancel/destructive
   export let behaviour = 'push' // Options: push/toggle (Extending: pop-up/pull-down)
-  export let isSelected = false // Used only if button behaviour is set to "toggle"
+  export let isOn = false // Used only if button behaviour is set to "toggle"
   export let isDisabled = false
 </script>
 
 
 <button
-  class='button{isDisabled ? " disabled" : ""}'
+  class='button'
   appearance={appearance}
-  purpose={purpose}
+  action={action}
   behaviour={behaviour}
-  aria-selected={behaviour === 'toggle' ? (isSelected && !isDisabled) : undefined}
+  aria-selected={behaviour === 'toggle' ? (isOn && !isDisabled) : undefined}
   aria-disabled={isDisabled}
   {...$$restProps}
+  on:click
   on:click|preventDefault={() => {
     if (behaviour === 'toggle' && !isDisabled) {
-      isSelected = !isSelected
+      isOn = !isOn
     }
   }}
-  on:click
   on:mouseover
   on:focus
   on:mouseout

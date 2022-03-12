@@ -31,8 +31,8 @@
   id={id !== '' 
     ? id 
     : console.warn('Segmented Control -> Segment: Property "id" is empty. Provide a unique non-empty id.')} 
-  class='
-    segmented-control-item{isSelected && !isDisabled ? " selected" : ""}{isDisabled ? " disabled" : ""}'
+  class='segmented-control-item'
+  type='button'
   role='tab'
   aria-selected={isSelected && !isDisabled}
   aria-disabled={isDisabled}

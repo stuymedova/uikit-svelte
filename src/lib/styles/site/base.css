@@ -1,7 +1,21 @@
 body {
-  width: 100%;
-  height: auto;
-  margin: 0;
-  padding: 0;
+	font-style: normal;
+  font: var(--textstyle-callout);
+  word-wrap: break-word;
+  
   background-color: var(--color-primary);
+	color: var(--color-text-primary);
+}
+
+body, input, textarea, select, button {
+	font-synthesis: none;
+	font-feature-settings: 'kern';
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	direction: ltr;
+	text-align: left;
+}
+
+button {
+	text-align: center;
 }

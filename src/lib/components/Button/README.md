@@ -2,6 +2,9 @@
 
 Button is a control that initiates an action.
 
+## Installation and Usage
+
+
 ## API
 
 **appearance**

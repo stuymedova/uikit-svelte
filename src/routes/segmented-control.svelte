@@ -14,19 +14,9 @@
 
 
 <style>
-  :global(body) {
-    width: 100%;
-    height: auto;
-    margin: 0;
-    padding: 0;
-    background-color: rgb(255, 255, 255);
-  }
-
   .segmented-control-container {
 		width: 100%;
-		position: absolute;
-		left: 0;
-		top: 12px;
+		padding-top: 12px;
 		z-index: 99;
 		display: flex;
 		justify-content: center;
