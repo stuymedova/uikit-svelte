@@ -1,1 +1,59 @@
-/* Reset */
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  width: 100%;
+  height: auto;
+	margin: 0;
+	padding: 0;
+}
+
+ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, hgroup, p, blockquote, figure, form, fieldset, input, legend, pre, abbr, button {
+	margin: 0;
+	padding: 0;
+}
+
+pre, code, address, caption, th, figcaption {
+	font-size: 1em;
+	font-weight: normal;
+	font-style: normal;
+}
+
+fieldset, iframe, img {
+	border: 0;
+}
+
+caption, th {
+	text-align: left;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+main, summary, details {
+	display: block;
+}
+
+audio, canvas, video, progress {
+	vertical-align: baseline;
+}
+
+button {
+	background: none;
+	border: 0;
+	/* -webkit-box-sizing: content-box; */
+	/* box-sizing: content-box; */
+	color: inherit;
+	font: inherit;
+	line-height: inherit;
+	overflow: visible;
+	vertical-align: inherit;
+	cursor: pointer;
+}
+button:disabled {
+	cursor: default;
+}

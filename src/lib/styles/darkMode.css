@@ -5,4 +5,5 @@
 @import 'site/base.css';
 
 @import 'components/Button.css';
+@import 'components/Switch.css';
 @import 'components/SegmentedControl.css';

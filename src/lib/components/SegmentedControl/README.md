@@ -6,15 +6,6 @@ Segmented control is a set of two or more segments, each of which functions as a
 
 ## Installation and Usage
 
-**Installation**
-
-To add a component to a Svelte/SvelteKit project, run:
-```shell
-npm i segmented-control-svelte
-```
-
-**Usage**
-
 Include component on a webpage by adding 
 ```js
 import 'segmented-control-svelte/lightMode.css' // Optional, alternatively use darkMode.css or a custom stylesheet

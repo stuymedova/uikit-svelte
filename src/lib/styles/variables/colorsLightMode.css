@@ -2,11 +2,11 @@
   --color-accent: rgb(0, 125, 255);
   --color-primary: rgb(255, 255, 255);
 
-  --color-background-primary: rgb(255, 255, 255);
-  --color-background-secondary: rgba(225, 225, 225, 75%);
-  --color-background-secondary-hovered: rgba(225, 225, 225, 90%);
-  --color-background-secondary-active: rgba(225, 225, 225, 90%);
+  --color-background-accent: rgb(255, 255, 255);
+  --color-background: rgba(225, 225, 225, 75%);
+  --color-background-hovered: rgba(225, 225, 225, 90%);
+  --color-background-active: rgba(225, 225, 225, 75%);
 
   --color-text-primary: rgb(0, 0, 0);
-  --color-text-disabled: rgb(145, 145, 150);
+  --color-text-disabled: rgb(138, 138, 138);
 }

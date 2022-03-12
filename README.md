@@ -20,11 +20,24 @@ Allows to customize and extend behaviour and appearance of components. How to do
 
 ## Installation and Usage
 
-```
+**Installation**
+
+To add a component to a Svelte/SvelteKit project, run:
+
+```shell
 npm install uikit-svelte
 ```
+
+**Usage**
 
 Import stylesheet (or use your own)
 Import components
 
-Use according to the each components' corresponding instructions. -->
+Use according to the each components' corresponding instructions.
+
+For usage instructions refer each component's corresponding guide:
+
+Button
+...
+
+-->

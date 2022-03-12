@@ -1,47 +1,39 @@
 .button {
-  font: inherit;
-	line-height: inherit;
-	overflow: visible;
-	vertical-align:inherit;
-
   position: relative;
   box-sizing: border-box;
   width: auto;
   height: auto;
   margin: 0;
   padding: 14px 18px;
-  border: 0;
   border-radius: 14px;
   z-index: 2;
-
-  font: var(--textstyle-callout);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  
-  transition: color 300ms, background 100ms;
-  cursor: pointer;
+  transition: color 300ms, background-color 100ms;
 }
+
+
+/* Appearance: gray */
 
 .button[appearance='gray'] {
   color: var(--color-text-primary);
-  background-color: var(--color-background-secondary);
+  background-color: var(--color-background);
 }
+
 @media (pointer: fine) {
-  .button[appearance='gray']:not(.disabled):hover {
-    background-color: var(--color-background-secondary-hovered);
+  .button[appearance='gray']:not([aria-disabled='true']):hover {
+    background-color: var(--color-background-hovered);
+  }
+  .button[appearance='gray']:not([aria-disabled='true']):active {
+    background-color: var(--color-background-active);
   }
 }
+
 @media (pointer: coarse) {
-  .button[appearance='gray']:not(.disabled):active {
-    background-color: var(--color-background-secondary-active);
+  .button[appearance='gray']:not([aria-disabled='true']):active {
+    background-color: var(--color-background-hovered);
   }
 }
-.button[appearance='gray'].disabled {
+
+.button[appearance='gray'][aria-disabled='true'] {
   color: var(--color-text-disabled);
   cursor: default;
 }
