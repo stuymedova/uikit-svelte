@@ -1,3 +1,3 @@
-export { Button } from './components/Button'
-export { Switch } from './components/Switch'
-export { SegmentedControl, Segment } from './components/SegmentedControl'
+export { Button } from './components/controls/Button'
+export { Switch } from './components/controls/Switch'
+export { SegmentedControl, Segment } from './components/controls/SegmentedControl'

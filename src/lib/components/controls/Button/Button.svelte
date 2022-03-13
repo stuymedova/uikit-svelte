@@ -5,10 +5,13 @@
   export let behaviour = 'push' // Options: push/toggle (Extending: pop-up/pull-down)
   export let isOn = false // Used only if button behaviour is set to "toggle"
   export let isDisabled = false
+
+  let ref = null
 </script>
 
 
 <button
+  bind:this={ref}
   class='button'
   appearance={appearance}
   action={action}
@@ -21,6 +24,7 @@
     if (behaviour === 'toggle' && !isDisabled) {
       isOn = !isOn
     }
+    ref.focus()
   }}
   on:mouseover
   on:focus
