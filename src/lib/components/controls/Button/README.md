@@ -2,16 +2,16 @@
 
 Button is a control that initiates an action.
 
-## Installation and Usage
+## Usage
 
 
 ## API
 
-**appearance**
+***appearance***
 
 <!-- Description -->
 
-**purpose**
+***purpose***
 
 Use this option to indicate that a button has a "destructive" purpose, such as deletion of user data.
 
@@ -23,7 +23,7 @@ Use this option to indicate that a button has a "destructive" purpose, such as d
 
 In addition to using the "destructive" role, you can create your own custom role and attach custom styles to it.
 
-**behaviour**
+***behaviour***
 
 <!-- Description -->
 

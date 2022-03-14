@@ -2,6 +2,7 @@
   import { setContext, onMount } from 'svelte'
   import { writable } from 'svelte/store'
 
+  export let label = ''
   export let selectedIndex = 0
   
   let focusedSegmentIndex = writable(selectedIndex)
@@ -47,7 +48,7 @@
 
   onMount(() => {
     if (segments.length < 2) {
-      console.warn('Segmented Control: For the component to function properly, provide two or more Segments.')
+      console.warn('Segmented Control: For the component to function correctly, provide two or more Segments.')
     }
   })
 </script>
@@ -56,7 +57,7 @@
 <div 
   class='segmented-control' 
   role='tablist'
-  aria-orientation='horizontal'
+  aria-label={label === '' ? undefined : label}
   {...$$restProps}
   on:click
   on:mouseover

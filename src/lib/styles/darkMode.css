@@ -4,6 +4,7 @@
 @import 'site/reset.css';
 @import 'site/base.css';
 
-@import 'components/Button.css';
-@import 'components/Switch.css';
-@import 'components/SegmentedControl.css';
+@import 'components/views/TabView.css';
+@import 'components/controls/Button.css';
+@import 'components/controls/Switch.css';
+@import 'components/controls/SegmentedControl.css';

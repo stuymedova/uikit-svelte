@@ -1,10 +1,10 @@
 # Segmented Control
 
-Segmented control is a set of two or more segments, each of which functions as a mutually exclusive button. It features a background, which can be animated with a sliding effect. It is often used to switch between different views.
+Segmented control is a set of two or more segments, each of which functions as a mutually exclusive button. It features a background, which can be animated with a sliding effect.
 
 <img width="1153" alt="segmented-control-svelte" src="https://user-images.githubusercontent.com/53351370/150729107-af17b189-4b81-42ec-8fda-985699180c8e.png">
 
-## Installation and Usage
+## Usage
 
 Include component on a webpage by adding 
 ```js
@@ -119,4 +119,4 @@ npm install
 npm run dev
 ```
 
-The demo will be available at http://localhost:3000. Navigate to `src/routes/index.svelte` to make any changes.
+The demo will be available at http://localhost:3000/controls/segmented-control. Navigate to `src/routes/controls/segmented-control.svelte` to make any changes.
