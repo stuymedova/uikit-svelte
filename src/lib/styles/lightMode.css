@@ -1,10 +1,11 @@
 @import 'variables/textStyles.css';
-@import 'variables/colorsLightMode.css';
+@import 'variables/lightColorScheme.css';
 
 @import 'site/reset.css';
 @import 'site/base.css';
 
 @import 'components/views/TabView.css';
 @import 'components/controls/Button.css';
+@import 'components/controls/Link.css';
 @import 'components/controls/Switch.css';
 @import 'components/controls/SegmentedControl.css';

@@ -1,5 +1,5 @@
 <script>
-  export let label = 'Button'
+  export let label = 'Label'
   export let appearance = 'gray' // Options: gray/plain/contoured/filled
   export let action = undefined // Options: -/primary/cancel/destructive
   export let behaviour = 'push' // Options: push/toggle (Extending: pop-up/pull-down)
