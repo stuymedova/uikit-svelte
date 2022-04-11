@@ -2,7 +2,6 @@
   import { setContext, onMount } from 'svelte'
   import { writable } from 'svelte/store'
 
-  export let label = ''
   export let selectedIndex = 0
   
   let focusedSegmentIndex = writable(selectedIndex)
@@ -57,7 +56,6 @@
 <div 
   class='segmented-control' 
   role='tablist'
-  aria-label={label === '' ? undefined : label}
   {...$$restProps}
   on:click
   on:mouseover

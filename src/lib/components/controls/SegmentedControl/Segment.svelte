@@ -1,8 +1,7 @@
 <script>
   import { getContext, onMount } from 'svelte'
 
-  export let id = ''
-  export let label = 'Segment'
+  export let label = 'Label'
   export let isDisabled = false
 
   let ref = null
@@ -28,9 +27,6 @@
 
 <button 
   bind:this={ref}
-  id={id !== '' 
-    ? id 
-    : console.warn('Segmented Control -> Segment: Property "id" is empty. Provide a unique non-empty id.')} 
   class='segmented-control-item'
   type='button'
   role='tab'

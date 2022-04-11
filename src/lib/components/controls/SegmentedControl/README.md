@@ -4,7 +4,16 @@ Segmented control is a set of two or more segments, each of which functions as a
 
 <img width="1153" alt="segmented-control-svelte" src="https://user-images.githubusercontent.com/53351370/150729107-af17b189-4b81-42ec-8fda-985699180c8e.png">
 
-## Usage
+## Installation and Usage
+
+**Installation**
+
+To add a component to a Svelte/SvelteKit project, run:
+```shell
+npm i segmented-control-svelte
+```
+
+**Usage**
 
 Include component on a webpage by adding 
 ```js
@@ -15,17 +24,17 @@ within the `script` tag of a Svelte file. You can further use the component as s
 
 ```html
 <SegmentedControl>
-  <Segment id='first'>First</Segment>
-  <Segment id='second'>Second</Segment>
+  <Segment>First</Segment>
+  <Segment>Second</Segment>
 </SegmentedControl>
 ```
 
 The generated HTML will be as such:
 
 ```html
-<div class="segmented-control" role="tablist" aria-orientation="horizontal">
-  <button id="first" class="segmented-control-item selected" role="tab" aria-selected="true" aria-disabled="false" tabindex="0">First</button>
-  <button id="second" class="segmented-control-item" role="tab" aria-disabled="false" aria-selected="false" aria-disabled="false" tabindex="-1">Second</button>
+<div class="segmented-control" role="tablist">
+  <button class="segmented-control-item selected" role="tab" aria-selected="true" aria-disabled="false" tabindex="0">First</button>
+  <button class="segmented-control-item" role="tab" aria-disabled="false" aria-selected="false" aria-disabled="false" tabindex="-1">Second</button>
   <div class="segmented-control-background" role="presentation" style="width: 75px; transform: translateX(2px);"></div>
 </div>
 ```
@@ -42,8 +51,8 @@ Use this option to specify an index of an element to be selected by default, sta
 
 ```html
 <SegmentedControl selectedIndex={1}>
-  <Segment id='first'>First</Segment>
-  <Segment id='second'>Second</Segment> <!-- This element will be selected initially -->
+  <Segment>First</Segment>
+  <Segment>Second</Segment> <!-- This element will be selected initially -->
 </SegmentedControl>
 ```
 
@@ -51,15 +60,15 @@ You can bind to this value to have changes to the selected index be reflected bo
 
 ```html
 <script>
-  import 'segmented-control-svelte/main.css'
+  import 'segmented-control-svelte/lightMode.css'
   import { SegmentedControl, Segment } from 'segmented-control-svelte'
 
   let selectedIndex = 1
 </script>
 
 <SegmentedControl bind:selectedIndex>
-  <Segment id='first'>First</Segment>
-  <Segment id='second'>Second</Segment>
+  <Segment>First</Segment>
+  <Segment>Second</Segment>
 </SegmentedControl>
 
 <p>Index of a selected element: {selectedIndex}</p>
@@ -67,25 +76,14 @@ You can bind to this value to have changes to the selected index be reflected bo
 
 **Segment**
 
-***id***
-
-This option is *required*. For the component to work properly each segment must have a unique identifier.
-
-```html
-<SegmentedControl>
-  <Segment id='first'>First</Segment>
-  <Segment id='second'>Second</Segment>
-</SegmentedControl>
-```
-
 ***label***
 
 Use this option to specify a segment's label.
 
 ```html
 <SegmentedControl>
-  <Segment id='first' label='First' />
-  <Segment id='second' label='Second' />
+  <Segment label='First' />
+  <Segment label='Second' />
 </SegmentedControl>
 ```
 
@@ -93,19 +91,19 @@ Alternatively, a label can be specified between component tags:
 
 ```html
 <SegmentedControl>
-  <Segment id='first'>First</Segment>
-  <Segment id='second'>Second</Segment>
+  <Segment>First</Segment>
+  <Segment>Second</Segment>
 </SegmentedControl>
 ```
 
 ***isDisabled***
 
-Use this option to disable selection of a segment.
+Use this option to disable selection of segment.
 
 ```html
 <SegmentedControl>
-  <Segment id='first'>First</Segment>
-  <Segment id='second' isDisabled={true}>Second</Segment>
+  <Segment>First</Segment>
+  <Segment isDisabled={true}>Second</Segment>
 </SegmentedControl>
 ```
 
@@ -114,7 +112,7 @@ Use this option to disable selection of a segment.
 Launch a demo by running in the terminal:
 
 ```shell
-git clone --depth=1 https://github.com/stuymedova/segmented-control-svelte . # Clone the latest commit from this repository to your current directory
+git clone --depth=1 https://github.com/stuymedova/uikit-svelte . # Clone the latest commit from this repository to your current directory
 npm install
 npm run dev
 ```

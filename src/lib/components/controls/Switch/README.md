@@ -10,3 +10,5 @@ A control that toggles between on and off states.
 ***label***
 ***isOn***
 ***isDisabled***
+
+## Demo

@@ -1,0 +1,50 @@
+.stepper {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.stepper-label {
+  margin-left: 10px;
+}
+
+.stepper-control {
+  position: relative;
+  width: 92px;
+  height: 44px;
+  margin: 0;
+  border-radius: 14px;
+  background-color: var(--color-background);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.stepper-value {
+  margin: 0 auto;
+  cursor: default;
+}
+
+.stepper-button {
+  height: 44px;
+  transition: fill 150ms;
+}
+.stepper-button[aria-disabled='true'] {
+  cursor: default;
+  fill: var(--color-text-disabled);
+}
+
+.stepper-decrement-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 16px 10px 16px 12px;
+}
+.stepper-increment-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 16px 12px 16px 10px;
+}

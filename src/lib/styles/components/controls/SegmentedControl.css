@@ -5,7 +5,7 @@
   display: inline-flex;
   margin: 0;
   padding: 2px;
-  border-radius: 16px;
+  border-radius: 14px;
   background-color: var(--color-background);
 }
 
@@ -17,7 +17,7 @@
   height: 40px;
   margin: 0;
   padding: 0;
-  border-radius: 14px;
+  border-radius: 12px;
   background-color: var(--color-background-accent);
   transition: width 300ms, transform 300ms;
 }
@@ -27,7 +27,7 @@
   box-sizing: border-box;
   width: 75px;
   padding: 12px;
-  border-radius: 14px;
+  border-radius: 12px;
   z-index: 2;
   
   overflow: hidden;
