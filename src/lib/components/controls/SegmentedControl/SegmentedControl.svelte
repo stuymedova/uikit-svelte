@@ -59,11 +59,11 @@
   {...$$restProps}
   on:click
   on:mouseover
+  on:mouseenter
   on:focus
   on:mouseout
-  on:blur
-  on:mouseenter
   on:mouseleave
+  on:blur
 >
   <slot />
   <div 

@@ -6,6 +6,8 @@
   margin: 0;
   padding: 2px;
   border-radius: 14px;
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
   background-color: var(--color-background);
 }
 

@@ -42,11 +42,11 @@
     ref.focus()
   }}
   on:mouseover
+  on:mouseenter
   on:focus
   on:mouseout
-  on:blur
-  on:mouseenter
   on:mouseleave
+  on:blur
   on:keydown
   on:keydown='{({ key }) => {
     if (key === 'ArrowRight' || key === 'ArrowDown') {

@@ -10,6 +10,8 @@
   width: 44px;
   height: 26px;
   border-radius: 15px;
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
   background-color: var(--color-background);
   transition: background-color 300ms, opacity 300ms;
 }

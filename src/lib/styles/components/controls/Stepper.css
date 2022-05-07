@@ -14,12 +14,15 @@
   height: 44px;
   margin: 0;
   border-radius: 14px;
-  background-color: var(--color-background);
   display: flex;
   flex-direction: row;
   align-items: center;
   text-align: center;
   overflow: hidden;
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
 }
 
 .stepper-value {

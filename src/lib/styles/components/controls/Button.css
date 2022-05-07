@@ -1,39 +1,53 @@
-.button {
+.popover-button-wrapper {
   position: relative;
+}
+
+.button {
   box-sizing: border-box;
   width: auto;
   height: auto;
   margin: 0;
   padding: 14px 18px;
   border-radius: 14px;
-  z-index: 2;
   transition: color 300ms, background-color 100ms;
-}
-
-
-/* Appearance: gray */
-
-.button[appearance='gray'] {
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
   color: var(--color-text-primary);
   background-color: var(--color-background);
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-@media (pointer: fine) {
-  .button[appearance='gray']:not([aria-disabled='true']):hover {
-    background-color: var(--color-background-hovered);
-  }
-  .button[appearance='gray']:not([aria-disabled='true']):active {
-    background-color: var(--color-background-active);
-  }
-}
-
-@media (pointer: coarse) {
-  .button[appearance='gray']:not([aria-disabled='true']):active {
-    background-color: var(--color-background-hovered);
-  }
-}
-
-.button[appearance='gray'][aria-disabled='true'] {
+.button[aria-disabled='true'] {
   color: var(--color-text-disabled);
   cursor: default;
+}
+
+/* aria-selected gets set only if behaviour is set to 'switch' or 'popover' */
+.button[aria-checked='false'], .button[aria-expanded='false'] {
+  background-color: var(--color-background);
+}
+.button[aria-checked='true'], .button[aria-expanded='true'] {
+  background-color: var(--color-background-selected);
+}
+
+/* Applies only if button behaviour is set to 'popover' */
+.button-popover {
+  position: absolute;
+  top: auto;
+  left: 0;
+  box-sizing: border-box;
+  width: 250px;
+  height: auto;
+  padding: 14px 18px 14px 18px;
+  margin-top: 6px;
+  border-radius: 14px;
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+  z-index: 10;
 }

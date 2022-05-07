@@ -4,9 +4,8 @@
 
   --color-background-accent: rgb(255, 255, 255);
   --color-background: rgba(225, 225, 225, 75%);
-  --color-background-hovered: rgba(225, 225, 225, 90%);
-  --color-background-active: rgba(225, 225, 225, 75%);
+  --color-background-selected: rgba(195, 195, 195, 75%);
 
   --color-text-primary: rgb(0, 0, 0);
-  --color-text-disabled: rgb(138, 138, 138);
+  --color-text-disabled: rgba(0, 0, 0, 30%);
 }

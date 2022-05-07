@@ -21,7 +21,6 @@
   /* .tab-view-container {
 		width: 100%;
 		padding-top: 12px;
-		z-index: 99;
 		display: flex;
 		justify-content: center;
   }

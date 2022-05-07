@@ -34,3 +34,13 @@ You can always customize the component's appearance. To view styles provided out
 **Classes:**
 
 **Attributes:** -->
+
+
+Notes:
+
+By default, button type is set to 'button', not 'submit', as in most browser's defaults. If you'd like to use it as a submit button in a form, specify the 'submit' type explicitly.
+
+
+Examples:
+
+Popup button: Add example where side changes dynamically based on viewport constraints
