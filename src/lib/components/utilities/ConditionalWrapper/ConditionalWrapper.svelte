@@ -3,13 +3,18 @@
   export let htmlTag = 'div'
 
   export let action = () => {}
-  export let actionParams = undefined
+  export let actionParameters = undefined
 </script>
 
 
-<!-- TODO: handle the case when there is no custom action -->
 {#if condition}
-  <svelte:element this={htmlTag} {...$$restProps} use:action={actionParams} on:clickAway>
+  <svelte:element 
+    this={htmlTag} 
+    {...$$restProps} 
+    use:action={actionParameters} 
+    on:interactOutside
+    on:pressAndHold
+  >
     <slot />
   </svelte:element>
 {:else}

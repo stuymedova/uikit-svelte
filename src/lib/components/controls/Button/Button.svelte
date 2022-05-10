@@ -1,26 +1,35 @@
 <script>
   import { ConditionalWrapper } from '$lib'
-  import { clickAway } from '$lib'
+  import { interactOutside } from '$lib'
 
   // TODO: use with SVGs
-  // TODO: for clarity, divide into common and behaviour-specific
   // TODO: for popover buttons, add variations by side (top, left, bottom, right) and alignment (start, end, center)
-  // TODO: popup/pulldown functionality — ? 
+  // TODO: popup(https://w3c.github.io/aria-practices/#combobox)/pulldown functionality — ? 
 
   export let label = 'Label'
-  export let id = '' // TODO: make sure id is provided before adding it
-  export let appearance = 'gray' // Options: gray/… (Extend: plain/contoured/filled)
-  export let action = undefined // Options: -/primary/cancel/destructive
+  // export let appearance = 'gray' // Options: gray/… (Extend: plain/contoured/filled) // TODO: accent/vibrant/call-to-action button — ?
   export let behaviour = 'push' // Options: push/switch/popover
-  export let isOn = false // Used only if button behaviour is set to "switch"
-  export let isExpanded = false // Used only if button behaviour is set to "popover"
-  export let closeWhenInteractOutside = true // Used only if button behaviour is set to "popover"
   export let isDisabled = false
+  
+  // Push button
+  export let purpose = undefined // Options: -/primary/cancel/destructive // TODO: test in a dialog component
+  
+  // Switch button
+  export let isOn = false
+  
+  // Popover button
+  export let isExpanded = false
+  export let id = '' // TODO: add aria-labelledby, and a second id
+  export let closeWhenInteractOutside = true
 
   let ref = null
 </script>
 
 
+<!-- 
+  Used only if button behaviour is set to "popover". 
+  Closes the popover when the Escape key is pressed 
+-->
 <svelte:window
   on:keydown='{({ key }) => {
     if (behaviour === 'popover' && isExpanded && key === 'Escape') {
@@ -31,8 +40,8 @@
 
 <ConditionalWrapper 
   condition={behaviour === 'popover'} 
-  action={clickAway}
-  on:clickAway={() => {
+  action={interactOutside}
+  on:interactOutside={() => {
     if (closeWhenInteractOutside && isExpanded) {
       isExpanded = false
     }
@@ -43,10 +52,9 @@
     bind:this={ref}
     class='button'
     type='button'
-    role={behaviour === 'switch' ? 'switch' : undefined}
-    appearance={appearance}
-    action={action}
     behaviour={behaviour}
+    purpose={behaviour === 'push' ? purpose : undefined}
+    role={behaviour === 'switch' ? 'switch' : undefined}
     aria-checked={behaviour === 'switch' ? isOn : undefined}
     aria-haspopup={behaviour === 'popover' ? true : undefined}
     aria-expanded={behaviour === 'popover' ? isExpanded : undefined}
@@ -69,7 +77,9 @@
   <!-- TODO: add animation -->
   {#if behaviour === 'popover'}
     <aside 
-      id={id}
+      id={id !== '' 
+        ? id 
+        : console.warn('Button (Popover): Property "id" is empty. Provide a unique non-empty id.')} 
       class='button-popover' 
       style='display: {isExpanded ? "block" : "none"}'>
       <slot name='popover'>{label}</slot>

@@ -1,7 +1,9 @@
-export function clickAway(node) {
+// TODO: respond to touch events specifically?
+
+export function interactOutside(node) {
 	const handleClick = (event) => {
 		if (!node.contains(event.target)) {
-			node.dispatchEvent(new CustomEvent('clickAway'))
+			node.dispatchEvent(new CustomEvent('interactOutside'))
 		}
 	}
 	
