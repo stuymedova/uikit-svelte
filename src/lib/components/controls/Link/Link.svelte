@@ -1,4 +1,5 @@
 <script>
+  // TODO: support anchor links
   export let label = 'Label'
   export let destination = ''
   export let openInNewTab = false

@@ -1,6 +1,6 @@
 <script>
   import { ConditionalWrapper } from '$lib'
-  import { interactOutside } from '$lib'
+  import { pressOutside } from '$lib'
 
   // TODO: use with SVGs
   // TODO: for popover buttons, add variations by side (top, left, bottom, right) and alignment (start, end, center)
@@ -19,8 +19,8 @@
   
   // Popover button
   export let isExpanded = false
-  export let id = '' // TODO: add aria-labelledby, and a second id
-  export let closeWhenInteractOutside = true
+  export let id = ''
+  export let shouldCloseOnPressOutside = true
 
   let ref = null
 </script>
@@ -28,7 +28,7 @@
 
 <!-- 
   Used only if button behaviour is set to "popover". 
-  Closes the popover when the Escape key is pressed 
+  Closes the popover when the Escape key is pressed.
 -->
 <svelte:window
   on:keydown='{({ key }) => {
@@ -40,9 +40,9 @@
 
 <ConditionalWrapper 
   condition={behaviour === 'popover'} 
-  action={interactOutside}
-  on:interactOutside={() => {
-    if (closeWhenInteractOutside && isExpanded) {
+  action={pressOutside}
+  on:pressOutside={() => {
+    if (shouldCloseOnPressOutside && isExpanded) {
       isExpanded = false
     }
   }}
@@ -50,6 +50,9 @@
 >
   <button
     bind:this={ref}
+    id={id !== '' 
+      ? id + '--trigger'
+      : console.warn('Popover Button: Property "id" is empty. Provide a unique non-empty id.')}
     class='button'
     type='button'
     behaviour={behaviour}
@@ -77,11 +80,11 @@
   <!-- TODO: add animation -->
   {#if behaviour === 'popover'}
     <aside 
-      id={id !== '' 
-        ? id 
-        : console.warn('Button (Popover): Property "id" is empty. Provide a unique non-empty id.')} 
+      id={id} 
       class='button-popover' 
-      style='display: {isExpanded ? "block" : "none"}'>
+      aria-labelledby={id + '--trigger'}
+      style='display: {isExpanded ? "block" : "none"}'
+    >
       <slot name='popover'>{label}</slot>
     </aside>
   {/if}

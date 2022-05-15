@@ -12,7 +12,7 @@
     this={htmlTag} 
     {...$$restProps} 
     use:action={actionParameters} 
-    on:interactOutside
+    on:pressOutside
     on:pressAndHold
   >
     <slot />

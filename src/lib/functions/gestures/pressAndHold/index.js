@@ -1,4 +1,4 @@
-export function pressAndHold(node, duration = 400) {
+export function pressAndHold(node, duration = 100) {
   let timer
 
 	const handleMousedown = () => {

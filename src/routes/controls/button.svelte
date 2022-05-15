@@ -4,11 +4,10 @@
 </script>
 
 
-
 <div class='content-wrapper'>
   <div class='button-container'>
     <p>Push button</p>
-    <Button role='primary'>Label</Button>
+    <Button>Label</Button>
   </div>
 
   <div class='button-container'>
@@ -18,17 +17,18 @@
 
   <div class='button-container'>
     <p>Popover button</p>
-    <Button behaviour='popover' wrapperId='popover-button-wrapper-1' id='popover-button-1'>
+    
+    <!-- TODO: note in documentation that an id needs to be specified per component once, the button will have an id posfixed by '--trigger' and a popover will have an id unchanged -->
+    <Button behaviour='popover' id='popover'>
       Label
 
-      <!-- TODO: note in a doc what svelte:fragment does (first example with a span, second with a svelte:fragment) -->
+      <!-- TODO: note in documentation what svelte:fragment does (first example with a span, second with a svelte:fragment) -->
       <svelte:fragment slot='popover'>
         Turpis egestas pretium aenean pharetra magna. Cum sociis natoque penatibus et magnis dis parturient. Enim sed faucibus turpis in eu mi.
       </svelte:fragment>
     </Button>
   </div>
 </div>
-
 
 
 <style>
@@ -51,7 +51,7 @@
     margin-bottom: 12px;
   }
 
-  /* :global(.button) {
+  :global(.button) {
     outline: none;
-  } */
+  }
 </style>

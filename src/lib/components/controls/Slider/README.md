@@ -1,7 +1,0 @@
-# Slider
-
-## Usage
-
-## API
-
-## Demo
