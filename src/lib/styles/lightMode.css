@@ -5,7 +5,6 @@
 @import 'site/base.css';
 
 @import 'components/views/TabView.css';
-@import 'components/views/ProgressView.css';
 @import 'components/controls/Button.css';
 @import 'components/controls/Link.css';
 @import 'components/controls/Stepper.css';

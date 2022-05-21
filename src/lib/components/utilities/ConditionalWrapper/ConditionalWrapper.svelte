@@ -1,5 +1,5 @@
 <script>
-  export let condition = true
+  export let predicate = true
   export let htmlTag = 'div'
 
   export let action = () => {}
@@ -7,7 +7,7 @@
 </script>
 
 
-{#if condition}
+{#if predicate}
   <svelte:element 
     this={htmlTag} 
     {...$$restProps} 

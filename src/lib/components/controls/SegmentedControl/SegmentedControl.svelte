@@ -1,4 +1,6 @@
 <script>
+  // TODO: support vertical orientation
+
   import { setContext, onMount } from 'svelte'
   import { writable } from 'svelte/store'
 

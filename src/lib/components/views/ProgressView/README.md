@@ -1,7 +1,0 @@
-# ProgressView
-
-## Usage
-
-## API
-
-## Demo

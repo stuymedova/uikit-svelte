@@ -8,7 +8,6 @@ export { SegmentedControl, Segment } from './components/controls/SegmentedContro
 
 // Views
 export { TabView, Tab, TabPanel } from './components/views/TabView'
-export { ProgressView } from './components/views/ProgressView'
 
 // Utilities
 export { ConditionalWrapper } from './components/utilities/ConditionalWrapper'

@@ -39,7 +39,7 @@
 />
 
 <ConditionalWrapper 
-  condition={behaviour === 'popover'} 
+  predicate={behaviour === 'popover'} 
   action={pressOutside}
   on:pressOutside={() => {
     if (shouldCloseOnPressOutside && isExpanded) {
