@@ -3,6 +3,7 @@
   import { Switch } from '$lib'
 </script>
 
+
 <div class='switch-container'>
   <Switch label='Optional Label' />
 </div>

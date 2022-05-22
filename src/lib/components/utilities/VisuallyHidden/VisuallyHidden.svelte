@@ -3,4 +3,6 @@
 </script>
 
 
-<svelte:element this={htmlTag} class='visually-hidden'><slot /></svelte:element>
+<svelte:element this={htmlTag} class='visually-hidden'>
+  <slot />
+</svelte:element>

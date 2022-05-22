@@ -1,5 +1,6 @@
 .switch {
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
 	white-space: nowrap;
 }

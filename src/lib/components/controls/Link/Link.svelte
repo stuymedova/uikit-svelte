@@ -1,8 +1,10 @@
 <script>
-  // TODO: support anchor links
+  // TODO: additional support for anchor links
+  // TODO: handle the case when link is wrapped around a DOM node
+
   export let label = 'Label'
   export let destination = ''
-  export let openInNewTab = false
+  export let shouldBeOpenedInNewTab = false
 
   let ref = null
 </script>
@@ -12,8 +14,8 @@
   bind:this={ref}
   class='link'
   href={destination}
-  target={openInNewTab ? '_blank' : undefined}
-  rel={openInNewTab ? 'noopener noreferrer' : undefined}
+  target={shouldBeOpenedInNewTab ? '_blank' : undefined}
+  rel={shouldBeOpenedInNewTab ? 'noopener noreferrer' : undefined}
   on:click
   on:click={() => {
     ref.focus()

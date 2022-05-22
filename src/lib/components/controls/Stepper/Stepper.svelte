@@ -53,7 +53,7 @@
 
 <div class='stepper'>
   {#if label !== ''}
-    <div class='stepper-label'>{label}</div>
+    <span class='stepper-label'>{label}</span>
   {/if}
 
   <div class='stepper-control'>

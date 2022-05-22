@@ -7,7 +7,7 @@
 <div class='link-container'>
   <Link 
     destination='https://github.com/stuymedova/uikit-svelte'
-    openInNewTab={true}
+    shouldBeOpenedInNewTab={true}
   >
     Label
   </Link>

@@ -2,7 +2,7 @@
 
 Segmented control is a set of two or more segments, each of which functions as a mutually exclusive button. It features a background, which can be animated with a sliding effect.
 
-<img width="1153" alt="segmented-control" src="https://user-images.githubusercontent.com/53351370/150729107-af17b189-4b81-42ec-8fda-985699180c8e.png">
+<img width="1153" alt="Segmented Control component demonstration" src="https://user-images.githubusercontent.com/53351370/150729107-af17b189-4b81-42ec-8fda-985699180c8e.png">
 
 ## Usage
 
@@ -54,15 +54,15 @@ You can bind to this value to have changes to the selected index be reflected bo
   import '@stuymedova/uikit-svelte/styles/lightMode.css'
   import { SegmentedControl, Segment } from '@stuymedova/uikit-svelte'
 
-  let selectedIndex = 1
+  let segmentedControlSelectedIndex = 1
 </script>
 
-<SegmentedControl bind:selectedIndex>
+<SegmentedControl bind:selectedIndex={segmentedControlSelectedIndex}>
   <Segment>First</Segment>
   <Segment>Second</Segment>
 </SegmentedControl>
 
-<p>Index of a selected element: {selectedIndex}</p>
+<p>Index of a selected element: {segmentedControlSelectedIndex}</p>
 ```
 
 ***orientation***
@@ -80,7 +80,7 @@ Use this option to specify orientation of the Segmented Control. Accepted option
 
 ***label***
 
-Use this option to specify a segment's label.
+Use this option to specify a Segment's label.
 
 ```html
 <SegmentedControl>
@@ -100,7 +100,7 @@ Alternatively, a label can be specified between component tags:
 
 ***isDisabled***
 
-Use this option to disable selection of segment.
+Use this option to disable selection of a Segment.
 
 ```html
 <SegmentedControl>
@@ -114,7 +114,7 @@ Use this option to disable selection of segment.
 Launch a demo by running in the terminal:
 
 ```shell
-git clone --depth=1 https://github.com/stuymedova/uikit-svelte . # Clone the latest commit from this repository to your current directory
+git clone --depth=1 https://github.com/stuymedova/uikit-svelte . # Clone the latest commit from this repository to the current directory
 npm install
 npm run dev
 ```

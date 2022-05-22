@@ -30,12 +30,12 @@
   on:mouseleave
   on:keydown
 >
-  <span class='switch-item'>
-    <span class='switch-item-knob'></span>
-  </span>
   {#if label !== ''}
     <span class='switch-label'>
       <slot>{label}</slot>
     </span>
   {/if}
+  <span class='switch-item'>
+    <span class='switch-item-knob'></span>
+  </span>
 </button>

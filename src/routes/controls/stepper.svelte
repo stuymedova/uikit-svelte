@@ -3,6 +3,7 @@
   import { Stepper } from '$lib'
 </script>
 
+
 <div class='stepper-container'>
   <Stepper label='Optional Label' />
 </div>
