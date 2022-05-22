@@ -8,7 +8,6 @@
   <SegmentedControl>
     <Segment id='first'>First</Segment>
     <Segment id='second'>Second</Segment>
-    <Segment id='third'>Third</Segment>
   </SegmentedControl>
 </div>
 

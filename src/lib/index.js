@@ -7,7 +7,6 @@ export { Switch } from './components/controls/Switch'
 export { SegmentedControl, Segment } from './components/controls/SegmentedControl'
 
 // Views
-export { TabView, Tab, TabPanel } from './components/views/TabView'
 
 // Utilities
 export { ConditionalWrapper } from './components/utilities/ConditionalWrapper'
