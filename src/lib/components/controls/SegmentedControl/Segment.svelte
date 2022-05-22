@@ -5,10 +5,11 @@
   export let isDisabled = false
 
   let ref = null
-  let width = 0
+  let length = 0
   let offset = 0
 
   const ctx = getContext('SegmentedControl')
+  const orientation = ctx.orientation
   const index = ctx.setIndex()
   const focusedSegmentIndex = ctx.focusedSegmentIndex
   const selectedSegmentIndex = ctx.selectedSegmentIndex
@@ -18,9 +19,15 @@
   $: isSelected = $selectedSegmentIndex === index
   
   onMount(() => {
-    width = Math.round(ref.clientWidth)
-    offset = Math.round(ref.offsetLeft)
-    ctx.addSegment({ index, isDisabled, width, offset })
+    if (orientation === 'horizontal') {
+      length = Math.round(ref.clientWidth) 
+      offset = Math.round(ref.offsetLeft) 
+    } else if (orientation === 'vertical') {
+      length = Math.round(ref.clientHeight) 
+      offset = Math.round(ref.offsetTop) 
+    }
+    
+    ctx.addSegment({ index, isDisabled, length, offset })
   })
 </script>
 
@@ -42,16 +49,19 @@
     ref.focus()
   }}
   on:mouseover
-  on:mouseenter
   on:focus
   on:mouseout
-  on:mouseleave
   on:blur
+  on:mouseenter
+  on:mouseleave
   on:keydown
   on:keydown='{({ key }) => {
-    if (key === 'ArrowRight' || key === 'ArrowDown') {
+    if (orientation === 'horizontal' && key === 'ArrowRight' || 
+        orientation === 'vertical' && key === 'ArrowDown') {
       ctx.setSelected(index + 1)
-    } else if (key === 'ArrowLeft' || key === 'ArrowUp') {
+    } else if (
+        orientation === 'horizontal' && key === 'ArrowLeft' || 
+        orientation === 'vertical' && key === 'ArrowUp') {
       ctx.setSelected(index - 1)
     }
   }}'

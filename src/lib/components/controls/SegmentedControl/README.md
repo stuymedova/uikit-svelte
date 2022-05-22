@@ -2,23 +2,14 @@
 
 Segmented control is a set of two or more segments, each of which functions as a mutually exclusive button. It features a background, which can be animated with a sliding effect.
 
-<img width="1153" alt="segmented-control-svelte" src="https://user-images.githubusercontent.com/53351370/150729107-af17b189-4b81-42ec-8fda-985699180c8e.png">
+<img width="1153" alt="segmented-control" src="https://user-images.githubusercontent.com/53351370/150729107-af17b189-4b81-42ec-8fda-985699180c8e.png">
 
-## Installation and Usage
-
-**Installation**
-
-To add a component to a Svelte/SvelteKit project, run:
-```shell
-npm i segmented-control-svelte
-```
-
-**Usage**
+## Usage
 
 Include component on a webpage by adding 
 ```js
-import 'segmented-control-svelte/lightMode.css' // Optional, alternatively use darkMode.css or a custom stylesheet
-import { SegmentedControl, Segment } from 'segmented-control-svelte'
+import '@stuymedova/uikit-svelte/styles/lightMode.css' // Optional, alternatively use darkMode.css or a custom stylesheet
+import { SegmentedControl, Segment } from '@stuymedova/uikit-svelte'
 ```
 within the `script` tag of a Svelte file. You can further use the component as such:
 
@@ -32,7 +23,7 @@ within the `script` tag of a Svelte file. You can further use the component as s
 The generated HTML will be as such:
 
 ```html
-<div class="segmented-control" role="tablist">
+<div class="segmented-control" role="tablist" aria-orientation="horizontal">
   <button class="segmented-control-item selected" role="tab" aria-selected="true" aria-disabled="false" tabindex="0">First</button>
   <button class="segmented-control-item" role="tab" aria-disabled="false" aria-selected="false" aria-disabled="false" tabindex="-1">Second</button>
   <div class="segmented-control-background" role="presentation" style="width: 75px; transform: translateX(2px);"></div>
@@ -60,8 +51,8 @@ You can bind to this value to have changes to the selected index be reflected bo
 
 ```html
 <script>
-  import 'segmented-control-svelte/lightMode.css'
-  import { SegmentedControl, Segment } from 'segmented-control-svelte'
+  import '@stuymedova/uikit-svelte/styles/lightMode.css'
+  import { SegmentedControl, Segment } from '@stuymedova/uikit-svelte'
 
   let selectedIndex = 1
 </script>
@@ -72,6 +63,17 @@ You can bind to this value to have changes to the selected index be reflected bo
 </SegmentedControl>
 
 <p>Index of a selected element: {selectedIndex}</p>
+```
+
+***orientation***
+
+Use this option to specify orientation of the Segmented Control. Accepted options are "horizontal" and "vertical". Default orientation is "horizontal".
+
+```html
+<SegmentedControl orientation='vertical'>
+  <Segment>First</Segment>
+  <Segment>Second</Segment>
+</SegmentedControl>
 ```
 
 **Segment**
