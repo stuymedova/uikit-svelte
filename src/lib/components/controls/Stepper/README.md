@@ -2,6 +2,8 @@
 
 Stepper is a control that increments and decrements a value with a step size within specified range.
 
+<img width="1198" alt="Stepper component demonstration" src="https://user-images.githubusercontent.com/53351370/169700699-6b14508f-eccb-4d20-917c-959e818c0029.png">
+
 ## Usage
 
 ## API
