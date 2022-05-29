@@ -1,5 +1,5 @@
 <script>
-  import { ConditionalWrapper } from '$lib'
+  import { Wrapper } from '$lib'
   import { pressOutside } from '$lib'
 
   // TODO: use with SVGs
@@ -38,7 +38,7 @@
   }}'
 />
 
-<ConditionalWrapper 
+<Wrapper 
   predicate={behaviour === 'popover'} 
   action={pressOutside}
   on:pressOutside={() => {
@@ -88,4 +88,4 @@
       <slot name='popover'>{label}</slot>
     </aside>
   {/if}
-</ConditionalWrapper>
+</Wrapper>

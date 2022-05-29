@@ -1,4 +1,7 @@
 <script>
+  // TODO: step away from "Conditional Wrapper" role, make it universal
+  // so it can be used in various scenarios
+
   export let predicate = true
   export let htmlTag = 'div'
 

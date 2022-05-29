@@ -1,11 +1,13 @@
 <script>
   // TODO: additional support for anchor links
-  // TODO: handle the case when link is wrapped around a DOM node
+  // TODO: add support for download links, make it intuitive 
+  // to specify a link's role
 
   export let label = 'Label'
   export let destination = ''
   export let shouldBeOpenedInNewTab = false
-
+  export let isInline = true
+  
   let ref = null
 </script>
 
@@ -16,6 +18,7 @@
   href={destination}
   target={shouldBeOpenedInNewTab ? '_blank' : undefined}
   rel={shouldBeOpenedInNewTab ? 'noopener noreferrer' : undefined}
+  isInline={isInline}
   on:click
   on:click={() => {
     ref.focus()

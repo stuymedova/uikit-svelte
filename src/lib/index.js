@@ -9,7 +9,7 @@ export { SegmentedControl, Segment } from './components/controls/SegmentedContro
 // Views
 
 // Utilities
-export { ConditionalWrapper } from './components/utilities/ConditionalWrapper'
+export { Wrapper } from './components/utilities/Wrapper'
 export { VisuallyHidden } from './components/utilities/VisuallyHidden'
 
 

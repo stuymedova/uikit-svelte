@@ -1,10 +1,18 @@
 .link {
   text-decoration: none;
+  color: inherit;
+}
+.link[isInline="true"] {
   color: var(--color-accent);
 }
+
 .link:hover {
+  text-decoration: none;
+}
+.link[isInline="true"]:hover {
   text-decoration: underline;
 }
+
 .link:active {
   text-decoration: none;
 }
