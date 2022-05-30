@@ -57,6 +57,7 @@ You can bind to this value to have changes to the selected index be reflected bo
   let segmentedControlSelectedIndex = 1
 </script>
 
+
 <SegmentedControl bind:selectedIndex={segmentedControlSelectedIndex}>
   <Segment>First</Segment>
   <Segment>Second</Segment>

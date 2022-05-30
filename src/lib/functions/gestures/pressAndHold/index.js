@@ -11,6 +11,7 @@ export function pressAndHold(node, duration = 100) {
     clearTimeout(timer)
   }
 	
+	
 	node.addEventListener('mousedown', handleMousedown)
 	node.addEventListener('mouseup', handleMouseup)
 

@@ -17,7 +17,9 @@
 		width: 100%;
 		padding-top: 12px;
 		display: flex;
-		justify-content: center;
+    flex-direction: column;
+		align-items: center;
+    gap: 12px;
   }
 
   :global(.segmented-control-item) {

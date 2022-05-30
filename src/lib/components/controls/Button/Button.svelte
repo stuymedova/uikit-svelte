@@ -1,4 +1,5 @@
 <script>
+  import { onMount } from 'svelte'
   import { Wrapper } from '$lib'
   import { pressOutside } from '$lib'
 
@@ -18,11 +19,17 @@
   export let isOn = false
   
   // Popover button
-  export let isExpanded = false
   export let id = ''
+  export let isExpanded = false
   export let shouldCloseOnPressOutside = true
 
   let ref = null
+
+  onMount(() => {
+    if (behaviour === 'popover' && id === '') {
+      console.warn('Popover Button: Property "id" is empty. Provide a unique non-empty id.')
+    }
+  })
 </script>
 
 
@@ -50,9 +57,7 @@
 >
   <button
     bind:this={ref}
-    id={id !== '' 
-      ? id + '--trigger'
-      : console.warn('Popover Button: Property "id" is empty. Provide a unique non-empty id.')}
+    id={(behaviour === 'popover' && id !== '') ? id + '--trigger' : undefined}
     class='button'
     type='button'
     behaviour={behaviour}
@@ -61,7 +66,7 @@
     aria-checked={behaviour === 'switch' ? isOn : undefined}
     aria-haspopup={behaviour === 'popover' ? true : undefined}
     aria-expanded={behaviour === 'popover' ? isExpanded : undefined}
-    aria-controls={behaviour === 'popover' ? id : undefined}
+    aria-controls={(behaviour === 'popover' && id !== '') ? id : undefined}
     aria-disabled={isDisabled}
     {...$$restProps}
     on:click
@@ -77,12 +82,15 @@
     <slot>{label}</slot>
   </button>
 
-  <!-- TODO: add animation -->
+  <!-- 
+    TODO: add fade in/out animation 
+    Idea: If animation passed, play it on next tick
+  -->
   {#if behaviour === 'popover'}
     <aside 
-      id={id} 
-      class='button-popover' 
-      aria-labelledby={id + '--trigger'}
+      id={(behaviour === 'popover' && id !== '') ? id : undefined}
+      class='button-popover'
+      aria-labelledby={(behaviour === 'popover' && id !== '') ? id + '--trigger' : undefined}
       style='display: {isExpanded ? "block" : "none"}'
     >
       <slot name='popover'>{label}</slot>

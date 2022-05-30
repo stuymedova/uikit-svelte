@@ -32,22 +32,21 @@
   }
 
   onMount(() => {
+    if (range.length !== 2) {
+      console.warn(`Stepper: Array "range" must contain two elements. Currently, it contains ${range.length}`)
+    }
+    if (range[0] >= range[1]) {
+      console.warn(`Stepper: Invalid range. Lower bound value must be smaller than the upper bound value`)
+    }
+    if (value < range[0] || value > range[1]) {
+      console.warn(`Stepper: Value out of range. Value must be within range bounds`)
+    }
+    if (step <= 0) {
+      console.warn(`Stepper: Step must be assigned a non-negative and non-zero value`)
+    }
+
     checkIfValueIsChangeable()
   })
-
-  
-  if (range.length !== 2) {
-    console.warn(`Stepper: Array "range" must contain two elements. Currently, it contains ${range.length}`)
-  }
-  if (range[0] >= range[1]) {
-    console.warn(`Stepper: Invalid range. Lower bound value must be smaller than the upper bound value`)
-  }
-  if (value < range[0] || value > range[1]) {
-    console.warn(`Stepper: Value out of range. Value must be within range bounds`)
-  }
-  if (step <= 0) {
-    console.warn(`Stepper: Step must be assigned a non-negative and non-zero value`)
-  }
 </script>
 
 

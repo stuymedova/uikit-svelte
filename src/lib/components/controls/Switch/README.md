@@ -50,7 +50,6 @@ Use this option to specify if a Switch is in an "on" or "off" state. By default 
 
 You can bind to this value to have changes to the Switch's state be reflected both in the Switch component and any other part of the interface that uses it.
 
-<!-- TODO: consider styling in these examples -->
 ```html
 <script>
   import '@stuymedova/uikit-svelte/styles/lightMode.css'
@@ -58,6 +57,7 @@ You can bind to this value to have changes to the Switch's state be reflected bo
 
   let isSwitchOn = false
 </script>
+
 
 <Switch bind:isOn={isSwitchOn} />
 <p>Switch is {isSwitchOn ? 'On' : 'Off'}</p>

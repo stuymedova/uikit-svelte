@@ -14,7 +14,9 @@
 		width: 100%;
 		padding: 12px 0;
 		display: flex;
-		justify-content: center;
+    flex-direction: column;
+		align-items: center;
+    gap: 12px;
   }
 
   :global(.switch) {
