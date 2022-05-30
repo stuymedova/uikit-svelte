@@ -10,4 +10,4 @@
 @import 'components/controls/Stepper.css';
 @import 'components/controls/Switch.css';
 @import 'components/controls/SegmentedControl.css';
-@import 'components/utilities/VisuallyHidden.css';
+@import 'components/modifiers/VisuallyHidden.css';

@@ -8,9 +8,9 @@ export { SegmentedControl, Segment } from './components/controls/SegmentedContro
 
 // Views
 
-// Utilities
-export { Wrapper } from './components/utilities/Wrapper'
-export { VisuallyHidden } from './components/utilities/VisuallyHidden'
+// Modifiers
+export { Wrapper } from './components/modifiers/Wrapper'
+export { VisuallyHidden } from './components/modifiers/VisuallyHidden'
 
 
 // FUNCTIONS
