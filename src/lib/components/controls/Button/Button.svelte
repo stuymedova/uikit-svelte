@@ -4,7 +4,7 @@
   import { pressOutside } from '$lib'
 
   // TODO: use with SVGs
-  // TODO: for popover buttons, add variations by side (top, left, bottom, right) and alignment (start, end, center)
+  // TODO: for popover button, set variations by side (top, right, bottom, left) and alignment (start, middle, end) automatically depending on whether or not a popover would be in the viewport
   // TODO: popup(https://w3c.github.io/aria-practices/#combobox)/pulldown functionality — ? 
 
   export let label = 'Label'
@@ -13,7 +13,7 @@
   export let isDisabled = false
   
   // Push button
-  export let purpose = undefined // Options: -/primary/cancel/destructive // TODO: test in a dialog component
+  export let purpose = undefined // Options: -/primary/cancel/destructive // TODO: implement and test in a dialog component
   
   // Switch button
   export let isOn = false
@@ -21,6 +21,9 @@
   // Popover button
   export let id = ''
   export let isExpanded = false
+  export let attachmentAnchor = 'bottom' // Options: top/right/bottom/left
+  export let attachmentAlignment = 'start' // Options: start/middle/end // TODO: Accepts numbers from 0 to 100, as well as keywords 'start', 'middle', and 'end', where 'start' is 0, 'middle' is 50, and 'end' is '100'
+  export let shouldDrawCaret = false
   export let shouldCloseOnPressOutside = true
 
   let ref = null
@@ -63,6 +66,8 @@
     behaviour={behaviour}
     purpose={behaviour === 'push' ? purpose : undefined}
     role={behaviour === 'switch' ? 'switch' : undefined}
+    data-attachment-anchor={behaviour === 'popover' ? attachmentAnchor : undefined}
+    data-attachment-alignment={behaviour === 'popover' ? attachmentAlignment : undefined}
     aria-checked={behaviour === 'switch' ? isOn : undefined}
     aria-haspopup={behaviour === 'popover' ? true : undefined}
     aria-expanded={behaviour === 'popover' ? isExpanded : undefined}
@@ -81,12 +86,18 @@
   >
     <slot>{label}</slot>
   </button>
-
+  
   <!-- 
     TODO: add fade in/out animation 
     Idea: If animation passed, play it on next tick
   -->
   {#if behaviour === 'popover'}
+    {#if shouldDrawCaret}
+      <span 
+        class='button-popover-caret'
+        style='display: {isExpanded ? "block" : "none"}'
+      ></span>
+    {/if}
     <aside 
       id={(behaviour === 'popover' && id !== '') ? id : undefined}
       class='button-popover'
