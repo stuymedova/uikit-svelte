@@ -16,6 +16,7 @@
 </div> -->
 
 <!-- Link around block element -->
+<!-- TODO: finish up an example -->
 <div class='link-container'>
   <Link
     destination='https://github.com/stuymedova/uikit-svelte'

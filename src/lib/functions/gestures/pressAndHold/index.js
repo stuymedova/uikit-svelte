@@ -1,24 +1,24 @@
 export function pressAndHold(node, duration = 100) {
   let timer
 
-	const handleMousedown = () => {
+	const onMouseDown = () => {
 		timer = setTimeout(() => {
       node.dispatchEvent(new CustomEvent('pressAndHold'))
     }, duration)
 	}
 
-  const handleMouseup = () => {
+  const onMouseUp = () => {
     clearTimeout(timer)
   }
 	
 	
-	node.addEventListener('mousedown', handleMousedown)
-	node.addEventListener('mouseup', handleMouseup)
+	node.addEventListener('mousedown', onMouseDown)
+	node.addEventListener('mouseup', onMouseUp)
 
 	return {
 		destroy() {
-			node.removeEventListener('mousedown', handleMousedown)
-	    node.removeEventListener('mouseup', handleMouseup)
+			node.removeEventListener('mousedown', onMouseDown)
+	    node.removeEventListener('mouseup', onMouseUp)
 		}
 	}
 }

@@ -1,6 +1,4 @@
 <script>
-  // TODO: consider making adjustments with respect to https://stackoverflow.com/a/56826594/15943057
-
   import { setContext, onMount } from 'svelte'
   import { writable } from 'svelte/store'
 

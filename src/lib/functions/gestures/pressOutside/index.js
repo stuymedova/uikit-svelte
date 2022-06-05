@@ -1,16 +1,16 @@
 export function pressOutside(node) {
-	const handleClick = (event) => {
+	const onClick = (event) => {
 		if (!node.contains(event.target)) {
 			node.dispatchEvent(new CustomEvent('pressOutside'))
 		}
 	}
 	
 	
-	document.addEventListener('click', handleClick, true)
+	document.addEventListener('click', onClick, true)
 
 	return {
 		destroy() {
-			document.removeEventListener('click', handleClick, true)
+			document.removeEventListener('click', onClick, true)
 		}
 	}
 }
