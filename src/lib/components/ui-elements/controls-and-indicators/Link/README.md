@@ -77,4 +77,4 @@ npm install
 npm run dev
 ```
 
-The demo will be available at http://localhost:3000/controls/link. Navigate to `src/routes/controls/link.svelte` to make any changes.
+The demo will be available at http://localhost:3000/ui-elements/controls-and-indicators/link. Navigate to `src/routes/ui-elements/controls-and-indicators/link.svelte` to make any changes.

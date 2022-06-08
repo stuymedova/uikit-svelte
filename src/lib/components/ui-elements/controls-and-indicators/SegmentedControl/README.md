@@ -120,4 +120,4 @@ npm install
 npm run dev
 ```
 
-The demo will be available at http://localhost:3000/controls/segmented-control. Navigate to `src/routes/controls/segmented-control.svelte` to make any changes.
+The demo will be available at http://localhost:3000/ui-elements/controls-and-indicators/segmented-control. Navigate to `src/routes/ui-elements/controls-and-indicators/segmented-control.svelte` to make any changes.

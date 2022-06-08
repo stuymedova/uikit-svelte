@@ -19,7 +19,7 @@ export { VisuallyHidden } from './components/accessibility/VisuallyHidden'
 
 
 // FUNCTIONS
-// 1. Gestures
+// 1. Interactions
 export { pressOutside } from './functions/gestures/pressOutside'
 export { pressAndHold } from './functions/gestures/pressAndHold'
 
