@@ -5,7 +5,7 @@
 .button {
   box-sizing: border-box;
   width: auto;
-  height: auto;
+  height: 44px;
   margin: 0;
   padding: 14px 18px;
   border-radius: 14px;

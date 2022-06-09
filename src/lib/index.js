@@ -11,6 +11,7 @@ export { SegmentedControl, Segment } from './components/ui-elements/controls-and
 
 // 1.3 Utilities
 export { Wrapper } from './components/ui-elements/utilities/Wrapper'
+export { ConditionalWrapper } from './components/ui-elements/utilities/ConditionalWrapper'
 
 // 2. Layout
 
@@ -19,8 +20,9 @@ export { VisuallyHidden } from './components/accessibility/VisuallyHidden'
 
 
 // FUNCTIONS
-// 1. Interactions
+// 1. Gestures
+export { longPress } from './functions/gestures/longPress'
 export { pressOutside } from './functions/gestures/pressOutside'
-export { pressAndHold } from './functions/gestures/pressAndHold'
 
 // 2. Utilities
+export { actionsToApply } from './functions/utilities/actionsToApply'

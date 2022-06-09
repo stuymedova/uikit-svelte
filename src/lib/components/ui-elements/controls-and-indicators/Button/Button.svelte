@@ -1,11 +1,7 @@
 <script>
   import { onMount } from 'svelte'
-  import { Wrapper } from '$lib'
+  import { ConditionalWrapper } from '$lib'
   import { pressOutside } from '$lib'
-
-  // TODO: use with SVGs
-  // TODO: for popover button, set variations by side (top, right, bottom, left) and alignment (start, middle, end) automatically depending on whether or not a popover would be in the viewport
-  // TODO: popup(https://w3c.github.io/aria-practices/#combobox)/pulldown functionality — ? 
 
   export let label = 'Label'
   // export let appearance = 'gray' // Options: gray/… (Extend: plain/contoured/filled) // TODO: accent/vibrant/call-to-action button — ?
@@ -22,7 +18,7 @@
   export let id = ''
   export let isExpanded = false
   export let attachmentAnchor = 'bottom' // Options: top/right/bottom/left
-  export let attachmentAlignment = 'start' // Options: start/middle/end // TODO: Accepts numbers from 0 to 100, as well as keywords 'start', 'middle', and 'end', where 'start' is 0, 'middle' is 50, and 'end' is '100'
+  export let attachmentAlignment = 'start' // Options: start/middle/end
   export let shouldDrawCaret = false
   export let shouldCloseOnPressOutside = true
 
@@ -48,9 +44,9 @@
   }}'
 />
 
-<Wrapper 
+<ConditionalWrapper 
   predicate={behaviour === 'popover'} 
-  action={pressOutside}
+  actions={[{ action: pressOutside }]}
   on:pressOutside={() => {
     if (shouldCloseOnPressOutside && isExpanded) {
       isExpanded = false
@@ -107,4 +103,4 @@
       <slot name='popover'>{label}</slot>
     </aside>
   {/if}
-</Wrapper>
+</ConditionalWrapper>

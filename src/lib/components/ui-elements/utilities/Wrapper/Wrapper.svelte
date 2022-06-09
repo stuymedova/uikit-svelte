@@ -1,25 +1,18 @@
 <script>
-  // TODO: step away from "Conditional Wrapper" role, make it universal
-  // so it can be used in various scenarios
+  import { actionsToApply } from '$lib'
 
-  export let predicate = true
   export let htmlTag = 'div'
-
-  export let action = () => {}
-  export let actionParameters = undefined
+  export let actions = null
 </script>
 
 
-{#if predicate}
-  <svelte:element 
-    this={htmlTag} 
-    {...$$restProps} 
-    use:action={actionParameters} 
-    on:pressOutside
-    on:pressAndHold
-  >
-    <slot />
-  </svelte:element>
-{:else}
+<svelte:element 
+  this={htmlTag}
+  class='wrapper'
+  use:actionsToApply={actions}
+  {...$$restProps}
+  on:longPress
+  on:pressOutside
+>
   <slot />
-{/if}
+</svelte:element>

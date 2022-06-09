@@ -1,9 +1,9 @@
-export function pressAndHold(node, duration = 100) {
+export function longPress(node, duration = 100) {
   let timer
 
 	const onMouseDown = () => {
 		timer = setTimeout(() => {
-      node.dispatchEvent(new CustomEvent('pressAndHold'))
+      node.dispatchEvent(new CustomEvent('longPress'))
     }, duration)
 	}
 
