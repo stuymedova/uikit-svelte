@@ -50,8 +50,4 @@
   p {
     margin-bottom: 12px;
   }
-
-  :global(.button) {
-    outline: none;
-  }
 </style>

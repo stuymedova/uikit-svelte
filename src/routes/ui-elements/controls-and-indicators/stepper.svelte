@@ -18,8 +18,4 @@
 		align-items: center;
     gap: 12px;
   }
-
-  :global(.stepper) {
-    outline: none;
-  }
 </style>

@@ -1,3 +1,7 @@
+*:not(:focus-visible) {
+  outline: none;
+}
+
 body {
 	font-style: normal;
   font: var(--textstyle-callout);

@@ -21,8 +21,4 @@
 		align-items: center;
     gap: 12px;
   }
-
-  :global(.segmented-control-item) {
-    outline: none;
-  }
 </style>

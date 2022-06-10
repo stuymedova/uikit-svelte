@@ -1,12 +1,12 @@
 <script>
 	import '$lib/styles/lightMode.css'
-  import { Link } from '$lib'
+  import { Wrapper, Link } from '$lib'
   import picture from '$lib/assets/spring.jpg';
 </script>
 
 
 <!-- Link around inline element -->
-<!-- <div class='link-container'>
+<!-- <div class='component-wrapper'>
   <Link 
     destination='https://github.com/stuymedova/uikit-svelte'
     shouldBeOpenedInNewTab={true}
@@ -17,35 +17,31 @@
 
 <!-- Link around block element -->
 <!-- TODO: finish up an example -->
-<div class='link-container'>
+<Wrapper class='component-wrapper'>
   <Link
     destination='https://github.com/stuymedova/uikit-svelte'
     shouldBeOpenedInNewTab={true}
     isInline={false}
   >
-    <div>
-      <img src={picture} alt='A tree blooming in spring' />
-      <div>
+    <Wrapper class='card-wrapper'>
+      <img src={picture} alt='A tree blooming in late spring' />
+      <Wrapper class='card-caption-wrapper'>
         <p>Lorem ipsum</p>
         <p>Turpis egestas pretium aenean pharetra magna. Cum sociis natoque penatibus et magnis dis parturient. Enim sed faucibus turpis in eu mi.</p>
-      </div>
-    </div>
+      </Wrapper>
+    </Wrapper>
   </Link>
-</div>
+</Wrapper>
 
 
 <style>
-  .link-container {
+  :global(.component-wrapper) {
 		width: 100%;
 		padding-top: 12px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
     gap: 12px;
-  }
-
-  :global(.link) {
-    outline: none;
   }
 
   img {
