@@ -1,11 +1,10 @@
-/* COMPONENTS */
 /* 1. UI Elements */
 /* 1.1. Controls and Indicators */
-@import 'components/controls-and-indicators/Button.css';
-@import 'components/controls-and-indicators/Link.css';
-@import 'components/controls-and-indicators/Stepper.css';
-@import 'components/controls-and-indicators/Switch.css';
-@import 'components/controls-and-indicators/SegmentedControl.css';
+@import 'ui-elements/controls-and-indicators/Button.css';
+@import 'ui-elements/controls-and-indicators/Link.css';
+@import 'ui-elements/controls-and-indicators/Stepper.css';
+@import 'ui-elements/controls-and-indicators/Switch.css';
+@import 'ui-elements/controls-and-indicators/SegmentedControl.css';
 
 /* 1.2 Presentation */
 
@@ -14,4 +13,4 @@
 /* 2. Layout */
 
 /* 3. Accessibility */
-@import 'components/accessibility/VisuallyHidden.css';
+@import 'accessibility/VisuallyHidden.css';
