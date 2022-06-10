@@ -4,15 +4,4 @@
 @import 'site/reset.css';
 @import 'site/base.css';
 
-/* COMPONENTS */
-/* Controls */
-@import 'components/controls/Button.css';
-@import 'components/controls/Link.css';
-@import 'components/controls/Stepper.css';
-@import 'components/controls/Switch.css';
-@import 'components/controls/SegmentedControl.css';
-
-/* Views */
-
-/* Modifiers */
-@import 'components/modifiers/VisuallyHidden.css';
+@import 'components/index.css'
