@@ -45,14 +45,14 @@
 />
 
 <ConditionalWrapper 
+  class='popover-button-wrapper'
   predicate={behaviour === 'popover'} 
-  actions={[{ action: pressOutside }]}
+  useActions={[{ action: pressOutside }]}
   on:pressOutside={() => {
     if (shouldCloseOnPressOutside && isExpanded) {
       isExpanded = false
     }
   }}
-  class='popover-button-wrapper'
 >
   <button
     bind:this={ref}

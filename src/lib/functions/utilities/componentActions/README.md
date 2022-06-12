@@ -1,0 +1,1 @@
+<!-- Actions can only be applied to DOM elements, not to components. This utility is used to bypass this limitation. -->
