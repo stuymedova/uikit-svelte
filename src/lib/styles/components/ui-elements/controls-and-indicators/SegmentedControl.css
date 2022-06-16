@@ -14,7 +14,7 @@
 }
 .segmented-control[aria-orientation='vertical'] {
   width: 79px;
-  height: 88px;
+  height: 84px;
   flex-direction: column;
 }
 
@@ -37,7 +37,7 @@
   transition: height 300ms, transform 300ms;
 }
 
-.segmented-control .segmented-control-item {
+.segmented-control .segment {
 	font: inherit;
 	line-height: inherit;
 	overflow: visible;
@@ -68,11 +68,11 @@
   background-color: transparent;
   cursor: pointer;
 }
-.segmented-control .segmented-control-item[aria-selected='true'] {
+.segmented-control .segment[aria-selected='true'] {
   color: var(--color-accent);
   cursor: default;
 }
-.segmented-control .segmented-control-item[aria-disabled='true'] {
+.segmented-control .segment[aria-disabled='true'] {
   color: var(--color-text-disabled);
   cursor: default;
 }

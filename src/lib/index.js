@@ -8,6 +8,7 @@ export { Switch } from './components/ui-elements/controls-and-indicators/Switch'
 export { SegmentedControl, Segment } from './components/ui-elements/controls-and-indicators/SegmentedControl'
 
 // 1.2 Presentation
+export { TabView, TabList, Tab, TabPanel, TabContent  } from './components/ui-elements/presentation/TabView'
 
 // 1.3 Utilities
 export { Wrapper } from './components/ui-elements/utilities/Wrapper'

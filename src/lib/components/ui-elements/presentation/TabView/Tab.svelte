@@ -5,45 +5,36 @@
   export let isDisabled = false
 
   let ref = null
-  let length = 0
-  let offset = 0
 
-  const ctx = getContext('SegmentedControl')
+  const ctx = getContext('TabView')
   const orientation = ctx.orientation
-  const index = ctx.setIndex()
-  const focusedSegmentIndex = ctx.focusedSegmentIndex
-  const selectedSegmentIndex = ctx.selectedSegmentIndex
+  const index = ctx.setTabIndex()
+  const focusedTabIndex = ctx.focusedTabIndex
+  const selectedTabIndex = ctx.selectedTabIndex
   
-  $: isFocused = $focusedSegmentIndex === index
+  $: isFocused = $focusedTabIndex === index
   $: if (isFocused) { ref?.focus() }
-  $: isSelected = $selectedSegmentIndex === index
+  $: isSelected = $selectedTabIndex === index
   
   onMount(() => {
-    if (orientation === 'horizontal') {
-      length = Math.round(ref.clientWidth) 
-      offset = Math.round(ref.offsetLeft) 
-    } else if (orientation === 'vertical') {
-      length = Math.round(ref.clientHeight) 
-      offset = Math.round(ref.offsetTop) 
-    }
-    
-    ctx.addSegment({ index, isDisabled, length, offset })
+    ctx.addTab({ index, isDisabled })
   })
 </script>
 
 
 <button 
   bind:this={ref}
-  class='segment'
+  class='tab'
   type='button'
   role='tab'
   aria-selected={isSelected && !isDisabled}
+  aria-controls=''
   aria-disabled={isDisabled}
   tabindex={isSelected ? '0' : '-1'}
   {...$$restProps}
   on:click
   on:click|preventDefault={() => { 
-    if (index !== $selectedSegmentIndex && !isDisabled) {
+    if (index !== $selectedTabIndex && !isDisabled) {
       ctx.setSelected(index)
     }
     ref.focus()

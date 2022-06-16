@@ -1,0 +1,14 @@
+.tab-view .tab-panel {
+  position: relative;
+}
+
+.tab-view .tab-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.tab-view .tab-content.selected {
+  opacity: 1;
+}
