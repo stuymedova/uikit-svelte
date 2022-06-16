@@ -1,15 +1,13 @@
 /* 1. UI Elements */
-/* 1.1. Controls and Indicators */
-@import 'ui-elements/controls-and-indicators/Button.css';
-@import 'ui-elements/controls-and-indicators/Link.css';
-@import 'ui-elements/controls-and-indicators/Stepper.css';
-@import 'ui-elements/controls-and-indicators/Switch.css';
-@import 'ui-elements/controls-and-indicators/SegmentedControl.css';
+/* 1.1. Controls */
+@import 'ui-elements/controls/Button.css';
+@import 'ui-elements/controls/Link.css';
+@import 'ui-elements/controls/Stepper.css';
+@import 'ui-elements/controls/Switch.css';
+@import 'ui-elements/controls/SegmentedControl.css';
+@import 'ui-elements/controls/TabView.css';
 
-/* 1.2 Presentation */
-@import 'ui-elements/presentation/TabView.css';
-
-/* 1.3 Utilities */
+/* 1.2 Utilities */
 
 /* 2. Layout */
 
