@@ -7,6 +7,7 @@
   // export let appearance = 'gray' // Options: gray/… (Extend: plain/contoured/filled) // TODO: accent/vibrant/call-to-action button — ?
   export let behaviour = 'push' // Options: push/switch/popover
   export let isDisabled = false
+  export let isSelected = undefined // Provided for external use
   
   // Push button
   export let purpose = undefined // Options: -/primary/cancel/destructive // TODO: implement and test in a dialog component
@@ -22,7 +23,15 @@
   export let shouldDrawCaret = false
   export let shouldCloseOnPressOutside = true
 
-  let ref = null
+  export let buttonRef = null
+
+  const restPropsExcludingClass = (props = $$restProps) => {
+    return Object.fromEntries(
+      Object.entries(props).filter(
+        ([ key, value ]) => key !== 'class'
+      )
+    )
+  }
 
   onMount(() => {
     if (behaviour === 'popover' && id === '') {
@@ -31,6 +40,11 @@
   })
 </script>
 
+
+<!-- 
+  Adds getters and setters for the component's props 
+-->
+<svelte:options accessors={true} />
 
 <!-- 
   Used only if button behaviour is set to "popover". 
@@ -55,9 +69,9 @@
   }}
 >
   <button
-    bind:this={ref}
+    bind:this={buttonRef}
     id={(behaviour === 'popover' && id !== '') ? id + '--trigger' : undefined}
-    class='button'
+    class='button {$$restProps.class}'
     type='button'
     behaviour={behaviour}
     purpose={behaviour === 'push' ? purpose : undefined}
@@ -69,7 +83,8 @@
     aria-expanded={behaviour === 'popover' ? isExpanded : undefined}
     aria-controls={(behaviour === 'popover' && id !== '') ? id : undefined}
     aria-disabled={isDisabled}
-    {...$$restProps}
+    aria-selected={isSelected}
+    {...restPropsExcludingClass()}
     on:click
     on:click|preventDefault={() => {
       if (behaviour === 'switch' && !isDisabled) {
@@ -77,8 +92,9 @@
       } else if (behaviour === 'popover' && !isDisabled) {
         isExpanded = !isExpanded
       }
-      ref.focus()
+      buttonRef.focus()
     }}
+    on:keydown
   >
     <slot>{label}</slot>
   </button>

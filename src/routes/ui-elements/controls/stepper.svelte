@@ -4,13 +4,13 @@
 </script>
 
 
-<div class='stepper-container'>
+<div class='component-wrapper'>
   <Stepper label='Optional Label' />
 </div>
 
 
 <style>
-  .stepper-container {
+  .component-wrapper {
 		width: 100%;
 		padding: 12px 0;
 		display: flex;

@@ -1,26 +1,26 @@
 <script>
 	import '$lib/styles/lightMode.css'
-  import { TabView, TabList, Tab, TabPanel, TabContent } from '$lib'
+  import { TabView, TabbedControl, Tab, TabPane, TabContent } from '$lib'
 </script>
 
 
-<div class='tab-view-container'>
+<div class='component-wrapper'>
   <TabView>
-    <TabList>
+    <TabbedControl>
       <Tab>First</Tab>
       <Tab>Second</Tab>
-    </TabList>
+    </TabbedControl>
 
-    <TabPanel>
+    <TabPane>
       <TabContent>First tab's content</TabContent>
       <TabContent>Second tab's content</TabContent>
-    </TabPanel>
+    </TabPane>
   </TabView>
 </div>
 
 
 <style>
-  .tab-view-container {
+  .component-wrapper {
 		width: 100%;
 		padding-top: 12px;
 		display: flex;

@@ -4,13 +4,13 @@
 </script>
 
 
-<div class='switch-container'>
+<div class='component-wrapper'>
   <Switch label='Optional Label' />
 </div>
 
 
 <style>
-  .switch-container {
+  .component-wrapper {
 		width: 100%;
 		padding: 12px 0;
 		display: flex;

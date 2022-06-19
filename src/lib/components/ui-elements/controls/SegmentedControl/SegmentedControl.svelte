@@ -33,11 +33,11 @@
       }
       segments = [...segments, { index, isDisabled, length, offset }]
     },
-    setSelected: (nextIndex) => {
-      if (nextIndex >= 0 && nextIndex < segments.length) {
-        $focusedSegmentIndex = nextIndex
+    setSelected: (segmentIndex) => {
+      if (segmentIndex >= 0 && segmentIndex < segments.length) {
+        $focusedSegmentIndex = segmentIndex
 
-        if (!segments[nextIndex].isDisabled) {
+        if (!segments[segmentIndex].isDisabled) {
           $selectedSegmentIndex = $focusedSegmentIndex
 
           backgroundLength = segments[$selectedSegmentIndex].length

@@ -4,16 +4,16 @@
 </script>
 
 
-<div class='segmented-control-container'>
+<div class='component-wrapper'>
   <SegmentedControl>
-    <Segment id='first'>First</Segment>
-    <Segment id='second'>Second</Segment>
+    <Segment>First</Segment>
+    <Segment>Second</Segment>
   </SegmentedControl>
 </div>
 
 
 <style>
-  .segmented-control-container {
+  .component-wrapper {
 		width: 100%;
 		padding-top: 12px;
 		display: flex;

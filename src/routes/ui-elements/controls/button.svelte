@@ -5,17 +5,17 @@
 
 
 <div class='content-wrapper'>
-  <div class='button-container'>
+  <div class='component-wrapper'>
     <p>Push button</p>
     <Button>Label</Button>
   </div>
 
-  <div class='button-container'>
+  <div class='component-wrapper'>
     <p>Switch button</p>
     <Button behaviour='switch'>Label</Button>
   </div>
 
-  <div class='button-container'>
+  <div class='component-wrapper'>
     <p>Popover button</p>
     
     <!-- TODO: note in documentation that an id needs to be specified per component once, the button will have an id posfixed by '--trigger' and a popover will have an id unchanged -->
@@ -41,7 +41,7 @@
     gap: 12px;
   }
 
-  .button-container {
+  .component-wrapper {
     display: flex;
     flex-direction: column;
 		align-items: center;

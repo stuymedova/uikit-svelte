@@ -1,10 +1,11 @@
 <script>
   import { getContext, onMount } from 'svelte'
+  import { Button } from '$lib'
 
   export let label = 'Label'
   export let isDisabled = false
 
-  let ref = null
+  let segmentRef = null
   let length = 0
   let offset = 0
 
@@ -15,16 +16,16 @@
   const selectedSegmentIndex = ctx.selectedSegmentIndex
   
   $: isFocused = $focusedSegmentIndex === index
-  $: if (isFocused) { ref?.focus() }
+  $: if (isFocused) { segmentRef?.buttonRef.focus() }
   $: isSelected = $selectedSegmentIndex === index
   
   onMount(() => {
     if (orientation === 'horizontal') {
-      length = Math.round(ref.clientWidth) 
-      offset = Math.round(ref.offsetLeft) 
+      length = Math.round(segmentRef?.buttonRef.clientWidth) 
+      offset = Math.round(segmentRef?.buttonRef.offsetLeft) 
     } else if (orientation === 'vertical') {
-      length = Math.round(ref.clientHeight) 
-      offset = Math.round(ref.offsetTop) 
+      length = Math.round(segmentRef?.buttonRef.clientHeight) 
+      offset = Math.round(segmentRef?.buttonRef.offsetTop) 
     }
     
     ctx.addSegment({ index, isDisabled, length, offset })
@@ -32,28 +33,20 @@
 </script>
 
 
-<button 
-  bind:this={ref}
+<Button
+  bind:this={segmentRef}
   class='segment'
-  type='button'
   role='tab'
-  aria-selected={isSelected && !isDisabled}
-  aria-disabled={isDisabled}
+  isSelected={isSelected}
+  isDisabled={isDisabled}
   tabindex={isSelected ? '0' : '-1'}
   {...$$restProps}
   on:click
-  on:click|preventDefault={() => { 
+  on:click={() => { 
     if (index !== $selectedSegmentIndex && !isDisabled) {
       ctx.setSelected(index)
     }
-    ref.focus()
   }}
-  on:mouseover
-  on:focus
-  on:mouseout
-  on:blur
-  on:mouseenter
-  on:mouseleave
   on:keydown
   on:keydown='{({ key }) => {
     if (orientation === 'horizontal' && key === 'ArrowRight' || 
@@ -67,4 +60,4 @@
   }}'
 >
   <slot>{label}</slot>
-</button>
+</Button>

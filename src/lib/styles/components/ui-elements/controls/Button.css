@@ -9,7 +9,7 @@
   margin: 0;
   padding: 14px 18px;
   border-radius: 14px;
-  transition: color 300ms, background-color 100ms;
+  transition: color 275ms, background-color 100ms;
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
   color: var(--color-text-primary);
