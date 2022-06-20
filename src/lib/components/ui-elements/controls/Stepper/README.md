@@ -8,7 +8,7 @@ Stepper is a control that increments and decrements a value within specified ran
 
 Include component on a webpage by adding 
 ```js
-import '@stuymedova/uikit-svelte/styles/lightMode.css' // Optional, alternatively use darkMode.css or a custom stylesheet
+import '@stuymedova/uikit-svelte/styles/SystemDisplay/lightMode.css' // Optional, alternatively use darkMode.css or a custom stylesheet
 import { Stepper } from '@stuymedova/uikit-svelte'
 ```
 within the `script` tag of a Svelte file. You can further use the component as such:
@@ -69,7 +69,7 @@ You can bind to this value to have changes be reflected both in the Stepper comp
 
 ```html
 <script>
-  import '@stuymedova/uikit-svelte/styles/lightMode.css'
+  import '@stuymedova/uikit-svelte/styles/SystemDisplay/lightMode.css'
   import { Stepper } from '@stuymedova/uikit-svelte'
 
   let stepperValue = 10

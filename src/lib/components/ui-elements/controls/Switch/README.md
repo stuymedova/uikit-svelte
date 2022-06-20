@@ -8,7 +8,7 @@ A control that toggles between on and off states.
 
 Include component on a webpage by adding 
 ```js
-import '@stuymedova/uikit-svelte/styles/lightMode.css' // Optional, alternatively use darkMode.css or a custom stylesheet
+import '@stuymedova/uikit-svelte/styles/SystemDisplay/lightMode.css' // Optional, alternatively use darkMode.css or a custom stylesheet
 import { Switch } from '@stuymedova/uikit-svelte'
 ```
 within the `script` tag of a Svelte file. You can further use the component as such:
@@ -52,7 +52,7 @@ You can bind to this value to have changes to the Switch's state be reflected bo
 
 ```html
 <script>
-  import '@stuymedova/uikit-svelte/styles/lightMode.css'
+  import '@stuymedova/uikit-svelte/styles/SystemDisplay/lightMode.css'
   import { Switch } from '@stuymedova/uikit-svelte'
 
   let isSwitchOn = false

@@ -1,5 +1,5 @@
 <script>
-	import '$lib/styles/lightMode.css'
+	import '$lib/styles/SystemDisplay/lightMode.css'
   import { TabView, TabbedControl, Tab, TabPane, TabContent } from '$lib'
 </script>
 
