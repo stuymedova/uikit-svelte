@@ -1,5 +1,7 @@
 # Segmented Control
 
+<!-- TODO: note about the way component is composed and how to customize styling -->
+
 Segmented control is a set of two or more segments, each of which functions as a mutually exclusive button. It features a background, which can be animated with a sliding effect.
 
 <img width="1153" alt="Segmented Control component demonstration" src="https://user-images.githubusercontent.com/53351370/150729107-af17b189-4b81-42ec-8fda-985699180c8e.png">

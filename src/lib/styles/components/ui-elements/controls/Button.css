@@ -8,6 +8,7 @@
   height: 44px;
   margin: 0;
   padding: 14px 18px;
+  text-align: center;
   border-radius: 14px;
   transition: color 275ms, background-color 100ms;
   -webkit-backdrop-filter: blur(14px);
@@ -23,6 +24,11 @@
 
 .button[aria-disabled='true'] {
   color: var(--color-text-disabled);
+  cursor: default;
+}
+/* aria-selected is provided for external use */
+.button[aria-selected='true'] {
+  color: var(--color-accent);
   cursor: default;
 }
 

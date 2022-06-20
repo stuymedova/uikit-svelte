@@ -18,7 +18,7 @@
   flex-direction: column;
 }
 
-.segmented-control .segmented-control-background {
+.segmented-control-background {
   position: absolute;
   width: auto;
   height: 40px;
@@ -39,21 +39,13 @@
   transition: height 300ms, transform 300ms;
 }
 
-.segmented-control .segment {
+.segment {
   position: relative;
-  box-sizing: border-box;
   width: 75px;
   height: 40px;
-  margin: 0;
   padding: 12px;
-  border: 0;
   border-radius: 12px;
   z-index: 2;
-
-  font-family: sans-serif;
-  font-size: 14px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   
   text-align: center;
   white-space: nowrap;
@@ -61,17 +53,8 @@
   text-overflow: ellipsis;
   
   color: var(--color-text-primary);
-  transition: color 275ms;
   -webkit-backdrop-filter: none;
   backdrop-filter: none;
   background-color: transparent;
   cursor: pointer;
-}
-.segmented-control .segment[aria-selected='true'] {
-  color: var(--color-accent);
-  cursor: default;
-}
-.segmented-control .segment[aria-disabled='true'] {
-  color: var(--color-text-disabled);
-  cursor: default;
 }

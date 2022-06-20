@@ -5,6 +5,8 @@
 body {
 	font-style: normal;
   font: var(--textstyle-callout);
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   word-wrap: break-word;
   
   background-color: var(--color-primary);
