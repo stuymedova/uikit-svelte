@@ -1,14 +1,20 @@
-.tab-view .tab-panel {
+.tab-pane {
   position: relative;
+  margin-top: 10px;
 }
 
-.tab-view .tab-content {
+.tab-content {
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
 }
 
-.tab-view .tab-content.selected {
+.tab-content.selected {
   opacity: 1;
+}
+
+/* TODO: requires improvement */
+.tab-view .segmented-control-background {
+  display: none;
 }

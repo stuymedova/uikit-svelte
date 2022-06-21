@@ -39,7 +39,7 @@
   transition: height 300ms, transform 300ms;
 }
 
-.segmented-control > .segment {
+.segment {
   position: relative;
   width: 75px;
   height: 40px;

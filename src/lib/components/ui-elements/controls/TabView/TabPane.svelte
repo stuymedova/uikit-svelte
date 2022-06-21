@@ -1,3 +1,3 @@
-<div class='tab-panel'>
+<div class='tab-pane'>
   <slot />
 </div>

@@ -1,15 +1,13 @@
 <script>
-  import { getContext, onMount } from 'svelte'
+  import { getContext } from 'svelte'
 
-  const ctx = getContext('TabView')
-  const index = ctx.setTabContentIndex()
-  const selectedTabIndex = ctx.selectedTabIndex
+  const context = getContext('TabView')
+  const index = context.setTabContentIndex()
+  const selectedTabIndex = context.selectedTabIndex
   
   $: isSelected = $selectedTabIndex === index
   
-  onMount(() => {
-    ctx.addTabContent({ index })
-  })
+  context.addTabContent({ index })
 </script>
 
 
