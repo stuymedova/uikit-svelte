@@ -4,6 +4,7 @@
 
   export let selectedIndex = 0
   export let orientation = 'horizontal' // Options: horizontal/vertical
+  export let topLevelClassName = 'segmented-control'
   
   let focusedSegmentIndex = writable(selectedIndex)
   let selectedSegmentIndex = writable(selectedIndex) // Selected Segment is one that is focused and not disabled
@@ -15,6 +16,7 @@
   $: selectedIndex = $selectedSegmentIndex
 
   setContext('SegmentedControl', {
+    topLevelClassName,
     orientation,
     focusedSegmentIndex,
     selectedSegmentIndex,
@@ -60,7 +62,7 @@
 
 
 <div 
-  class='segmented-control' 
+  class={topLevelClassName} 
   role='tablist'
   aria-orientation={orientation}
   {...$$restProps}
@@ -74,7 +76,7 @@
 >
   <slot />
   <div 
-    class='segmented-control-background' 
+    class='{topLevelClassName}-background' 
     role='presentation' 
     style='
       {orientation === 'vertical' ? 'height' : 'width'}: {backgroundLength}px; 

@@ -13,8 +13,3 @@
 .tab-content.selected {
   opacity: 1;
 }
-
-/* TODO: requires improvement */
-.tab-view .segmented-control-background {
-  display: none;
-}

@@ -10,6 +10,7 @@
   let offset = 0
 
   const context = getContext('SegmentedControl')
+  const topLevelClassName = context.topLevelClassName
   const orientation = context.orientation
   const index = context.setIndex()
   const focusedSegmentIndex = context.focusedSegmentIndex
@@ -35,7 +36,7 @@
 
 <Button
   bind:this={segmentRef}
-  class='segment'
+  class='{topLevelClassName}-item'
   role='tab'
   isSelected={isSelected}
   isDisabled={isDisabled}

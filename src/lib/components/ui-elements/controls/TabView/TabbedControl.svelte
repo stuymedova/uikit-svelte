@@ -12,8 +12,8 @@
 
 <SegmentedControl
   bind:selectedIndex={$selectedTabIndex}
+  topLevelClassName='tabbed-control'
   orientation={orientation}
-  class='tab-list'
   role='tablist'
 >
   <slot />

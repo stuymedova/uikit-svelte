@@ -12,6 +12,8 @@ Description, link to Figma
 
 **Development**
 
+Optimized for usability.
+
 Description
 
 ## Component Library

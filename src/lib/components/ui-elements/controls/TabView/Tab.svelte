@@ -8,7 +8,6 @@
 
 
 <Segment
-  class='tab'
   role='tab'
   aria-controls=''
   isDisabled={isDisabled}
