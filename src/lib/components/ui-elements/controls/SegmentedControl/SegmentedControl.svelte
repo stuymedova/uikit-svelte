@@ -5,6 +5,7 @@
   export let selectedIndex = 0
   export let orientation = 'horizontal' // Options: horizontal/vertical
   export let topLevelClassName = 'segmented-control'
+  export let isBackgroundAnimated = true
   
   let focusedSegmentIndex = writable(selectedIndex)
   let selectedSegmentIndex = writable(selectedIndex) // Selected Segment is one that is focused and not disabled
@@ -17,6 +18,7 @@
 
   setContext('SegmentedControl', {
     topLevelClassName,
+    isBackgroundAnimated,
     orientation,
     focusedSegmentIndex,
     selectedSegmentIndex,
@@ -24,16 +26,23 @@
       indexesIterator += 1
       return indexesIterator
     },
-    addSegment: ({ index, isDisabled, length, offset }) => {
+    addSegment: ({ index, isDisabled, length = undefined, offset = undefined }) => {
       if (index === $selectedSegmentIndex) {
         if (isDisabled) {
           console.warn('Segmented Control: Avoid initially selecting a disabled Segment.')
         }
 
-        backgroundLength = length
-        backgroundOffset = offset
+        if (isBackgroundAnimated) {
+          backgroundLength = length
+          backgroundOffset = offset
+        }
       }
-      segments = [...segments, { index, isDisabled, length, offset }]
+
+      if (isBackgroundAnimated) {
+        segments = [...segments, { index, isDisabled, length, offset }]
+      } else {
+        segments = [...segments, { index, isDisabled }]
+      }
     },
     setSelected: (segmentIndex) => {
       if (segmentIndex >= 0 && segmentIndex < segments.length) {
@@ -42,8 +51,10 @@
         if (!segments[segmentIndex].isDisabled) {
           $selectedSegmentIndex = $focusedSegmentIndex
 
-          backgroundLength = segments[$selectedSegmentIndex].length
-          backgroundOffset = segments[$selectedSegmentIndex].offset
+          if (isBackgroundAnimated) {
+            backgroundLength = segments[$selectedSegmentIndex].length
+            backgroundOffset = segments[$selectedSegmentIndex].offset
+          }
         }
       }
     }
@@ -75,11 +86,14 @@
   on:blur
 >
   <slot />
-  <div 
-    class='{topLevelClassName}-background' 
-    role='presentation' 
-    style='
-      {orientation === 'vertical' ? 'height' : 'width'}: {backgroundLength}px; 
-      transform: translate{orientation === 'vertical' ? 'Y' : 'X'}({backgroundOffset}px)'
-  ></div>
+
+  {#if isBackgroundAnimated}
+    <div 
+      class='{topLevelClassName}-background' 
+      role='presentation' 
+      style='
+        {orientation === 'vertical' ? 'height' : 'width'}: {backgroundLength}px; 
+        transform: translate{orientation === 'vertical' ? 'Y' : 'X'}({backgroundOffset}px)'
+    ></div>
+  {/if}
 </div>

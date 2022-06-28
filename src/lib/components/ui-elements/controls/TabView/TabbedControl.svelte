@@ -2,9 +2,11 @@
   import { getContext } from 'svelte'
   import { SegmentedControl } from '$lib'
 
+  export let orientation = 'horizontal' // Options: horizontal/vertical
+  export let isBackgroundAnimated = false
+
   const context = getContext('TabView')
   let selectedTabIndex = context.selectedTabIndex
-  let orientation = context.orientation
 
   $: context.setSelected($selectedTabIndex)
 </script>
@@ -14,6 +16,7 @@
   bind:selectedIndex={$selectedTabIndex}
   topLevelClassName='tabbed-control'
   orientation={orientation}
+  isBackgroundAnimated={isBackgroundAnimated}
   role='tablist'
 >
   <slot />

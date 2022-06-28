@@ -15,21 +15,28 @@
   const index = context.setIndex()
   const focusedSegmentIndex = context.focusedSegmentIndex
   const selectedSegmentIndex = context.selectedSegmentIndex
+  const isBackgroundAnimated = context.isBackgroundAnimated
   
   $: isFocused = $focusedSegmentIndex === index
   $: if (isFocused) { segmentRef?.buttonRef.focus() }
   $: isSelected = $selectedSegmentIndex === index
-  
+
+  if (!isBackgroundAnimated) {
+    context.addSegment({ index, isDisabled })
+  }
+
   onMount(() => {
-    if (orientation === 'horizontal') {
-      length = Math.round(segmentRef?.buttonRef.clientWidth) 
-      offset = Math.round(segmentRef?.buttonRef.offsetLeft) 
-    } else if (orientation === 'vertical') {
-      length = Math.round(segmentRef?.buttonRef.clientHeight) 
-      offset = Math.round(segmentRef?.buttonRef.offsetTop) 
+    if (isBackgroundAnimated) {
+      if (orientation === 'horizontal') {
+        length = Math.round(segmentRef?.buttonRef.clientWidth) 
+        offset = Math.round(segmentRef?.buttonRef.offsetLeft) 
+      } else if (orientation === 'vertical') {
+        length = Math.round(segmentRef?.buttonRef.clientHeight) 
+        offset = Math.round(segmentRef?.buttonRef.offsetTop) 
+      }
+
+      context.addSegment({ index, isDisabled, length, offset })
     }
-    
-    context.addSegment({ index, isDisabled, length, offset })
   })
 </script>
 

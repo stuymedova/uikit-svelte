@@ -3,7 +3,6 @@
   import { writable } from 'svelte/store'
 
   export let selectedIndex = 0 // TODO: "value out of range" error if such passed
-  export let orientation = 'horizontal' // Options: horizontal/vertical
 
   // Needs to be a store in order for a child to update it
   let selectedTabIndex = writable(selectedIndex)
@@ -12,7 +11,6 @@
 
   setContext('TabView', {
     selectedTabIndex,
-    orientation,
     setTabContentIndex: () => {
       tabContentsIndexesIterator += 1
       return tabContentsIndexesIterator
@@ -31,7 +29,6 @@
 <div 
   class='tab-view' 
   role='tablist'
-  aria-orientation={orientation}
   {...$$restProps}
   on:click
   on:mouseover
