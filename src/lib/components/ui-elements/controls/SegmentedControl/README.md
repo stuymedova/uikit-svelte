@@ -1,6 +1,8 @@
 # Segmented Control
 
-<!-- TODO: note about the way component is composed and how to customize styling -->
+*Composition type: complex*
+
+<!-- TODO: Remove the "mutially exclusive" part? -->
 
 Segmented control is a set of two or more segments, each of which functions as a mutually exclusive button. It features a background, which can be animated with a sliding effect.
 
@@ -26,8 +28,8 @@ The generated HTML will be as such:
 
 ```html
 <div class="segmented-control" role="tablist" aria-orientation="horizontal">
-  <button class="segment selected" role="tab" aria-selected="true" aria-disabled="false" tabindex="0">First</button>
-  <button class="segment" role="tab" aria-disabled="false" aria-selected="false" aria-disabled="false" tabindex="-1">Second</button>
+  <button class="button segmented-control-item selected" role="tab" aria-selected="true" aria-disabled="false" tabindex="0">First</button>
+  <button class="button segmented-control-item" role="tab" aria-disabled="false" aria-selected="false" aria-disabled="false" tabindex="-1">Second</button>
   <div class="segmented-control-background" role="presentation" style="width: 75px; transform: translateX(2px);"></div>
 </div>
 ```
@@ -77,6 +79,17 @@ Use this option to specify orientation of the Segmented Control. Accepted option
   <Segment>First</Segment>
   <Segment>Second</Segment>
 </SegmentedControl>
+```
+
+***isBackgroundAnimated***
+
+Use this option to specify whether or not a background should be animated. Set to `true` by default. If an animated background is not required, it will not be rendered, resulting in HTML as such:
+
+```html
+<div class="segmented-control" role="tablist" aria-orientation="horizontal">
+  <button class="button segmented-control-item selected" role="tab" aria-selected="true" aria-disabled="false" tabindex="0">First</button>
+  <button class="button segmented-control-item" role="tab" aria-disabled="false" aria-selected="false" aria-disabled="false" tabindex="-1">Second</button>
+</div>
 ```
 
 **Segment**
