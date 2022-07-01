@@ -71,6 +71,22 @@ Use this option to disable changing a Switch's state.
 <Switch isDisabled={true} />
 ```
 
+***topLevelClassName***
+
+Use this option to specify the component's class name (one of the top-most wrapper and of each child that inherits its class name). 
+
+By default set to "switch". If, for instance, set to "mode-switch", the component's HTML output would look as such:
+
+```html
+<button class="mode-switch" type="button" role="switch" aria-checked="false" aria-disabled="false">
+  <span class="mode-switch-label">Optional Label</span>
+  <span class="mode-switch-item">
+    <span class="mode-switch-item-knob"></span>
+  </span>
+</button>
+```
+
+
 ## Demo
 
 Launch a demo by running in the terminal:

@@ -76,6 +76,7 @@
   class={topLevelClassName} 
   role='tablist'
   aria-orientation={orientation}
+  data-is-background-animated={isBackgroundAnimated}
   {...$$restProps}
   on:click
   on:mouseover

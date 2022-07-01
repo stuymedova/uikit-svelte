@@ -6,7 +6,7 @@
   export let isBackgroundAnimated = false
 
   const context = getContext('TabView')
-  let selectedTabIndex = context.selectedTabIndex
+  const selectedTabIndex = context.selectedTabIndex
 
   $: context.setSelected($selectedTabIndex)
 </script>

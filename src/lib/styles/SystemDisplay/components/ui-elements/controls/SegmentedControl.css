@@ -58,3 +58,6 @@
   background-color: transparent;
   cursor: pointer;
 }
+.segmented-control[data-is-background-animated="false"] .segmented-control-item[aria-selected="true"] {
+  background-color: var(--color-background-accent);
+}

@@ -25,14 +25,6 @@
 
   export let buttonRef = null
 
-  const restPropsExcludingClass = (props = $$restProps) => {
-    return Object.fromEntries(
-      Object.entries(props).filter(
-        ([ key, value ]) => key !== 'class'
-      )
-    )
-  }
-
   onMount(() => {
     if (behaviour === 'popover' && id === '') {
       console.warn('Popover Button: Property "id" is empty. Provide a unique non-empty id.')
@@ -68,10 +60,11 @@
     }
   }}
 >
+  <!-- TODO: add data prefix (purpose -> data-purpose)? -->
   <button
     bind:this={buttonRef}
     id={(behaviour === 'popover' && id !== '') ? id + '--trigger' : undefined}
-    class='button {$$restProps.class}'
+    class='button'
     type='button'
     behaviour={behaviour}
     purpose={behaviour === 'push' ? purpose : undefined}
@@ -84,7 +77,7 @@
     aria-controls={(behaviour === 'popover' && id !== '') ? id : undefined}
     aria-disabled={isDisabled}
     aria-selected={isSelected}
-    {...restPropsExcludingClass()}
+    {...$$restProps}
     on:click
     on:click|preventDefault={() => {
       if (behaviour === 'switch' && !isDisabled) {

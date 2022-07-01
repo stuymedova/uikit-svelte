@@ -10,7 +10,7 @@
   padding: 14px 18px;
   text-align: center;
   border-radius: 14px;
-  transition: color 275ms, background-color 100ms;
+  transition: color 275ms, background-color 225ms;
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
   color: var(--color-text-primary);

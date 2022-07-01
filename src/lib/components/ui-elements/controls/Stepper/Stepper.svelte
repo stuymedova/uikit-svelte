@@ -5,6 +5,7 @@
   export let value = 0
   export let range = [0, 99]
   export let step = 1
+  export let topLevelClassName = 'stepper'
 
   let isAbleToDecrement = true
   let isAbleToIncrement = true
@@ -50,15 +51,17 @@
 </script>
 
 
-<div class='stepper'>
+<!-- TODO: use button component instead of an html button? -->
+<!-- TODO: icons (or rather button content) should be customizable -->
+<div class={topLevelClassName}>
   {#if label !== ''}
-    <span class='stepper-label'>{label}</span>
+    <span class='{topLevelClassName}-label'>{label}</span>
   {/if}
 
-  <div class='stepper-control'>
-    <span class='stepper-value'>{value}</span>
+  <div class='{topLevelClassName}-control'>
+    <span class='{topLevelClassName}-value'>{value}</span>
     <button 
-      class='stepper-button stepper-decrement-button' 
+      class='{topLevelClassName}-button {topLevelClassName}-decrement-button' 
       aria-label={`Decrement by ${step}`}
       on:click={() => { changeValue(-step); checkIfValueIsChangeable() }}
       aria-disabled={!isAbleToDecrement}>
@@ -70,7 +73,7 @@
       </svg>
     </button>
     <button 
-      class='stepper-button stepper-increment-button' 
+      class='{topLevelClassName}-button {topLevelClassName}-increment-button' 
       aria-label={`Increment by ${step}`}
       on:click={() => { changeValue(step); checkIfValueIsChangeable() }}
       aria-disabled={!isAbleToIncrement}>

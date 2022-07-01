@@ -43,7 +43,7 @@
 
 <Button
   bind:this={segmentRef}
-  class='{topLevelClassName}-item'
+  class='button {topLevelClassName}-item'
   role='tab'
   isSelected={isSelected}
   isDisabled={isDisabled}

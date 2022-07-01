@@ -1,7 +1,5 @@
 # Segmented Control
 
-*Composition type: complex*
-
 <!-- TODO: Remove the "mutially exclusive" part? -->
 
 Segmented control is a set of two or more segments, each of which functions as a mutually exclusive button. It features a background, which can be animated with a sliding effect.
@@ -89,6 +87,20 @@ Use this option to specify whether or not a background should be animated. Set t
 <div class="segmented-control" role="tablist" aria-orientation="horizontal">
   <button class="button segmented-control-item selected" role="tab" aria-selected="true" aria-disabled="false" tabindex="0">First</button>
   <button class="button segmented-control-item" role="tab" aria-disabled="false" aria-selected="false" aria-disabled="false" tabindex="-1">Second</button>
+</div>
+```
+
+***topLevelClassName***
+
+Use this option to specify the component's class name (one of the top-most wrapper and of each child that inherits its class name). 
+
+By default set to "segmented-control". If, for instance, set to "gallery-segmented-control", the component's HTML output would look as such:
+
+```html
+<div class="gallery-segmented-control" role="tablist" aria-orientation="horizontal">
+  <button class="button gallery-segmented-control-item selected" role="tab" aria-selected="true" aria-disabled="false" tabindex="0">First</button>
+  <button class="button gallery-segmented-control-item" role="tab" aria-disabled="false" aria-selected="false" aria-disabled="false" tabindex="-1">Second</button>
+  <div class="gallery-segmented-control-background" role="presentation" style="width: 75px; transform: translateX(2px);"></div>
 </div>
 ```
 
