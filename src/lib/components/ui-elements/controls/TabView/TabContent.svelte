@@ -4,6 +4,7 @@
   const context = getContext('TabView')
   const index = context.setTabContentIndex()
   const selectedTabIndex = context.selectedTabIndex
+  const topLevelClassName = context.topLevelClassName
   
   $: isSelected = $selectedTabIndex === index
   
@@ -12,7 +13,7 @@
 
 
 <div 
-  class='tab-content'
+  class='{topLevelClassName}-tab-content'
   class:selected={isSelected}
   role='tabpanel'
   aria-labelledby=''

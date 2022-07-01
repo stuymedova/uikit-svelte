@@ -17,11 +17,11 @@
   $: selectedIndex = $selectedSegmentIndex
 
   setContext('SegmentedControl', {
-    topLevelClassName,
-    isBackgroundAnimated,
-    orientation,
     focusedSegmentIndex,
     selectedSegmentIndex,
+    orientation,
+    topLevelClassName,
+    isBackgroundAnimated,
     setIndex: () => {
       indexesIterator += 1
       return indexesIterator

@@ -7,6 +7,7 @@
 
   const context = getContext('TabView')
   const selectedTabIndex = context.selectedTabIndex
+  const topLevelClassName = context.topLevelClassName
 
   $: context.setSelected($selectedTabIndex)
 </script>
@@ -14,8 +15,8 @@
 
 <SegmentedControl
   bind:selectedIndex={$selectedTabIndex}
-  topLevelClassName='tabbed-control'
   orientation={orientation}
+  topLevelClassName='{topLevelClassName}-tabbed-control'
   isBackgroundAnimated={isBackgroundAnimated}
   role='tablist'
 >

@@ -10,11 +10,11 @@
   let offset = 0
 
   const context = getContext('SegmentedControl')
-  const topLevelClassName = context.topLevelClassName
-  const orientation = context.orientation
   const index = context.setIndex()
   const focusedSegmentIndex = context.focusedSegmentIndex
   const selectedSegmentIndex = context.selectedSegmentIndex
+  const orientation = context.orientation
+  const topLevelClassName = context.topLevelClassName
   const isBackgroundAnimated = context.isBackgroundAnimated
   
   $: isFocused = $focusedSegmentIndex === index

@@ -1,15 +1,14 @@
-.tab-pane {
+.tab-view-tab-pane {
   position: relative;
   margin-top: 10px;
 }
 
-.tab-content {
+.tab-view-tab-content {
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
 }
-
-.tab-content.selected {
+.tab-view-tab-content[aria-selected="true"] {
   opacity: 1;
 }
