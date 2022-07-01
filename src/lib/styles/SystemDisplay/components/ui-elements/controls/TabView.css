@@ -9,6 +9,6 @@
   left: 0;
   opacity: 0;
 }
-.tab-view-tab-content[aria-selected="true"] {
+.tab-view-tab-content.selected {
   opacity: 1;
 }

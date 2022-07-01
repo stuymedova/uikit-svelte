@@ -2,14 +2,14 @@
   text-decoration: none;
   color: inherit;
 }
-.link[isInline="true"] {
+.link[data-is-inline="true"] {
   color: var(--color-accent);
 }
 
 .link:hover {
   text-decoration: none;
 }
-.link[isInline="true"]:hover {
+.link[data-is-inline="true"]:hover {
   text-decoration: underline;
 }
 

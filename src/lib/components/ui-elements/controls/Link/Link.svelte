@@ -18,7 +18,7 @@
   href={destination}
   target={shouldBeOpenedInNewTab ? '_blank' : undefined}
   rel={shouldBeOpenedInNewTab ? 'noopener noreferrer' : undefined}
-  isInline={isInline}
+  data-is-inline={isInline}
   on:click
   on:click={() => {
     ref.focus()

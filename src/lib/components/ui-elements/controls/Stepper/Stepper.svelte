@@ -63,8 +63,9 @@
     <button 
       class='{topLevelClassName}-button {topLevelClassName}-decrement-button' 
       aria-label={`Decrement by ${step}`}
+      aria-disabled={!isAbleToDecrement}
       on:click={() => { changeValue(-step); checkIfValueIsChangeable() }}
-      aria-disabled={!isAbleToDecrement}>
+    >
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
         <g class="minus" transform="translate(-14 -16)">
           <rect class="icon_background" width="12" height="12" transform="translate(14 16)" fill="none"/>
@@ -75,8 +76,9 @@
     <button 
       class='{topLevelClassName}-button {topLevelClassName}-increment-button' 
       aria-label={`Increment by ${step}`}
+      aria-disabled={!isAbleToIncrement}
       on:click={() => { changeValue(step); checkIfValueIsChangeable() }}
-      aria-disabled={!isAbleToIncrement}>
+    >
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
         <g class="plus" transform="translate(0.625)">
           <path class="vertical_stroke" data-name="vertical stroke" d="M0,11.375a.6.6,0,0,1-.625-.566V-.059A.6.6,0,0,1,0-.625a.6.6,0,0,1,.625.566V10.809A.6.6,0,0,1,0,11.375Z" transform="translate(5.375 0.625)"/>

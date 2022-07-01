@@ -66,8 +66,8 @@
     id={(behaviour === 'popover' && id !== '') ? id + '--trigger' : undefined}
     class='button'
     type='button'
-    behaviour={behaviour}
-    purpose={behaviour === 'push' ? purpose : undefined}
+    data-behaviour={behaviour}
+    data-purpose={behaviour === 'push' ? purpose : undefined}
     role={behaviour === 'switch' ? 'switch' : undefined}
     data-attachment-anchor={behaviour === 'popover' ? attachmentAnchor : undefined}
     data-attachment-alignment={behaviour === 'popover' ? attachmentAlignment : undefined}
