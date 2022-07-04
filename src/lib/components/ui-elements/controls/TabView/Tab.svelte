@@ -3,15 +3,16 @@
   import { Segment } from '$lib'
 
   export let label = 'Label'
-  export let isDisabled = false // TODO: test isDisabled for reactivity
+  export let isDisabled = false
 </script>
 
 
 <Segment
-  role='tab'
   aria-controls=''
-  isDisabled={isDisabled}
+  bind:isDisabled={isDisabled}
   {...$$restProps}
+  on:click
+  on:keydown
 >
   <slot>{label}</slot>
 </Segment>

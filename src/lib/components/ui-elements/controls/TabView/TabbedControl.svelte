@@ -18,7 +18,6 @@
   orientation={orientation}
   topLevelClassName='{topLevelClassName}-tabbed-control'
   isBackgroundAnimated={isBackgroundAnimated}
-  role='tablist'
 >
   <slot />
 </SegmentedControl>

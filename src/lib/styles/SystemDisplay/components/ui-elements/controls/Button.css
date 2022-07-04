@@ -27,7 +27,7 @@
   cursor: default;
 }
 /* aria-selected is provided for external use */
-.button[aria-selected='true'] {
+.button[aria-selected='true'][aria-disabled='false'] {
   color: var(--color-accent);
   cursor: default;
 }
