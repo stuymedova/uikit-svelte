@@ -8,6 +8,7 @@
   export let behaviour = 'push' // Options: push/switch/popover
   export let isDisabled = false
   export let isSelected = undefined // Provided for external use
+  export let a11yLabel = undefined // Provided for external use
   
   // Push button
   export let purpose = undefined // Options: -/primary/cancel/destructive // TODO: implement and test in a dialog component
@@ -77,6 +78,7 @@
     aria-controls={(behaviour === 'popover' && id !== '') ? id : undefined}
     aria-disabled={isDisabled}
     aria-selected={isSelected}
+    aria-label={a11yLabel}
     {...$$restProps}
     on:click
     on:click|preventDefault={() => {

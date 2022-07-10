@@ -32,6 +32,7 @@
 
 .stepper-button {
   height: 44px;
+  background-color: transparent;
   transition: fill 150ms;
 }
 .stepper-button[aria-disabled='true'] {
