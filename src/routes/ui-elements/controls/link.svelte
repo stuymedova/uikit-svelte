@@ -1,7 +1,7 @@
 <script>
-	import '$lib/styles/SystemDisplay/lightMode.css'
+	import '$lib/styles/system-display/lightMode.css'
   import { Wrapper, Link } from '$lib'
-  import picture from '$lib/assets/spring.jpg';
+  import picture from '$lib/assets/images/spring.jpg'
 </script>
 
 

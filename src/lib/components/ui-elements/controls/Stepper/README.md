@@ -8,7 +8,7 @@ Stepper is a control that increments and decrements a value within specified ran
 
 Include component on a webpage by adding 
 ```js
-import '@stuymedova/uikit-svelte/styles/SystemDisplay/lightMode.css' // Optional, alternatively use darkMode.css or a custom stylesheet
+import '@stuymedova/uikit-svelte/styles/system-display/lightMode.css' // Optional, alternatively use darkMode.css or a custom stylesheet
 import { Stepper, IncrementButton, DecrementButton, StepperValue } from '@stuymedova/uikit-svelte'
 ```
 within the `script` tag of a Svelte file. You can further use the component as such:
@@ -19,7 +19,7 @@ within the `script` tag of a Svelte file. You can further use the component as s
   <DecrementButton>
     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
       <g class="minus" transform="translate(-14 -16)">
-        <rect class="icon_background" width="12" height="12" transform="translate(14 16)" fill="none"/>
+        <rect class="symbol_background" width="12" height="12" transform="translate(14 16)" fill="none"/>
         <path class="horizontal_stroke" data-name="horizontal stroke" d="M10.809.625H-.059A.6.6,0,0,1-.625,0,.6.6,0,0,1-.059-.625H10.809A.6.6,0,0,1,11.375,0,.6.6,0,0,1,10.809.625Z" transform="translate(14.625 22)"/>
       </g>
     </svg>
@@ -46,7 +46,7 @@ The generated HTML will be as such:
     <button class="stepper-button stepper-decrement-button" aria-label="Decrement by 1" aria-disabled="true">
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
         <g class="minus" transform="translate(-14 -16)">
-          <rect class="icon_background" width="12" height="12" transform="translate(14 16)" fill="none"></rect>
+          <rect class="symbol_background" width="12" height="12" transform="translate(14 16)" fill="none"></rect>
           <path class="horizontal_stroke" data-name="horizontal stroke" d="M10.809.625H-.059A.6.6,0,0,1-.625,0,.6.6,0,0,1-.059-.625H10.809A.6.6,0,0,1,11.375,0,.6.6,0,0,1,10.809.625Z" transform="translate(14.625 22)"></path>
         </g>
       </svg>
@@ -77,7 +77,7 @@ Use this option to specify a Stepper's label. This option is not required, if no
   <DecrementButton>
     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
       <g class="minus" transform="translate(-14 -16)">
-        <rect class="icon_background" width="12" height="12" transform="translate(14 16)" fill="none"/>
+        <rect class="symbol_background" width="12" height="12" transform="translate(14 16)" fill="none"/>
         <path class="horizontal_stroke" data-name="horizontal stroke" d="M10.809.625H-.059A.6.6,0,0,1-.625,0,.6.6,0,0,1-.059-.625H10.809A.6.6,0,0,1,11.375,0,.6.6,0,0,1,10.809.625Z" transform="translate(14.625 22)"/>
       </g>
     </svg>
@@ -103,7 +103,7 @@ Use this option to specify a Stepper's value.
   <DecrementButton>
     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
       <g class="minus" transform="translate(-14 -16)">
-        <rect class="icon_background" width="12" height="12" transform="translate(14 16)" fill="none"/>
+        <rect class="symbol_background" width="12" height="12" transform="translate(14 16)" fill="none"/>
         <path class="horizontal_stroke" data-name="horizontal stroke" d="M10.809.625H-.059A.6.6,0,0,1-.625,0,.6.6,0,0,1-.059-.625H10.809A.6.6,0,0,1,11.375,0,.6.6,0,0,1,10.809.625Z" transform="translate(14.625 22)"/>
       </g>
     </svg>
@@ -123,7 +123,7 @@ You can bind to this value to have changes be reflected both in the Stepper comp
 
 ```html
 <script>
-  import '@stuymedova/uikit-svelte/styles/SystemDisplay/lightMode.css'
+  import '@stuymedova/uikit-svelte/styles/system-display/lightMode.css'
   import { Stepper } from '@stuymedova/uikit-svelte'
 
   let stepperValue = 10
@@ -134,7 +134,7 @@ You can bind to this value to have changes be reflected both in the Stepper comp
   <DecrementButton>
     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
       <g class="minus" transform="translate(-14 -16)">
-        <rect class="icon_background" width="12" height="12" transform="translate(14 16)" fill="none"/>
+        <rect class="symbol_background" width="12" height="12" transform="translate(14 16)" fill="none"/>
         <path class="horizontal_stroke" data-name="horizontal stroke" d="M10.809.625H-.059A.6.6,0,0,1-.625,0,.6.6,0,0,1-.059-.625H10.809A.6.6,0,0,1,11.375,0,.6.6,0,0,1,10.809.625Z" transform="translate(14.625 22)"/>
       </g>
     </svg>
@@ -162,7 +162,7 @@ Use `range` to define the lower and upper bound for possible values.
   <DecrementButton>
     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
       <g class="minus" transform="translate(-14 -16)">
-        <rect class="icon_background" width="12" height="12" transform="translate(14 16)" fill="none"/>
+        <rect class="symbol_background" width="12" height="12" transform="translate(14 16)" fill="none"/>
         <path class="horizontal_stroke" data-name="horizontal stroke" d="M10.809.625H-.059A.6.6,0,0,1-.625,0,.6.6,0,0,1-.059-.625H10.809A.6.6,0,0,1,11.375,0,.6.6,0,0,1,10.809.625Z" transform="translate(14.625 22)"/>
       </g>
     </svg>
@@ -190,7 +190,7 @@ Note: be careful using a floating point number as a step.
   <DecrementButton>
     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
       <g class="minus" transform="translate(-14 -16)">
-        <rect class="icon_background" width="12" height="12" transform="translate(14 16)" fill="none"/>
+        <rect class="symbol_background" width="12" height="12" transform="translate(14 16)" fill="none"/>
         <path class="horizontal_stroke" data-name="horizontal stroke" d="M10.809.625H-.059A.6.6,0,0,1-.625,0,.6.6,0,0,1-.059-.625H10.809A.6.6,0,0,1,11.375,0,.6.6,0,0,1,10.809.625Z" transform="translate(14.625 22)"/>
       </g>
     </svg>
@@ -221,7 +221,7 @@ By default set to "stepper". If, for instance, set to "quantity-stepper", the co
     <button class="quantity-stepper-button quantity-stepper-decrement-button" aria-label="Decrement by 1" aria-disabled="true">
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
         <g class="minus" transform="translate(-14 -16)">
-          <rect class="icon_background" width="12" height="12" transform="translate(14 16)" fill="none"></rect>
+          <rect class="symbol_background" width="12" height="12" transform="translate(14 16)" fill="none"></rect>
           <path class="horizontal_stroke" data-name="horizontal stroke" d="M10.809.625H-.059A.6.6,0,0,1-.625,0,.6.6,0,0,1-.059-.625H10.809A.6.6,0,0,1,11.375,0,.6.6,0,0,1,10.809.625Z" transform="translate(14.625 22)"></path>
         </g>
       </svg>

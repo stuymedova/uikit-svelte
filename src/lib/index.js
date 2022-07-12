@@ -8,7 +8,10 @@ export { Switch } from './components/ui-elements/controls/Switch'
 export { SegmentedControl, Segment } from './components/ui-elements/controls/SegmentedControl'
 export { TabView, TabbedControl, Tab, TabPane, TabContent } from './components/ui-elements/controls/TabView'
 
-// 1.2 Utilities
+// 1.2. Media
+export { Symbol } from './components/ui-elements/media/Symbol'
+
+// 1.3 Utilities
 export { Wrapper } from './components/ui-elements/utilities/Wrapper'
 export { ConditionalWrapper } from './components/ui-elements/utilities/ConditionalWrapper'
 

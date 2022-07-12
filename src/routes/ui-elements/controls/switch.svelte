@@ -1,5 +1,5 @@
 <script>
-	import '$lib/styles/SystemDisplay/lightMode.css'
+	import '$lib/styles/system-display/lightMode.css'
   import { Switch } from '$lib'
 </script>
 
