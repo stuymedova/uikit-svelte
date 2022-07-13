@@ -1,5 +1,5 @@
 <script>
-	import '$lib/styles/system-display/lightMode.css'
+	import '$styles/system-display/lightMode.css'
   import { Stepper, IncrementButton, DecrementButton, StepperValue } from '$lib'
 </script>
 
