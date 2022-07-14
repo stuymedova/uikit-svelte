@@ -2,6 +2,8 @@
   import { getContext } from 'svelte'
   import { Button } from '$lib'
 
+  export let a11yLabel = ''
+
   const context = getContext('Stepper')
   const step = context.step
   const setValue = context.setValue
@@ -12,8 +14,8 @@
 
 <Button 
   class='button {topLevelClassName}-button {topLevelClassName}-increment-button' 
+  a11yLabel={a11yLabel === '' ? undefined : a11yLabel}
   isDisabled={!$isAbleToIncrement}
-  a11yLabel={`Increment by ${step}`}
   on:click={() => { setValue(step) }}
 >
   <slot />

@@ -6,6 +6,7 @@ const config = {
 		adapter: adapter(),
 		alias: {
 			$styles: 'src/lib/styles',
+			$images: 'src/lib/assets/images',
 			$symbols: 'src/lib/assets/symbols'
 		}
 	}

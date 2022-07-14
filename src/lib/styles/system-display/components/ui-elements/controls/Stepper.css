@@ -32,6 +32,8 @@
 
 .stepper-button {
   height: 44px;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
   background-color: transparent;
   transition: fill 150ms;
 }
