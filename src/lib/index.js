@@ -1,19 +1,19 @@
 // COMPONENTS
 // 1. UI Elements
 // 1.1. Controls
-export { Button } from './components/ui-elements/controls/Button'
-export { Link } from './components/ui-elements/controls/Link'
-export { Stepper, IncrementButton, DecrementButton, StepperValue } from './components/ui-elements/controls/Stepper'
-export { Switch } from './components/ui-elements/controls/Switch'
-export { SegmentedControl, Segment } from './components/ui-elements/controls/SegmentedControl'
-export { TabView, TabbedControl, Tab, TabPane, TabContent } from './components/ui-elements/controls/TabView'
+export { Button } from './components/controls/Button'
+export { Link } from './components/controls/Link'
+export { Stepper, IncrementButton, DecrementButton, StepperValue } from './components/controls/Stepper'
+export { Switch } from './components/controls/Switch'
+export { SegmentedControl, Segment } from './components/controls/SegmentedControl'
+export { TabView, TabbedControl, Tab, TabPane, TabContent } from './components/controls/TabView'
 
 // 1.2. Media
-export { Symbol } from './components/ui-elements/media/Symbol'
+export { Symbol } from './components/media/Symbol'
 
 // 1.3 Utilities
-export { Wrapper } from './components/ui-elements/utilities/Wrapper'
-export { ConditionalWrapper } from './components/ui-elements/utilities/ConditionalWrapper'
+export { Wrapper } from './components/utilities/Wrapper'
+export { ConditionalWrapper } from './components/utilities/ConditionalWrapper'
 
 // 2. Layout
 

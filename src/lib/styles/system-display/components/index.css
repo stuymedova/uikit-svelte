@@ -1,18 +1,17 @@
-/* 1. UI Elements */
-/* 1.1. Controls */
-@import 'ui-elements/controls/Button.css';
-@import 'ui-elements/controls/Link.css';
-@import 'ui-elements/controls/SegmentedControl.css';
-@import 'ui-elements/controls/Stepper.css';
-@import 'ui-elements/controls/Switch.css';
-@import 'ui-elements/controls/TabView.css';
+/* Controls */
+@import 'controls/Button.css';
+@import 'controls/Link.css';
+@import 'controls/SegmentedControl.css';
+@import 'controls/Stepper.css';
+@import 'controls/Switch.css';
+@import 'controls/TabView.css';
 
-/* 1.2. Media */
-@import 'ui-elements/media/Symbol.css';
+/* Media */
+@import 'media/Symbol.css';
 
-/* 1.3 Utilities */
+/* Layout */
 
-/* 2. Layout */
-
-/* 3. Accessibility */
+/* Accessibility */
 @import 'accessibility/VisuallyHidden.css';
+
+/* Utilities */
