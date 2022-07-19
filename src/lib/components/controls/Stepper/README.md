@@ -106,8 +106,6 @@ Use this option to specify a Stepper's label. This option is not required, if no
 </Stepper>
 ```
 
-<!-- TODO: examples with label rendered and not -->
-
 ***value***
 
 Use this option to specify a Stepper's value.
@@ -204,6 +202,42 @@ Or, alternatively, you can use it as such:
 </Stepper>
 ```
 
+***isWrapped***
+
+Use this option to specify if the value should be wrapped. Useful for when you use a Stepper to iterate over a dataset (in which case, set the range of possible values as equal to the bounds of the dataset). By default set to `false`.
+
+```html
+<script>
+	import '@stuymedova/uikit-svelte/styles/system-display/lightMode.css'
+  import { Stepper, IncrementButton, DecrementButton, StepperValue } from '$lib'
+	import { Symbol } from '$lib'
+
+	let stepperValue = 0
+	const colors = ['orange', 'orangered', 'gray', 'mediumpurple', 'plum']
+</script>
+
+
+<Stepper bind:value={stepperValue} isWrapped={true} range={[0, colors.length - 1]}>
+  <DecrementButton a11yLabel='Decrement by 1'>
+    <Symbol name='minus' />
+  </DecrementButton>
+  <IncrementButton a11yLabel='Increment by 1'>
+    <Symbol name='plus' />
+  </IncrementButton>
+</Stepper>
+
+<div 
+  style='width: 44px; height: 44px; border-radius: 100%; background-color: {colors[stepperValue]};'
+></div>
+
+
+<style>
+	:global(.stepper) {
+		width: 70px;
+	}
+</style>
+```
+
 ***topLevelClassName***
 
 Use this option to specify the component's class name (one of the top-most wrapper and of each child that inherits its class name). 
@@ -248,7 +282,29 @@ By default set to "stepper". If, for instance, set to "quantity-stepper", as abo
 </div>
 ```
 
-<!-- **IncrementButton, DecrementButton**
+**IncrementButton, DecrementButton**
+
+***label***
+
+Use this option to specify a label.
+
+```html
+<Stepper>
+  <StepperValue />
+  <DecrementButton label='Decrement value' />
+  <IncrementButton label='Increment value' />
+</Stepper>
+```
+
+Alternatively, a label can be specified between component tags:
+
+```html
+<Stepper>
+  <StepperValue />
+  <DecrementButton>Decrement value</DecrementButton>
+  <IncrementButton>Increment value</IncrementButton>
+</Stepper>
+```
 
 ***a11yLabel***
 
@@ -264,7 +320,7 @@ Use this option to specify the component's aria-label attribute. Recommended if 
     <Symbol name='plus' />
   </IncrementButton>
 </Stepper>
-``` -->
+```
 
 ## Demo
 

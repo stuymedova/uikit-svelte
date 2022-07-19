@@ -6,6 +6,7 @@
   export let value = 0
   export let range = [0, 99]
   export let step = 1
+  export let isWrapped = false
   export let topLevelClassName = 'stepper'
 
   let stepperValue = writable(value)
@@ -37,16 +38,26 @@
     isAbleToDecrement,
     topLevelClassName,
     setValue: (step) => {
-      if ($stepperValue + step >= range[0] && $stepperValue + step <= range[1]) {
+      if (isWrapped) {
         $stepperValue += step
-        checkIfWillBeAbleToSetValue()
+
+        if ($stepperValue < range[0]) {
+          $stepperValue = range[1]
+        } else if ($stepperValue > range[1]) {
+          $stepperValue = range[0]
+        }
+      } else {
+        if ($stepperValue + step >= range[0] && $stepperValue + step <= range[1]) {
+          $stepperValue += step
+          checkIfWillBeAbleToSetValue()
+        }
       }
     }
   })
 
   onMount(() => {
     if (range.length !== 2) {
-      console.warn(`Stepper: Array "range" must contain two elements. Currently, it contains ${range.length}`)
+      console.warn(`Stepper: The range property value, an array, must contain 2 elements. Currently, it contains ${range.length}`)
     }
     if (range[0] >= range[1]) {
       console.warn(`Stepper: Invalid range. Lower bound value must be smaller than the upper bound value`)
@@ -58,7 +69,9 @@
       console.warn(`Stepper: Step must be assigned a non-negative and non-zero value`)
     }
 
-    checkIfWillBeAbleToSetValue()
+    if (!isWrapped) {
+      checkIfWillBeAbleToSetValue()
+    }
   })
 </script>
 
