@@ -1,5 +1,5 @@
 <script>
-  import * as Symbol from '$symbols/system-display-symbols'
+  import * as Symbol from '$symbols/system-display'
 
   // TODO: scale symbols (small, medium, and large)
   // TODO: account for dark mode

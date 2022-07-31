@@ -5,7 +5,7 @@
 
 
 <div class='component-wrapper'>
-  <TabView generateIdsFromId='gallery'>
+  <TabView generateIdsFromId='sample-text'>
     <TabbedControl>
       <Tab>First</Tab>
       <Tab>Second</Tab>
