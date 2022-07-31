@@ -22,9 +22,9 @@ export { VisuallyHidden } from './components/accessibility/VisuallyHidden'
 
 
 // FUNCTIONS
-// 1. Interactions
-export { longPress } from './functions/interactions/longPress'
-export { pressOutside } from './functions/interactions/pressOutside'
+// 1. Gestures
+export { longPress } from './functions/gestures/longPress'
+export { pressOutside } from './functions/gestures/pressOutside'
 
 // 2. Utilities
 export { componentActions } from './functions/utilities/componentActions'

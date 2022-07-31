@@ -1,5 +1,55 @@
 # UIKit Svelte
 
+<!-- TEMPORARY -->
+## Components
+
+**Accessibility**
+
+* SkipNavigation
+* VisuallyHidden
+
+**Controls**
+
+* Button
+* Link
+* SegmentedControl
+* Stepper
+* Switch
+* TabView
+
+**Layout**
+
+**Media**
+
+**Utilities**
+
+* ConditionalWrapper
+* Wrapper
+
+## Functions
+
+**Gestures**
+
+* longPress
+* pressOutside
+
+**Utilities**
+
+* componentActions
+
+## Styles
+
+**System Display/…**
+
+## Assets
+
+**Symbols/System Display**
+
+* Minus
+* Plus
+<!-- END TEMPORARY -->
+
+
 <!-- UIKit Component Library provides views, controls, and layout structures for declaring your app’s user interface, as well as utility functions to augment their behaviour. It comes with fully customizable styles, a built-in accessibility support, and conforms to [standards]. This makes UIKit great tool to integrate with your software product.
 
 Additional material, which includes a high-level view of concepts that went into developing this library, as well additional guides and resources, such as one on accessibility, will be released shortly. -->
