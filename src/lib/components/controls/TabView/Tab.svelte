@@ -1,15 +1,21 @@
 <script>
-  // TODO: handle aria-controls/aria-labelledby pair
+  import { getContext } from 'svelte'
   import { Segment } from '$lib'
 
   export let label = 'Label'
+  export let id = ''
   export let isDisabled = false
+
+  const context = getContext('TabView')
+  const index = context.setTabIndex()
+  const generateIdsFromId = context.generateIdsFromId
 </script>
 
 
 <Segment
-  aria-controls=''
+  id={(generateIdsFromId !== '') ? `${generateIdsFromId}-item-${index}--trigger` : (id !== '') ? id : undefined}
   bind:isDisabled={isDisabled}
+  aria-controls={(generateIdsFromId !== '') ? `${generateIdsFromId}-item-${index}` : ($$restProps["aria-controls"]) ? $$restProps["aria-controls"] : undefined}
   {...$$restProps}
   on:click
   on:keydown

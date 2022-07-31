@@ -3,6 +3,7 @@
   import { Button } from '$lib'
 
   export let label = 'Label'
+  export let id = ''
   export let isDisabled = false
 
   let segmentRef = null
@@ -22,7 +23,7 @@
   $: isSelected = $selectedSegmentIndex === index
 
   if (!isBackgroundAnimated) {
-    context.addSegment({ index, isDisabled })
+    context.addSegment(index, isDisabled)
   }
 
   onMount(() => {
@@ -35,7 +36,7 @@
         offset = Math.round(segmentRef?.buttonRef.offsetTop) 
       }
 
-      context.addSegment({ index, isDisabled, length, offset })
+      context.addSegment(index, isDisabled, length, offset)
     }
   })
 </script>
@@ -43,6 +44,7 @@
 
 <Button
   bind:this={segmentRef}
+  id={id !== '' ? id : undefined}
   class='button {topLevelClassName}-item'
   role='tab'
   isSelected={isSelected}

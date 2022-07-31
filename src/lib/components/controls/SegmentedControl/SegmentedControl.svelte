@@ -7,7 +7,7 @@
   export let topLevelClassName = 'segmented-control'
   export let isBackgroundAnimated = true
   
-  let focusedSegmentIndex = writable(selectedIndex)
+  let focusedSegmentIndex = writable(selectedIndex) // Needs to be a store in order for a child to update it
   let selectedSegmentIndex = writable(selectedIndex) // Selected Segment is one that is focused and not disabled
   let segments = []
   let indexesIterator = -1
@@ -26,7 +26,7 @@
       indexesIterator += 1
       return indexesIterator
     },
-    addSegment: ({ index, isDisabled, length = undefined, offset = undefined }) => {
+    addSegment: (index, isDisabled, length = undefined, offset = undefined) => {
       if (index === $selectedSegmentIndex) {
         if (isDisabled) {
           console.warn('Segmented Control: Avoid initially selecting a disabled Segment.')
@@ -61,6 +61,10 @@
   })
 
   onMount(() => {
+    if (selectedIndex < 0 || selectedIndex >= segments.length) {
+      console.warn(`Segmented Control: Provided "selectedIndex" value is out of range. Value should be greater than or equal to 0, and less than ${segments.length}, provided ${selectedIndex}.`)
+    }
+
     if (segments.length < 2) {
       console.warn('Segmented Control: For the component to function correctly, provide two or more Segments.')
     }

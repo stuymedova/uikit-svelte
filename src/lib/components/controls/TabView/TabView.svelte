@@ -1,28 +1,39 @@
 <script>
-  import { setContext } from 'svelte'
+  import { setContext, onMount } from 'svelte'
   import { writable } from 'svelte/store'
 
-  export let selectedIndex = 0 // TODO: "value out of range" error if such passed
+  export let selectedIndex = 0
   export let topLevelClassName = 'tab-view'
+  export let generateIdsFromId = ''
 
-  // Needs to be a store in order for a child to update it
-  let selectedTabIndex = writable(selectedIndex)
+  let selectedTabIndex = writable(selectedIndex) // Needs to be a store in order for a child to update it
   let tabContents = []
+  let tabIndexesIterator = -1
   let tabContentsIndexesIterator = -1
 
   setContext('TabView', {
     selectedTabIndex,
     topLevelClassName,
+    generateIdsFromId,
+    setTabIndex: () => {
+      tabIndexesIterator += 1
+      return tabIndexesIterator
+    },
     setTabContentIndex: () => {
       tabContentsIndexesIterator += 1
       return tabContentsIndexesIterator
     },
-    addTabContent: ({ index }) => {
-      tabContents = [...tabContents, { index }]
+    addTabContent: (index) => {
+      tabContents = [...tabContents, index]
     },
-    // Required in order for a child to update $selectedTabIndex value
     setSelected: (tabIndex) => {
       $selectedTabIndex = tabIndex
+    }
+  })
+
+  onMount(() => {
+    if (selectedIndex < 0 || selectedIndex >= tabContents.length) {
+      console.warn(`Segmented Control: Provided "selectedIndex" value is out of range. Value should be greater than or equal to 0, and less than ${segments.length}, provided ${selectedIndex}.`)
     }
   })
 </script>

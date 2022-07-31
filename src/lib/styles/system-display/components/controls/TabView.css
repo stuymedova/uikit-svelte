@@ -8,6 +8,7 @@
   top: 0;
   left: 0;
   opacity: 0;
+  width: 344px;
 }
 .tab-view-tab-content.selected {
   opacity: 1;

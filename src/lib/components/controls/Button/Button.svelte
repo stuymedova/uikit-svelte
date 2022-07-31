@@ -4,6 +4,7 @@
   import { pressOutside } from '$lib'
 
   export let label = 'Label'
+  export let id = ''
   // export let appearance = 'gray' // Options: gray/… (Extend: plain/contoured/filled) // TODO: accent/vibrant/call-to-action button — ?
   export let behaviour = 'push' // Options: push/switch/popover
   export let isDisabled = false
@@ -17,7 +18,6 @@
   export let isOn = false
   
   // Popover button
-  export let id = ''
   export let isExpanded = false
   export let attachmentAnchor = 'bottom' // Options: top/right/bottom/left
   export let attachmentAlignment = 'start' // Options: start/middle/end
@@ -64,7 +64,7 @@
   <!-- TODO: add data prefix (purpose -> data-purpose)? -->
   <button
     bind:this={buttonRef}
-    id={(behaviour === 'popover' && id !== '') ? id + '--trigger' : undefined}
+    id={(behaviour === 'popover' && id !== '') ? id + '--trigger' : (id !== '') ? id : undefined}
     class='button'
     type='button'
     data-behaviour={behaviour}
@@ -106,9 +106,9 @@
       ></span>
     {/if}
     <aside 
-      id={(behaviour === 'popover' && id !== '') ? id : undefined}
+      id={id !== '' ? id : undefined}
       class='button-popover'
-      aria-labelledby={(behaviour === 'popover' && id !== '') ? id + '--trigger' : undefined}
+      aria-labelledby={id !== '' ? id + '--trigger' : undefined}
       style='display: {isExpanded ? "block" : "none"}'
     >
       <slot name='popover'>{label}</slot>
