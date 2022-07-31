@@ -5,7 +5,6 @@
 
 **Accessibility**
 
-* SkipNavigation
 * VisuallyHidden
 
 **Controls**
@@ -20,6 +19,8 @@
 **Layout**
 
 **Media**
+
+* Symbol
 
 **Utilities**
 
