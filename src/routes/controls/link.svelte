@@ -16,7 +16,7 @@
 </div> -->
 
 <!-- Link around block element -->
-<!-- TODO: finish up an example -->
+<!-- TODO: finish up an example (styles) -->
 <Wrapper class='component-wrapper'>
   <Link
     destination='https://github.com/stuymedova/uikit-svelte'

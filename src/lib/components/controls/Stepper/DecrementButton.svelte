@@ -6,7 +6,6 @@
   export let a11yLabel = ''
 
   const context = getContext('Stepper')
-  const step = context.step
   const setValue = context.setValue
   const isAbleToDecrement = context.isAbleToDecrement
   const topLevelClassName = context.topLevelClassName
@@ -17,7 +16,7 @@
   class='button {topLevelClassName}-button {topLevelClassName}-decrement-button' 
   a11yLabel={a11yLabel === '' ? undefined : a11yLabel}
   isDisabled={!$isAbleToDecrement}
-  on:click={() => { setValue(-step) }}
+  on:click={() => { setValue('decrement') }}
 >
   <slot>{label}</slot>
 </Button>

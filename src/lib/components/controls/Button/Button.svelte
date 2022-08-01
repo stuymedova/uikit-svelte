@@ -3,8 +3,8 @@
   import { ConditionalWrapper } from '$lib'
   import { pressOutside } from '$lib'
 
-  export let label = 'Label'
   export let id = ''
+  export let label = 'Label'
   // export let appearance = 'gray' // Options: gray/… (Extend: plain/contoured/filled) // TODO: accent/vibrant/call-to-action button — ?
   export let behaviour = 'push' // Options: push/switch/popover
   export let isDisabled = false

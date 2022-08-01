@@ -2,8 +2,8 @@
   import { getContext } from 'svelte'
   import { Segment } from '$lib'
 
-  export let label = 'Label'
   export let id = ''
+  export let label = 'Label'
   export let isDisabled = false
 
   const context = getContext('TabView')

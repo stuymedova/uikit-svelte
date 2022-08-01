@@ -2,8 +2,8 @@
   import { getContext, onMount } from 'svelte'
   import { Button } from '$lib'
 
-  export let label = 'Label'
   export let id = ''
+  export let label = 'Label'
   export let isDisabled = false
 
   let segmentRef = null

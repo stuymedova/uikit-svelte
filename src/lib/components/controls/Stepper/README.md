@@ -238,7 +238,7 @@ Use this option to specify if the value should be wrapped. Useful for when you u
 </style>
 ```
 
-***topLevelClassName***
+***topLevelClassName*** (not reactive)
 
 Use this option to specify the component's class name (one of the top-most wrapper and of each child that inherits its class name). 
 

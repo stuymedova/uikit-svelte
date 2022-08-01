@@ -54,18 +54,22 @@ Use this option to specify the Link's destination URL. As already shown above, t
 <Link destination='https://github.com/stuymedova/uikit-svelte'>Label</Link>
 ```
 
-***shouldOpenInNewTab***
+***shouldBeOpenedInNewTab***
 
 Use this option to specify if a Link should be opened in a new tab. If set to `true`, a link recieves additional attributes `target="_blank"` and `rel="noopener noreferrer"`. By default set to `false`.
 
 ```html
 <Link 
   destination='https://github.com/stuymedova/uikit-svelte'
-  shouldOpenInNewTab={true}
+  shouldBeOpenedInNewTab={true}
 >
   Label
 </Link>
 ```
+
+<!-- ***isInline***
+
+Use this option to specify whether the link is wrapped around an inline or a block element. An anchor element gets rendered with an `data-is-inline` attribute, which you can look for in your stylesheet to assign different styles depending on the intended use. -->
 
 ## Demo
 

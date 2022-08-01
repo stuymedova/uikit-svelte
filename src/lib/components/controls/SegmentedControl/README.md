@@ -1,7 +1,5 @@
 # Segmented Control
 
-<!-- TODO: Remove the "mutially exclusive" part? -->
-
 Segmented control is a set of two or more segments, each of which functions as a mutually exclusive button. It features a background, which can be animated with a sliding effect.
 
 <img width="1153" alt="Segmented Control component demonstration" src="https://user-images.githubusercontent.com/53351370/150729107-af17b189-4b81-42ec-8fda-985699180c8e.png">
@@ -68,7 +66,7 @@ You can bind to this value to have changes to the selected index be reflected bo
 <p>Index of a selected element: {segmentedControlSelectedIndex}</p>
 ```
 
-***orientation***
+***orientation*** (not reactive)
 
 Use this option to specify orientation of the Segmented Control. Accepted options are "horizontal" and "vertical". Default orientation is "horizontal".
 
@@ -79,7 +77,7 @@ Use this option to specify orientation of the Segmented Control. Accepted option
 </SegmentedControl>
 ```
 
-***isBackgroundAnimated***
+***isBackgroundAnimated*** (not reactive)
 
 Use this option to specify whether or not a background should be animated. Set to `true` by default. If an animated background is not required, it will not be rendered, resulting in HTML as such:
 
@@ -90,7 +88,7 @@ Use this option to specify whether or not a background should be animated. Set t
 </div>
 ```
 
-***topLevelClassName***
+***topLevelClassName*** (not reactive)
 
 Use this option to specify the component's class name (one of the top-most wrapper and of each child that inherits its class name). 
 
@@ -105,6 +103,17 @@ By default set to "segmented-control". If, for instance, set to "gallery-segment
 ```
 
 **Segment**
+
+***id***
+
+Use this option to specify a Segment's id.
+
+```html
+<SegmentedControl>
+  <Segment id='segmented-control-item-1' />
+  <Segment id='segmented-control-item-2' />
+</SegmentedControl>
+```
 
 ***label***
 

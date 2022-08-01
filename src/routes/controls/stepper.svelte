@@ -4,7 +4,7 @@
 	import { Symbol } from '$lib'
 
 	// let stepperValue = 0
-	// const colors = ['orange', 'orangered', 'gray', 'mediumpurple', 'plum']
+	// const colors = ['orange', 'mediumpurple', 'gray', 'orangered', 'plum']
 </script>
 
 

@@ -33,24 +33,30 @@
 
   setContext('Stepper', {
     stepperValue,
-    step,
     isAbleToIncrement,
     isAbleToDecrement,
     topLevelClassName,
-    setValue: (step) => {
+    setValue: (action) => {
       if (isWrapped) {
-        $stepperValue += step
+        if (action === 'increment') {
+          $stepperValue += step
+        } else if (action === 'decrement') {
+          $stepperValue -= step
+        }
 
         if ($stepperValue < range[0]) {
-          $stepperValue = range[1]
+          $stepperValue = range[1] - (range[0] - $stepperValue - 1)
         } else if ($stepperValue > range[1]) {
-          $stepperValue = range[0]
+          $stepperValue = range[0] + ($stepperValue - range[1] - 1)
         }
       } else {
-        if ($stepperValue + step >= range[0] && $stepperValue + step <= range[1]) {
+        if (action === 'increment' && $stepperValue + step <= range[1]) {
           $stepperValue += step
-          checkIfWillBeAbleToSetValue()
+        } else if (action === 'decrement' && $stepperValue - step >= range[0]) {
+          $stepperValue -= step
         }
+
+        checkIfWillBeAbleToSetValue()
       }
     }
   })
