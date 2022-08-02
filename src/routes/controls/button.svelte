@@ -19,7 +19,7 @@
     <p>Popover button</p>
     
     <!-- TODO: note in documentation that an id needs to be specified per component once, the button will have an id posfixed by '--trigger' and a popover will have an id unchanged -->
-    <Button behaviour='popover' id='popover'>
+    <Button behaviour='popover' generateIdsFrom='popover'>
       Label
 
       <!-- TODO: note in documentation what svelte:fragment does (first example with a span, second with a svelte:fragment) -->

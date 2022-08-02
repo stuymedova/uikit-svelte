@@ -3,7 +3,6 @@
   import { ConditionalWrapper } from '$lib'
   import { pressOutside } from '$lib'
 
-  export let id = ''
   export let label = 'Label'
   // export let appearance = 'gray' // Options: gray/… (Extend: plain/contoured/filled) // TODO: accent/vibrant/call-to-action button — ?
   export let behaviour = 'push' // Options: push/switch/popover
@@ -18,6 +17,7 @@
   export let isOn = false
   
   // Popover button
+  export let generateIdsFrom = ''
   export let isExpanded = false
   export let attachmentAnchor = 'bottom' // Options: top/right/bottom/left
   export let attachmentAlignment = 'start' // Options: start/middle/end
@@ -27,8 +27,8 @@
   export let buttonRef = null
 
   onMount(() => {
-    if (behaviour === 'popover' && id === '') {
-      console.warn('Popover Button: Property "id" is empty. Provide a unique non-empty id.')
+    if (behaviour === 'popover' && generateIdsFrom === '') {
+      console.warn('Popover Button: Property "generateIdsFrom" is empty. Provide a String that would be used to generate ids and aria-controls/aria-labelledby attributes.')
     }
   })
 </script>
@@ -64,7 +64,8 @@
   <!-- TODO: add data prefix (purpose -> data-purpose)? -->
   <button
     bind:this={buttonRef}
-    id={(behaviour === 'popover' && id !== '') ? id + '--trigger' : (id !== '') ? id : undefined}
+    id={
+      (behaviour === 'popover' && generateIdsFrom !== '') ? generateIdsFrom + '--trigger' : $$restProps.id}
     class='button'
     type='button'
     data-behaviour={behaviour}
@@ -75,7 +76,7 @@
     aria-checked={behaviour === 'switch' ? isOn : undefined}
     aria-haspopup={behaviour === 'popover' ? true : undefined}
     aria-expanded={behaviour === 'popover' ? isExpanded : undefined}
-    aria-controls={(behaviour === 'popover' && id !== '') ? id : undefined}
+    aria-controls={(behaviour === 'popover' && generateIdsFrom !== '') ? generateIdsFrom : undefined}
     aria-disabled={isDisabled}
     aria-selected={isSelected}
     aria-label={a11yLabel}
@@ -106,9 +107,9 @@
       ></span>
     {/if}
     <aside 
-      id={id !== '' ? id : undefined}
+      id={generateIdsFrom !== '' ? generateIdsFrom : undefined}
       class='button-popover'
-      aria-labelledby={id !== '' ? id + '--trigger' : undefined}
+      aria-labelledby={generateIdsFrom !== '' ? generateIdsFrom + '--trigger' : undefined}
       style='display: {isExpanded ? "block" : "none"}'
     >
       <slot name='popover'>{label}</slot>

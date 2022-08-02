@@ -1,13 +1,11 @@
 <script>
   import { getContext } from 'svelte'
 
-  export let id = ''
-
   const context = getContext('TabView')
   const index = context.setTabContentIndex()
   const selectedTabIndex = context.selectedTabIndex
   const topLevelClassName = context.topLevelClassName
-  const generateIdsFromId = context.generateIdsFromId
+  const generateIdsFrom = context.generateIdsFrom
   
   $: isSelected = $selectedTabIndex === index
   
@@ -16,11 +14,15 @@
 
 
 <div 
-  id={(generateIdsFromId !== '') ? `${generateIdsFromId}-item-${index}` : (id !== '') ? id : undefined}
+  id={
+    ($$restProps.id) ? $$restProps.id :
+    (generateIdsFrom !== '') ? `${generateIdsFrom}-item-${index}`: undefined}
   class='{topLevelClassName}-tab-content'
   class:selected={isSelected}
   role='tabpanel'
-  aria-labelledby={(generateIdsFromId !== '') ? `${generateIdsFromId}-item-${index}--trigger` : ($$restProps["aria-labelledby"]) ? $$restProps["aria-labelledby"] : undefined}
+  aria-labelledby={
+    ($$restProps["aria-labelledby"]) ? $$restProps["aria-labelledby"] :
+    (generateIdsFrom !== '') ? `${generateIdsFrom}-item-${index}--trigger` : undefined}
   tabindex={isSelected ? '0' : '-1'}
   style='opacity: {isSelected ? '1' : '0'}'
   {...$$restProps}

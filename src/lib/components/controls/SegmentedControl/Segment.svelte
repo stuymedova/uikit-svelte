@@ -2,7 +2,6 @@
   import { getContext, onMount } from 'svelte'
   import { Button } from '$lib'
 
-  export let id = ''
   export let label = 'Label'
   export let isDisabled = false
 
@@ -44,7 +43,6 @@
 
 <Button
   bind:this={segmentRef}
-  id={id !== '' ? id : undefined}
   class='button {topLevelClassName}-item'
   role='tab'
   isSelected={isSelected}

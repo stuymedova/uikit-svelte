@@ -4,7 +4,7 @@
 
   export let selectedIndex = 0
   export let topLevelClassName = 'tab-view'
-  export let generateIdsFromId = ''
+  export let generateIdsFrom = ''
 
   let selectedTabIndex = writable(selectedIndex) // Needs to be a store in order for a child to update it
   let tabContents = []
@@ -14,7 +14,7 @@
   setContext('TabView', {
     selectedTabIndex,
     topLevelClassName,
-    generateIdsFromId,
+    generateIdsFrom,
     setTabIndex: () => {
       tabIndexesIterator += 1
       return tabIndexesIterator

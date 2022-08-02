@@ -104,17 +104,6 @@ By default set to "segmented-control". If, for instance, set to "gallery-segment
 
 **Segment**
 
-***id***
-
-Use this option to specify a Segment's id.
-
-```html
-<SegmentedControl>
-  <Segment id='segmented-control-item-1' />
-  <Segment id='segmented-control-item-2' />
-</SegmentedControl>
-```
-
 ***label***
 
 Use this option to specify a Segment's label.
