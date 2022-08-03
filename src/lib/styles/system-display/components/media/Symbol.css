@@ -1,3 +1,4 @@
 .button .symbol {
   pointer-events: none;
+  vertical-align: middle;
 }

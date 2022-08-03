@@ -3,7 +3,7 @@
 
   // TODO: scale symbols (small, medium, and large)
   // TODO: account for dark mode
-  export let name = undefined
+  export let name = ''
   
   const capitalize = (str) => {
     return str.charAt(0).toUpperCase() + str.slice(1)
