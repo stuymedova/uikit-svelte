@@ -36,7 +36,7 @@
 
 **Utilities**
 
-* componentActions
+* applyActionsToComponent
 
 ## Styles
 

@@ -1,4 +1,4 @@
-export function componentActions(node, passedActions) {
+export function applyActionsToComponent(node, passedActions) {
   if (!passedActions) return
 
   const decoupledActions = passedActions.map((passedAction) => {
