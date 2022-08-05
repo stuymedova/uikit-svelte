@@ -67,7 +67,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-    border-radius: 14px;
+    border-radius: 10px;
     overflow: hidden;
   }
 
@@ -82,8 +82,8 @@
     color: var(--color-text-primary);
     background-color: var(--color-background);
 
-    border-bottom-left-radius: 14px;
-    border-bottom-right-radius: 14px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     overflow: hidden;
   } */
 </style>

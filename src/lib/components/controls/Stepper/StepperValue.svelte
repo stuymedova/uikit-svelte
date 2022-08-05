@@ -2,9 +2,9 @@
   import { getContext } from 'svelte'
 
   const context = getContext('Stepper')
-  const topLevelClassName = context.topLevelClassName
   const stepperValue = context.stepperValue
+  const generateClassNamesFrom = context.generateClassNamesFrom
 </script>
 
 
-<span class='{topLevelClassName}-value'>{$stepperValue}</span>
+<span class='{generateClassNamesFrom}-value'>{$stepperValue}</span>

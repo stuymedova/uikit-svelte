@@ -3,8 +3,8 @@
   import { writable } from 'svelte/store'
 
   export let selectedIndex = 0
-  export let topLevelClassName = 'tab-view'
   export let generateIdsFrom = ''
+  export let generateClassNamesFrom = 'tab-view'
 
   let selectedTabIndex = writable(selectedIndex) // Needs to be a store in order for a child to update it
   let tabContents = []
@@ -13,8 +13,8 @@
 
   setContext('TabView', {
     selectedTabIndex,
-    topLevelClassName,
     generateIdsFrom,
+    generateClassNamesFrom,
     setTabIndex: () => {
       tabIndexesIterator += 1
       return tabIndexesIterator

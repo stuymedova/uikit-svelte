@@ -7,7 +7,7 @@
 
   const context = getContext('TabView')
   const selectedTabIndex = context.selectedTabIndex
-  const topLevelClassName = context.topLevelClassName
+  const generateClassNamesFrom = context.generateClassNamesFrom
 
   $: context.setSelected($selectedTabIndex)
 </script>
@@ -16,7 +16,7 @@
 <SegmentedControl
   bind:selectedIndex={$selectedTabIndex}
   orientation={orientation}
-  topLevelClassName='{topLevelClassName}-tabbed-control'
+  generateClassNamesFrom='{generateClassNamesFrom}-tabbed-control'
   isBackgroundAnimated={isBackgroundAnimated}
 >
   <slot />

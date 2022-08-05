@@ -7,7 +7,7 @@
   export let range = [0, 99]
   export let step = 1
   export let isWrapped = false
-  export let topLevelClassName = 'stepper'
+  export let generateClassNamesFrom = 'stepper'
 
   let stepperValue = writable(value)
   let isAbleToIncrement = writable(true)
@@ -35,7 +35,7 @@
     stepperValue,
     isAbleToIncrement,
     isAbleToDecrement,
-    topLevelClassName,
+    generateClassNamesFrom,
     setValue: (action) => {
       if (isWrapped) {
         if (action === 'increment') {
@@ -82,12 +82,12 @@
 </script>
 
 
-<div class={topLevelClassName}>
+<div class={generateClassNamesFrom}>
   {#if label !== ''}
-    <span class='{topLevelClassName}-label'>{label}</span>
+    <span class='{generateClassNamesFrom}-label'>{label}</span>
   {/if}
 
-  <div class='{topLevelClassName}-control'>
+  <div class='{generateClassNamesFrom}-control'>
     <slot />
   </div>
 </div>

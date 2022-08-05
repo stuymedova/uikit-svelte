@@ -4,8 +4,8 @@
   const context = getContext('TabView')
   const index = context.setTabContentIndex()
   const selectedTabIndex = context.selectedTabIndex
-  const topLevelClassName = context.topLevelClassName
   const generateIdsFrom = context.generateIdsFrom
+  const generateClassNamesFrom = context.generateClassNamesFrom
   
   $: isSelected = $selectedTabIndex === index
   
@@ -17,7 +17,7 @@
   id={
     ($$restProps.id) ? $$restProps.id :
     (generateIdsFrom !== '') ? `${generateIdsFrom}-item-${index}`: undefined}
-  class='{topLevelClassName}-tab-content'
+  class='{generateClassNamesFrom}-tab-content'
   class:selected={isSelected}
   role='tabpanel'
   aria-labelledby={

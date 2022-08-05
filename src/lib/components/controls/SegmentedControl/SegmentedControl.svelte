@@ -4,7 +4,7 @@
 
   export let selectedIndex = 0
   export let orientation = 'horizontal' // Options: horizontal/vertical
-  export let topLevelClassName = 'segmented-control'
+  export let generateClassNamesFrom = 'segmented-control'
   export let isBackgroundAnimated = true
   
   let focusedSegmentIndex = writable(selectedIndex) // Needs to be a store in order for a child to update it
@@ -20,7 +20,7 @@
     focusedSegmentIndex,
     selectedSegmentIndex,
     orientation,
-    topLevelClassName,
+    generateClassNamesFrom,
     isBackgroundAnimated,
     setIndex: () => {
       indexesIterator += 1
@@ -77,7 +77,7 @@
 
 
 <div 
-  class={topLevelClassName} 
+  class={generateClassNamesFrom} 
   role='tablist'
   aria-orientation={orientation}
   data-is-background-animated={isBackgroundAnimated}
@@ -94,7 +94,7 @@
 
   {#if isBackgroundAnimated}
     <div 
-      class='{topLevelClassName}-background' 
+      class='{generateClassNamesFrom}-background' 
       role='presentation' 
       style='
         {orientation === 'vertical' ? 'height' : 'width'}: {backgroundLength}px; 

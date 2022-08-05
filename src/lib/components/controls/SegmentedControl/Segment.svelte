@@ -14,7 +14,7 @@
   const focusedSegmentIndex = context.focusedSegmentIndex
   const selectedSegmentIndex = context.selectedSegmentIndex
   const orientation = context.orientation
-  const topLevelClassName = context.topLevelClassName
+  const generateClassNamesFrom = context.generateClassNamesFrom
   const isBackgroundAnimated = context.isBackgroundAnimated
   
   $: isFocused = $focusedSegmentIndex === index
@@ -43,7 +43,7 @@
 
 <Button
   bind:this={segmentRef}
-  class='button {topLevelClassName}-item'
+  class='button {generateClassNamesFrom}-item'
   role='tab'
   isSelected={isSelected}
   isDisabled={isDisabled}

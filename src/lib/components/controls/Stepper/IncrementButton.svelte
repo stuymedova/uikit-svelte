@@ -8,12 +8,12 @@
   const context = getContext('Stepper')
   const setValue = context.setValue
   const isAbleToIncrement = context.isAbleToIncrement
-  const topLevelClassName = context.topLevelClassName
+  const generateClassNamesFrom = context.generateClassNamesFrom
 </script>
 
 
 <Button 
-  class='button {topLevelClassName}-button {topLevelClassName}-increment-button' 
+  class='button {generateClassNamesFrom}-button {generateClassNamesFrom}-increment-button' 
   a11yLabel={a11yLabel === '' ? undefined : a11yLabel}
   isDisabled={!$isAbleToIncrement}
   on:click={() => { setValue('increment') }}

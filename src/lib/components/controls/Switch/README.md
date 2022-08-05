@@ -71,9 +71,13 @@ Use this option to disable changing a Switch's state.
 <Switch isDisabled={true} />
 ```
 
-***topLevelClassName***
+***generateClassNamesFrom***
 
 Use this option to specify the component's class name (one of the top-most wrapper and of each child that inherits its class name). 
+
+```html
+<Switch generateClassNamesFrom='mode-switch' />
+```
 
 By default set to "switch". If, for instance, set to "mode-switch", the component's HTML output would look as such:
 

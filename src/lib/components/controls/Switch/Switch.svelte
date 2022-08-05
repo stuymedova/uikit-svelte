@@ -2,7 +2,7 @@
   export let label = ''
   export let isOn = false
   export let isDisabled = false
-  export let topLevelClassName = 'switch'
+  export let generateClassNamesFrom = 'switch'
 
   let ref = null
 </script>
@@ -10,7 +10,7 @@
 
 <button 
   bind:this={ref}
-  class={topLevelClassName}
+  class={generateClassNamesFrom}
   type='button'
   role='switch'
   aria-checked={isOn}
@@ -32,11 +32,11 @@
   on:keydown
 >
   {#if label !== ''}
-    <span class='{topLevelClassName}-label'>
+    <span class='{generateClassNamesFrom}-label'>
       <slot>{label}</slot>
     </span>
   {/if}
-  <span class='{topLevelClassName}-item'>
-    <span class='{topLevelClassName}-item-knob'></span>
+  <span class='{generateClassNamesFrom}-item'>
+    <span class='{generateClassNamesFrom}-item-knob'></span>
   </span>
 </button>

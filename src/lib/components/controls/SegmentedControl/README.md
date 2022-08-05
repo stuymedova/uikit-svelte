@@ -88,9 +88,16 @@ Use this option to specify whether or not a background should be animated. Set t
 </div>
 ```
 
-***topLevelClassName*** (not reactive)
+***generateClassNamesFrom*** (not reactive)
 
-Use this option to specify the component's class name (one of the top-most wrapper and of each child that inherits its class name). 
+Use this option to specify the component's class name (one of the top-most wrapper and of each child that inherits its class name).
+
+```html
+<SegmentedControl generateClassNamesFrom='gallery-segmented-control'>
+  <Segment>First</Segment>
+  <Segment>Second</Segment>
+</SegmentedControl>
+```
 
 By default set to "segmented-control". If, for instance, set to "gallery-segmented-control", the component's HTML output would look as such:
 

@@ -2,10 +2,10 @@
   import { getContext } from 'svelte'
 
   const context = getContext('TabView')
-  const topLevelClassName = context.topLevelClassName
+  const generateClassNamesFrom = context.generateClassNamesFrom
 </script>
 
 
-<div class='{topLevelClassName}-tab-pane'>
+<div class='{generateClassNamesFrom}-tab-pane'>
   <slot />
 </div>
