@@ -1,4 +1,10 @@
+.symbol > svg {
+  /* Prevent clipped SVG */
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  overflow: visible;
+}
+
 .button .symbol {
   pointer-events: none;
-  vertical-align: middle;
 }
