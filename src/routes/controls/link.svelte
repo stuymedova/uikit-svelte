@@ -1,40 +1,41 @@
 <script>
 	import '$styles/system-display/lightMode.css'
-  import { Wrapper, Link } from '$lib'
-  import picture from '$lib/assets/images/spring.jpg'
+  import { Wrapper } from '$lib'
+  import { Link } from '$lib'
+  // import picture from '$lib/assets/images/spring.jpg'
 </script>
 
 
-<!-- Link around inline element -->
-<!-- <div class='component-wrapper'>
+<!-- EXAMPLE 1: Link around an inline element -->
+<Wrapper class='component-wrapper'>
   <Link 
     destination='https://github.com/stuymedova/uikit-svelte'
     shouldBeOpenedInNewTab={true}
   >
     Label
   </Link>
-</div> -->
+</Wrapper>
 
-<!-- Link around block element -->
-<!-- TODO: finish up an example (styles) -->
-<Wrapper class='component-wrapper'>
+<!-- EXAMPLE 2: Link around a block element -->
+<!-- <Wrapper class='component-wrapper'>
   <Link
     destination='https://github.com/stuymedova/uikit-svelte'
     shouldBeOpenedInNewTab={true}
     isInline={false}
   >
     <Wrapper class='card-wrapper'>
-      <img src={picture} alt='A tree blooming in late spring' />
+      <img class='card-image' src={picture} alt='A tree blooming in late spring' />
       <Wrapper class='card-caption-wrapper'>
         <p>Lorem ipsum</p>
-        <p>Turpis egestas pretium aenean pharetra magna. Cum sociis natoque penatibus et magnis dis parturient. Enim sed faucibus turpis in eu mi.</p>
+        <p>Turpis egestas pretium aenean pharetra magna. Cum sociis natoque penatibus et magnis dis parturient.</p>
       </Wrapper>
     </Wrapper>
   </Link>
-</Wrapper>
+</Wrapper> -->
 
 
 <style>
+  /* EXAMPLE 1 */
   :global(.component-wrapper) {
 		width: 100%;
 		padding-top: 12px;
@@ -44,8 +45,45 @@
     gap: 12px;
   }
 
-  img {
-    width: 300px;
-    height: auto;
+
+  /* EXAMPLE 2 */
+  /* :global(.component-wrapper) {
+		width: 100%;
+		padding-top: 12px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+    gap: 12px;
   }
+
+  .card-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  :global(.card-wrapper) {
+		width: 300px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  :global(.card-caption-wrapper) {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 15px 20px;
+
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+    overflow: hidden;
+  } */
 </style>
