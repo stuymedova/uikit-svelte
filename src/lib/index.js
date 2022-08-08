@@ -6,7 +6,7 @@ export { Link } from './components/controls/Link'
 export { Stepper, IncrementButton, DecrementButton, StepperValue } from './components/controls/Stepper'
 export { Switch } from './components/controls/Switch'
 export { SegmentedControl, Segment } from './components/controls/SegmentedControl'
-export { TabView, TabbedControl, Tab, TabPane, TabContent } from './components/controls/TabView'
+export { TabView, TabbedControl, Tab, TabContent, TabPane } from './components/controls/TabView'
 
 // 1.2. Media
 export { Symbol } from './components/media/Symbol'

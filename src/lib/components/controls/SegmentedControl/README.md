@@ -6,7 +6,7 @@ Segmented control is a set of two or more segments, each of which functions as a
 
 ## Usage
 
-Include component on a webpage by adding 
+Include the component on a webpage by adding 
 ```js
 import '@stuymedova/uikit-svelte/styles/system-display/lightMode.css' // Optional, alternatively use darkMode.css or a custom stylesheet
 import { SegmentedControl, Segment } from '@stuymedova/uikit-svelte'
@@ -47,7 +47,7 @@ Use this option to specify an index of an element to be selected by default, sta
 </SegmentedControl>
 ```
 
-You can bind to this value to have changes to the selected index be reflected both in the Segmented Control component and any other part of the interface that uses it.
+You can bind to this value to have changes to the selected index be reflected both in the Segmented Control component and in any other part of the interface that uses it.
 
 ```html
 <script>
@@ -68,7 +68,7 @@ You can bind to this value to have changes to the selected index be reflected bo
 
 ***orientation*** (not reactive)
 
-Use this option to specify orientation of the Segmented Control. Accepted options are "horizontal" and "vertical". Default orientation is "horizontal".
+Use this option to specify an orientation of the Segmented Control. Accepted values are "horizontal" and "vertical". Default orientation is "horizontal".
 
 ```html
 <SegmentedControl orientation='vertical'>
@@ -79,7 +79,16 @@ Use this option to specify orientation of the Segmented Control. Accepted option
 
 ***isBackgroundAnimated*** (not reactive)
 
-Use this option to specify whether or not a background should be animated. Set to `true` by default. If an animated background is not required, it will not be rendered, resulting in HTML as such:
+Use this option to specify whether or not a background should be animated. Set to `true` by default. 
+
+```html
+<SegmentedControl isBackgroundAnimated={false}>
+  <Segment>First</Segment>
+  <Segment>Second</Segment>
+</SegmentedControl>
+```
+
+If an animated background is not required, it will not be rendered, resulting in HTML as such:
 
 ```html
 <div class="segmented-control" role="tablist" aria-orientation="horizontal">
@@ -93,19 +102,19 @@ Use this option to specify whether or not a background should be animated. Set t
 Use this option to specify the component's class name (one of the top-most wrapper and of each child that inherits its class name).
 
 ```html
-<SegmentedControl generateClassNamesFrom='gallery-segmented-control'>
+<SegmentedControl generateClassNamesFrom='navigation-segmented-control'>
   <Segment>First</Segment>
   <Segment>Second</Segment>
 </SegmentedControl>
 ```
 
-By default set to "segmented-control". If, for instance, set to "gallery-segmented-control", the component's HTML output would look as such:
+By default set to "segmented-control". If, for instance, set to "navigation-segmented-control", the component's HTML output would look as such:
 
 ```html
-<div class="gallery-segmented-control" role="tablist" aria-orientation="horizontal">
-  <button class="button gallery-segmented-control-item selected" role="tab" aria-selected="true" aria-disabled="false" tabindex="0">First</button>
-  <button class="button gallery-segmented-control-item" role="tab" aria-disabled="false" aria-selected="false" aria-disabled="false" tabindex="-1">Second</button>
-  <div class="gallery-segmented-control-background" role="presentation" style="width: 75px; transform: translateX(2px);"></div>
+<div class="navigation-segmented-control" role="tablist" aria-orientation="horizontal">
+  <button class="button navigation-segmented-control-item selected" role="tab" aria-selected="true" aria-disabled="false" tabindex="0">First</button>
+  <button class="button navigation-segmented-control-item" role="tab" aria-disabled="false" aria-selected="false" aria-disabled="false" tabindex="-1">Second</button>
+  <div class="navigation-segmented-control-background" role="presentation" style="width: 75px; transform: translateX(2px);"></div>
 </div>
 ```
 

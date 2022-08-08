@@ -6,7 +6,7 @@ A control for navigating to a URL.
 
 ## Usage
 
-Include component on a webpage by adding 
+Include the component on a webpage by adding 
 ```js
 import '@stuymedova/uikit-svelte/styles/system-display/lightMode.css' // Optional, alternatively use darkMode.css or a custom stylesheet
 import { Link } from '@stuymedova/uikit-svelte'

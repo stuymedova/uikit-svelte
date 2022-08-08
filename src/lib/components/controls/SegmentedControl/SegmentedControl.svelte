@@ -65,10 +65,6 @@
       console.warn(`Segmented Control: Provided "selectedIndex" value is out of range. Value should be greater than or equal to 0, and less than ${segments.length}, provided ${selectedIndex}.`)
     }
 
-    if (segments.length < 2) {
-      console.warn('Segmented Control: For the component to function correctly, provide two or more Segments.')
-    }
-
     if (orientation !== 'horizontal' && orientation !== 'vertical') {
       console.error(`Segmented Control: Accepted orientation types are "horizontal" and "vertical". Provided "${orientation}".`)
     }

@@ -7,4 +7,6 @@
 
 .button .symbol {
   pointer-events: none;
+  /* display: inline-block;
+  vertical-align: middle; */
 }

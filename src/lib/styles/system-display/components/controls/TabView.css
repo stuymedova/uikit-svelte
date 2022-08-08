@@ -1,15 +1,29 @@
-.tab-view-tab-pane {
+.tab-view-tabbed-control {
   position: relative;
-  margin-top: 10px;
+  display: flex;
+  gap: 4px;
+  margin-bottom: 10px;
+}
+.tab-view-tabbed-control[aria-orientation='vertical'] {
+  width: 84px;
+  height: 84px;
+  flex-direction: column;
 }
 
 .tab-view-tab-content {
+  position: relative;
+}
+
+.tab-view-tab-pane {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0;
   width: 344px;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
 }
-.tab-view-tab-content.selected {
+.tab-view-tab-pane.selected {
   opacity: 1;
+  visibility: visible;
 }

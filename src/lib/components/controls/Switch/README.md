@@ -6,7 +6,7 @@ A control that toggles between on and off states.
 
 ## Usage
 
-Include component on a webpage by adding 
+Include the component on a webpage by adding 
 ```js
 import '@stuymedova/uikit-svelte/styles/system-display/lightMode.css' // Optional, alternatively use darkMode.css or a custom stylesheet
 import { Switch } from '@stuymedova/uikit-svelte'
