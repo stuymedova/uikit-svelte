@@ -220,17 +220,13 @@ By default set to "tab-view". If, for instance, set to "information-tab-view", t
 </div>
 ```
 
-**Tabbed Control**
-
-***position***
-
-<!-- TODO -->
+***controlPosition***
 
 Use this option to specify a side by which to position the Tabbed Control relative to the Tab Content. Accepted values are "top", "bottom", "left", and "right". By default set to "top".
 
 ```html
-<TabView generateIdsFrom='sample-text'>
-  <TabbedControl position='bottom'>
+<TabView generateIdsFrom='sample-text' controlPosition='bottom'>
+  <TabbedControl>
     <Tab>First</Tab>
     <Tab>Second</Tab>
     <Tab>Third</Tab>
@@ -252,15 +248,15 @@ Use this option to specify a side by which to position the Tabbed Control relati
 </TabView>
 ```
 
-***orientation***
+**Tabbed Control**
 
-<!-- TODO -->
+***orientation***
 
 Use this option to specify an orientation of the Tabbed Control. Accepted values are "horizontal" and "vertical". Default orientation is "horizontal".
 
 ```html
-<TabView generateIdsFrom='sample-text'>
-  <TabbedControl position='left' orientation='vertical'>
+<TabView generateIdsFrom='sample-text' controlPosition='left'>
+  <TabbedControl orientation='vertical'>
     <Tab>First</Tab>
     <Tab>Second</Tab>
     <Tab>Third</Tab>

@@ -5,6 +5,7 @@
   export let selectedIndex = 0
   export let generateIdsFrom = '' // TODO: require this option to be specified, throw an error if not
   export let generateClassNamesFrom = 'tab-view'
+  export let controlPosition = 'top' // Options: top/left/bottom/right
 
   let selectedTabIndex = writable(selectedIndex) // Needs to be a store in order for a child to update it
   let tabPanes = []
@@ -55,7 +56,8 @@
 
 <div 
   class='tab-view' 
-  role='tablist'
+  role='tablist' 
+  data-control-position={controlPosition}
   {...$$restProps}
   on:click
   on:mouseover
