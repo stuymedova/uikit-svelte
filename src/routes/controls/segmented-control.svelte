@@ -4,7 +4,6 @@
 </script>
 
 
-<!-- TODO: set width equal to that of a largest element (or height) -->
 <div class='component-wrapper'>
   <SegmentedControl>
     <Segment>First</Segment>

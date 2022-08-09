@@ -37,13 +37,13 @@
 
 .tab-view-tab-content {
   position: relative;
+  width: 344px;
 }
 
 .tab-view-tab-pane {
   position: absolute;
   top: 0;
   left: 0;
-  width: 344px;
   pointer-events: none;
   opacity: 0;
   visibility: hidden;

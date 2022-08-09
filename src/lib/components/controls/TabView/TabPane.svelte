@@ -14,8 +14,9 @@
   $: isSelected = $selectedTabIndex === index
   
   onMount(() => {
-    width = Math.round(tabPaneRef.clientWidth)
-    height = Math.round(tabPaneRef.clientHeight)
+    // TODO: account for resize (what if width is set to a relative value such as 100vw)
+    width = parseInt(window.getComputedStyle(tabPaneRef).width)
+    height = parseInt(window.getComputedStyle(tabPaneRef).height)
 
     context.addTabPane(index, width, height)
   })

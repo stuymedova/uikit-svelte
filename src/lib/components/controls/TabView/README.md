@@ -57,9 +57,6 @@ The generated HTML will be as such:
 
 ## API
 
-<!-- TODO: mark the non-reactive ones -->
-<!-- TODO: specify a side, by which to render the control (on top, bottom, or to the right, left side from the Tab Pane) -->
-
 You can specify additional options for the Tab View, Tabbed Control, and each separate Tab.
 
 **Tab View**
@@ -125,12 +122,12 @@ You can bind to this value to have changes to the selected index be reflected bo
   </TabContent>
 </TabView>
 
-<p>Index of a selected element: {tabViewSelectedIndex}</p>
+<p>Index of a selected tab: {tabViewSelectedIndex}</p>
 ```
 
-***generateIdsFrom***
+***generateIdsFrom (not reactive)***
 
-Required. Use this option to specify an id for each of the iterable children (Tabs and Tab Contents), as well as their "aria-controls" and "aria-labelledby" attributes. The generated Tab ids and Tab Contents' "aria-labelledby" attributes follow this template: `{generateIdsFrom}-item-{index}--trigger`. The generated Tab Content ids and Tabs' "aria-controls" attributes follow this template: `{generateIdsFrom}-item-{index}`. Indexes are set automatically. By default the property is unspecified.
+Required. Use this option to specify an id for each Tab and Tab Content component, as well as their "aria-controls" and "aria-labelledby" attributes. The generated Tab ids and Tab Contents' "aria-labelledby" attributes follow this template: `{generateIdsFrom}-item-{index}--trigger`. The generated Tab Content ids and Tabs' "aria-controls" attributes follow this template: `{generateIdsFrom}-item-{index}`. Indexes are set automatically. By default the property is unspecified.
 
 ```html
 <TabView generateIdsFrom='sample-text'>
@@ -174,7 +171,7 @@ The component's HTML output looks as such:
 </div>
 ```
 
-***generateClassNamesFrom***
+***generateClassNamesFrom (not reactive)***
 
 Use this option to specify the component's class name (one of the top-most wrapper and of each child that inherits its class name).
 
@@ -250,7 +247,7 @@ Use this option to specify a side by which to position the Tabbed Control relati
 
 **Tabbed Control**
 
-***orientation***
+***orientation (not reactive)***
 
 Use this option to specify an orientation of the Tabbed Control. Accepted values are "horizontal" and "vertical". Default orientation is "horizontal".
 
@@ -278,7 +275,7 @@ Use this option to specify an orientation of the Tabbed Control. Accepted values
 </TabView>
 ```
 
-***isBackgroundAnimated***
+***isBackgroundAnimated (not reactive)***
 
 Use this option to specify whether or not a background should be animated. Set to `false` by default. 
 
