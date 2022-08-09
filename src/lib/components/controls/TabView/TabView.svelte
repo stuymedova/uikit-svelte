@@ -3,11 +3,11 @@
   import { writable } from 'svelte/store'
 
   export let selectedIndex = 0
-  export let generateIdsFrom = '' // TODO: require this option to be specified, throw an error if not
+  export let generateIdsFrom = ''
   export let generateClassNamesFrom = 'tab-view'
   export let controlPosition = 'top' // Options: top/left/bottom/right
 
-  let selectedTabIndex = writable(selectedIndex) // Needs to be a store in order for a child to update it
+  let selectedTabIndex = writable(selectedIndex)
   let tabPanes = []
   let tabIndexesIterator = -1
   let tabPaneIndexesIterator = -1
@@ -49,6 +49,10 @@
   onMount(() => {
     if (selectedIndex < 0 || selectedIndex >= tabPanes.length) {
       console.warn(`TabView: Provided "selectedIndex" value is out of range. Value should be greater than or equal to 0, and less than ${tabPanes.length}, provided ${selectedIndex}.`)
+    }
+
+    if (generateIdsFrom === '') {
+      console.warn(`TabView: Provide value to the "generateIdsFrom" property. The "generateIdsFrom" property is used to assign an id to each Tab and Tab Content component, as well as their "aria-controls" and "aria-labelledby" attributes.`)
     }
   })
 </script>

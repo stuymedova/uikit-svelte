@@ -7,7 +7,7 @@
   export let generateClassNamesFrom = 'segmented-control'
   export let isBackgroundAnimated = true
   
-  let focusedSegmentIndex = writable(selectedIndex) // Needs to be a store in order for a child to update it
+  let focusedSegmentIndex = writable(selectedIndex)
   let selectedSegmentIndex = writable(selectedIndex) // Selected Segment is one that is focused and not disabled
   let segments = []
   let indexesIterator = -1

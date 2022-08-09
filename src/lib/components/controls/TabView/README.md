@@ -6,7 +6,7 @@ Tab view is a set of mutually exclusive panes of content, which you can switch b
 
 ## Usage
 
-Include component on a webpage by adding 
+Include the component on a webpage by adding 
 ```js
 import '@stuymedova/uikit-svelte/styles/system-display/lightMode.css' // Optional, alternatively use darkMode.css or a custom stylesheet
 import { TabView, TabbedControl, Tab, TabContent, TabPane } from '@stuymedova/uikit-svelte'
@@ -23,9 +23,7 @@ within the `script` tag of a Svelte file. You can further use the component as s
 
   <TabContent>
     <TabPane>
-      Turpis egestas pretium aenean pharetra magna. Cum 
-      sociis natoque penatibus et magnis dis parturient. Enim sed faucibus turpis in eu mi. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Nisi 
-      scelerisque eu ultrices vitae.
+      Turpis egestas pretium aenean pharetra magna. Cum sociis natoque penatibus et magnis dis parturient. Enim sed faucibus turpis in eu mi. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Nisi scelerisque eu ultrices vitae.
     </TabPane>
     <TabPane>
       This is a viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Sed aliquam ultrices mauris. Phasellus magna. Fusce egestas elit eget lorem. Pellentesque auctor neque nec urna.
@@ -75,9 +73,7 @@ Use this option to specify an index of an element to be selected by default, sta
 
   <TabContent>
     <TabPane>
-      Turpis egestas pretium aenean pharetra magna. Cum 
-      sociis natoque penatibus et magnis dis parturient. Enim sed faucibus turpis in eu mi. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Nisi 
-      scelerisque eu ultrices vitae.
+      Turpis egestas pretium aenean pharetra magna. Cum sociis natoque penatibus et magnis dis parturient. Enim sed faucibus turpis in eu mi. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Nisi scelerisque eu ultrices vitae.
     </TabPane>
     <TabPane> <!-- This element will be displayed initially -->
       This is a viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Sed aliquam ultrices mauris. Phasellus magna. Fusce egestas elit eget lorem. Pellentesque auctor neque nec urna.
@@ -109,9 +105,7 @@ You can bind to this value to have changes to the selected index be reflected bo
 
   <TabContent>
     <TabPane>
-      Turpis egestas pretium aenean pharetra magna. Cum 
-      sociis natoque penatibus et magnis dis parturient. Enim sed faucibus turpis in eu mi. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Nisi 
-      scelerisque eu ultrices vitae.
+      Turpis egestas pretium aenean pharetra magna. Cum sociis natoque penatibus et magnis dis parturient. Enim sed faucibus turpis in eu mi. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Nisi scelerisque eu ultrices vitae.
     </TabPane>
     <TabPane>
       This is a viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Sed aliquam ultrices mauris. Phasellus magna. Fusce egestas elit eget lorem. Pellentesque auctor neque nec urna.
@@ -127,7 +121,7 @@ You can bind to this value to have changes to the selected index be reflected bo
 
 ***generateIdsFrom (not reactive)***
 
-Required. Use this option to specify an id for each Tab and Tab Content component, as well as their "aria-controls" and "aria-labelledby" attributes. The generated Tab ids and Tab Contents' "aria-labelledby" attributes follow this template: `{generateIdsFrom}-item-{index}--trigger`. The generated Tab Content ids and Tabs' "aria-controls" attributes follow this template: `{generateIdsFrom}-item-{index}`. Indexes are set automatically. By default the property is unspecified.
+Required. Use this option to specify an id for each Tab and Tab Content component, as well as their "aria-controls" and "aria-labelledby" attributes. The generated Tab ids and Tab Contents' "aria-labelledby" attributes follow `{generateIdsFrom}-item-{index}--trigger` template. The generated Tab Content ids and Tabs' "aria-controls" attributes follow `{generateIdsFrom}-item-{index}` template. Indexes are set automatically. By default the property is unspecified.
 
 ```html
 <TabView generateIdsFrom='sample-text'>
@@ -139,9 +133,7 @@ Required. Use this option to specify an id for each Tab and Tab Content componen
 
   <TabContent>
     <TabPane>
-      Turpis egestas pretium aenean pharetra magna. Cum 
-      sociis natoque penatibus et magnis dis parturient. Enim sed faucibus turpis in eu mi. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Nisi 
-      scelerisque eu ultrices vitae.
+      Turpis egestas pretium aenean pharetra magna. Cum sociis natoque penatibus et magnis dis parturient. Enim sed faucibus turpis in eu mi. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Nisi scelerisque eu ultrices vitae.
     </TabPane>
     <TabPane>
       This is a viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Sed aliquam ultrices mauris. Phasellus magna. Fusce egestas elit eget lorem. Pellentesque auctor neque nec urna.
@@ -185,9 +177,7 @@ Use this option to specify the component's class name (one of the top-most wrapp
 
   <TabContent>
     <TabPane>
-      Turpis egestas pretium aenean pharetra magna. Cum 
-      sociis natoque penatibus et magnis dis parturient. Enim sed faucibus turpis in eu mi. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Nisi 
-      scelerisque eu ultrices vitae.
+      Turpis egestas pretium aenean pharetra magna. Cum sociis natoque penatibus et magnis dis parturient. Enim sed faucibus turpis in eu mi. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Nisi scelerisque eu ultrices vitae.
     </TabPane>
     <TabPane>
       This is a viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Sed aliquam ultrices mauris. Phasellus magna. Fusce egestas elit eget lorem. Pellentesque auctor neque nec urna.
@@ -231,9 +221,7 @@ Use this option to specify a side by which to position the Tabbed Control relati
 
   <TabContent>
     <TabPane>
-      Turpis egestas pretium aenean pharetra magna. Cum 
-      sociis natoque penatibus et magnis dis parturient. Enim sed faucibus turpis in eu mi. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Nisi 
-      scelerisque eu ultrices vitae.
+      Turpis egestas pretium aenean pharetra magna. Cum sociis natoque penatibus et magnis dis parturient. Enim sed faucibus turpis in eu mi. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Nisi scelerisque eu ultrices vitae.
     </TabPane>
     <TabPane>
       This is a viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Sed aliquam ultrices mauris. Phasellus magna. Fusce egestas elit eget lorem. Pellentesque auctor neque nec urna.
@@ -261,9 +249,7 @@ Use this option to specify an orientation of the Tabbed Control. Accepted values
 
   <TabContent>
     <TabPane>
-      Turpis egestas pretium aenean pharetra magna. Cum 
-      sociis natoque penatibus et magnis dis parturient. Enim sed faucibus turpis in eu mi. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Nisi 
-      scelerisque eu ultrices vitae.
+      Turpis egestas pretium aenean pharetra magna. Cum sociis natoque penatibus et magnis dis parturient. Enim sed faucibus turpis in eu mi. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Nisi scelerisque eu ultrices vitae.
     </TabPane>
     <TabPane>
       This is a viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Sed aliquam ultrices mauris. Phasellus magna. Fusce egestas elit eget lorem. Pellentesque auctor neque nec urna.
@@ -277,6 +263,8 @@ Use this option to specify an orientation of the Tabbed Control. Accepted values
 
 ***isBackgroundAnimated (not reactive)***
 
+<!-- TODO: styles for when the background is animated -->
+
 Use this option to specify whether or not a background should be animated. Set to `false` by default. 
 
 ```html
@@ -289,9 +277,7 @@ Use this option to specify whether or not a background should be animated. Set t
 
   <TabContent>
     <TabPane>
-      Turpis egestas pretium aenean pharetra magna. Cum 
-      sociis natoque penatibus et magnis dis parturient. Enim sed faucibus turpis in eu mi. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Nisi 
-      scelerisque eu ultrices vitae.
+      Turpis egestas pretium aenean pharetra magna. Cum sociis natoque penatibus et magnis dis parturient. Enim sed faucibus turpis in eu mi. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Nisi scelerisque eu ultrices vitae.
     </TabPane>
     <TabPane>
       This is a viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Sed aliquam ultrices mauris. Phasellus magna. Fusce egestas elit eget lorem. Pellentesque auctor neque nec urna.
@@ -303,7 +289,7 @@ Use this option to specify whether or not a background should be animated. Set t
 </TabView>
 ```
 
-If an animated background is required, it will be rendered, resulting in HTML as such:
+If an animated background is required, it will be rendered, resulting in an HTML as such:
 
 ```html
 <div class="tab-view" role="tablist">
@@ -327,7 +313,7 @@ If an animated background is required, it will be rendered, resulting in HTML as
 
 ***label***
 
-Use this option to specify a Segment's label.
+Use this option to specify a Tab label.
 
 ```html
 <TabView generateIdsFrom='sample-text'>
@@ -339,9 +325,7 @@ Use this option to specify a Segment's label.
 
   <TabContent>
     <TabPane>
-      Turpis egestas pretium aenean pharetra magna. Cum 
-      sociis natoque penatibus et magnis dis parturient. Enim sed faucibus turpis in eu mi. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Nisi 
-      scelerisque eu ultrices vitae.
+      Turpis egestas pretium aenean pharetra magna. Cum sociis natoque penatibus et magnis dis parturient. Enim sed faucibus turpis in eu mi. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Nisi scelerisque eu ultrices vitae.
     </TabPane>
     <TabPane>
       This is a viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Sed aliquam ultrices mauris. Phasellus magna. Fusce egestas elit eget lorem. Pellentesque auctor neque nec urna.
@@ -365,9 +349,7 @@ Alternatively, a label can be specified between component tags:
 
   <TabContent>
     <TabPane>
-      Turpis egestas pretium aenean pharetra magna. Cum 
-      sociis natoque penatibus et magnis dis parturient. Enim sed faucibus turpis in eu mi. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Nisi 
-      scelerisque eu ultrices vitae.
+      Turpis egestas pretium aenean pharetra magna. Cum sociis natoque penatibus et magnis dis parturient. Enim sed faucibus turpis in eu mi. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Nisi scelerisque eu ultrices vitae.
     </TabPane>
     <TabPane>
       This is a viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Sed aliquam ultrices mauris. Phasellus magna. Fusce egestas elit eget lorem. Pellentesque auctor neque nec urna.
@@ -381,7 +363,7 @@ Alternatively, a label can be specified between component tags:
 
 ***isDisabled***
 
-Use this option to disable selection of a Tab.
+Use this option to disable the selection of a Tab.
 
 ```html
 <TabView generateIdsFrom='sample-text'>
@@ -393,9 +375,7 @@ Use this option to disable selection of a Tab.
 
   <TabContent>
     <TabPane>
-      Turpis egestas pretium aenean pharetra magna. Cum 
-      sociis natoque penatibus et magnis dis parturient. Enim sed faucibus turpis in eu mi. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Nisi 
-      scelerisque eu ultrices vitae.
+      Turpis egestas pretium aenean pharetra magna. Cum sociis natoque penatibus et magnis dis parturient. Enim sed faucibus turpis in eu mi. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Nisi scelerisque eu ultrices vitae.
     </TabPane>
     <TabPane>
       This is a viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Sed aliquam ultrices mauris. Phasellus magna. Fusce egestas elit eget lorem. Pellentesque auctor neque nec urna.

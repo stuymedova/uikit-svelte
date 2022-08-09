@@ -88,7 +88,7 @@ Use this option to specify whether or not a background should be animated. Set t
 </SegmentedControl>
 ```
 
-If an animated background is not required, it will not be rendered, resulting in HTML as such:
+If an animated background is not required, it will not be rendered, resulting an in HTML as such:
 
 ```html
 <div class="segmented-control" role="tablist" aria-orientation="horizontal">
@@ -142,7 +142,7 @@ Alternatively, a label can be specified between component tags:
 
 ***isDisabled***
 
-Use this option to disable selection of a Segment.
+Use this option to disable the selection of a Segment.
 
 ```html
 <SegmentedControl>
