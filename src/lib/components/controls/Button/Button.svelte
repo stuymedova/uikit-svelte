@@ -9,6 +9,7 @@
   export let isDisabled = false
   export let isSelected = undefined // Provided for external use
   export let a11yLabel = undefined // Provided for external use
+  export let generateClassNamesFrom = 'button'
   
   // Push button
   export let purpose = undefined // Options: -/primary/cancel/destructive // TODO: implement and test in a dialog component
@@ -52,7 +53,7 @@
 />
 
 <ConditionalWrapper 
-  class='popover-button-wrapper'
+  class='popover-{generateClassNamesFrom}-wrapper'
   predicate={behaviour === 'popover'} 
   useActions={[{ action: pressOutside }]}
   on:pressOutside={() => {
@@ -66,7 +67,7 @@
     bind:this={buttonRef}
     id={
       (behaviour === 'popover' && generateIdsFrom !== '') ? generateIdsFrom + '--trigger' : $$restProps.id}
-    class='button'
+    class={generateClassNamesFrom}
     type='button'
     data-behaviour={behaviour}
     data-purpose={behaviour === 'push' ? purpose : undefined}
@@ -90,7 +91,9 @@
       }
       buttonRef.focus()
     }}
+    on:focus
     on:keydown
+    on:mouseover
   >
     <slot>{label}</slot>
   </button>
@@ -102,17 +105,17 @@
   {#if behaviour === 'popover'}
     {#if shouldDrawCaret}
       <span 
-        class='button-popover-caret'
+        class='{generateClassNamesFrom}-popover-caret'
         style='display: {isExpanded ? "block" : "none"}'
       ></span>
     {/if}
     <aside 
       id={generateIdsFrom !== '' ? generateIdsFrom : undefined}
-      class='button-popover'
+      class='{generateClassNamesFrom}-popover'
       aria-labelledby={generateIdsFrom !== '' ? generateIdsFrom + '--trigger' : undefined}
       style='display: {isExpanded ? "block" : "none"}'
     >
-      <slot name='popover'>{label}</slot>
+      <slot name='popover' />
     </aside>
   {/if}
 </ConditionalWrapper>

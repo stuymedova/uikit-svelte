@@ -6,7 +6,7 @@
   export let name = ''
   
   const capitalize = (str) => {
-    return str.charAt(0).toUpperCase() + str.slice(1)
+    return str[0].toUpperCase() + str.substring(1)
   }
 
   const capitalizedName = capitalize(name)
