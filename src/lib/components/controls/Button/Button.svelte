@@ -55,7 +55,7 @@
 <ConditionalWrapper 
   class='popover-{generateClassNamesFrom}-wrapper'
   predicate={behaviour === 'popover'} 
-  useActions={[{ action: pressOutside }]}
+  actions={[{ action: pressOutside }]}
   on:pressOutside={() => {
     if (shouldCloseOnPressOutside && isExpanded) {
       isExpanded = false
