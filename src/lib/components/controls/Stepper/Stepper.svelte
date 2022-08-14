@@ -1,3 +1,7 @@
+<script context='module'>
+	export const Stepper = {}
+</script>
+
 <script>
   import { setContext, onMount } from 'svelte'
   import { writable } from 'svelte/store'
@@ -31,7 +35,7 @@
     }
   }
 
-  setContext('Stepper', {
+  setContext(Stepper, {
     stepperValue,
     isAbleToIncrement,
     isAbleToDecrement,

@@ -1,5 +1,6 @@
 <script>
   import { getContext, onMount } from 'svelte'
+  import { SegmentedControl } from './SegmentedControl.svelte'
   import { Button } from '$lib'
 
   export let label = 'Label'
@@ -9,7 +10,7 @@
   let length = 0
   let offset = 0
 
-  const context = getContext('SegmentedControl')
+  const context = getContext(SegmentedControl)
   const index = context.setIndex()
   const focusedSegmentIndex = context.focusedSegmentIndex
   const selectedSegmentIndex = context.selectedSegmentIndex

@@ -1,11 +1,12 @@
 <script>
   import { getContext, onMount } from 'svelte'
+  import { TabView } from './TabView.svelte'
 
   let tabPaneRef = null
   let width = 0
   let height = 0
 
-  const context = getContext('TabView')
+  const context = getContext(TabView)
   const index = context.setTabPaneIndex()
   const selectedTabIndex = context.selectedTabIndex
   const generateIdsFrom = context.generateIdsFrom

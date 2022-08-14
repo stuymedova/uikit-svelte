@@ -1,3 +1,7 @@
+<script context='module'>
+	export const TabView = {}
+</script>
+
 <script>
   import { setContext, onMount } from 'svelte'
   import { writable } from 'svelte/store'
@@ -16,7 +20,7 @@
   
   $: selectedIndex = $selectedTabIndex
 
-  setContext('TabView', {
+  setContext(TabView, {
     selectedTabIndex,
     generateIdsFrom,
     generateClassNamesFrom,

@@ -1,11 +1,12 @@
 <script>
   import { getContext } from 'svelte'
+  import { TabView } from './TabView.svelte'
   import { Segment } from '$lib'
 
   export let label = 'Label'
   export let isDisabled = false
 
-  const context = getContext('TabView')
+  const context = getContext(TabView)
   const index = context.setTabIndex()
   const generateIdsFrom = context.generateIdsFrom
 </script>

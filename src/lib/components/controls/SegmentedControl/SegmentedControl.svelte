@@ -1,3 +1,7 @@
+<script context='module'>
+	export const SegmentedControl = {}
+</script>
+
 <script>
   import { setContext, onMount } from 'svelte'
   import { writable } from 'svelte/store'
@@ -16,7 +20,7 @@
 
   $: selectedIndex = $selectedSegmentIndex
 
-  setContext('SegmentedControl', {
+  setContext(SegmentedControl, {
     focusedSegmentIndex,
     selectedSegmentIndex,
     orientation,

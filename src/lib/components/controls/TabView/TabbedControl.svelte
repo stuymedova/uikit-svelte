@@ -1,11 +1,12 @@
 <script>
   import { getContext } from 'svelte'
+  import { TabView } from './TabView.svelte'
   import { SegmentedControl } from '$lib'
 
   export let orientation = 'horizontal' // Options: horizontal/vertical
   export let isBackgroundAnimated = false
 
-  const context = getContext('TabView')
+  const context = getContext(TabView)
   const selectedTabIndex = context.selectedTabIndex
   const generateClassNamesFrom = context.generateClassNamesFrom
 

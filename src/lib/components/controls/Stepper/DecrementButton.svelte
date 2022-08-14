@@ -1,11 +1,12 @@
 <script>
   import { getContext } from 'svelte'
+  import { Stepper } from './Stepper.svelte'
   import { Button } from '$lib'
 
   export let label = 'Decrement'
   export let a11yLabel = ''
 
-  const context = getContext('Stepper')
+  const context = getContext(Stepper)
   const setValue = context.setValue
   const isAbleToDecrement = context.isAbleToDecrement
   const generateClassNamesFrom = context.generateClassNamesFrom
