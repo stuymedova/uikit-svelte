@@ -1,7 +1,6 @@
 <script>
   import { onMount } from 'svelte'
-  import { ConditionalWrapper } from '$lib'
-  import { pressOutside } from '$lib'
+  import { PopoverAnchor, Popover } from '$lib'
 
   export let label = 'Label'
   // export let appearance = 'gray' // Options: gray/… (Extend: plain/contoured/filled) // TODO: accent/vibrant/call-to-action button — ?
@@ -9,7 +8,7 @@
   export let isDisabled = false
   export let isSelected = undefined // Provided for external use
   export let a11yLabel = undefined // Provided for external use
-  export let generateClassNamesFrom = 'button'
+  export let generateClassNamesFrom = ''
   
   // Push button
   export let purpose = undefined // Options: -/primary/cancel/destructive // TODO: implement and test in a dialog component
@@ -20,9 +19,9 @@
   // Popover button
   export let generateIdsFrom = ''
   export let isExpanded = false
-  export let attachmentAnchor = 'bottom' // Options: top/right/bottom/left
+  export let attachmentSide = 'bottom' // Options: top/right/bottom/left
   export let attachmentAlignment = 'start' // Options: start/middle/end
-  export let shouldDrawCaret = false
+  export let hasArrow = false
   export let shouldCloseOnPressOutside = true
 
   export let buttonRef = null
@@ -36,7 +35,8 @@
 
 
 <!-- 
-  Adds getters and setters for the component's props 
+  Used by components that build on top of the Button component (ex. Segmented Control).
+  Adds getters and setters for the component's props.
 -->
 <svelte:options accessors={true} />
 
@@ -52,27 +52,26 @@
   }}'
 />
 
-<ConditionalWrapper 
-  class='popover-{generateClassNamesFrom}-wrapper'
+<PopoverAnchor 
   predicate={behaviour === 'popover'} 
-  actions={[{ action: pressOutside }]}
-  on:pressOutside={() => {
-    if (shouldCloseOnPressOutside && isExpanded) {
-      isExpanded = false
-    }
-  }}
+  generateIdsFrom={generateIdsFrom}
+  generateClassNamesFrom={generateClassNamesFrom}
+  bind:isPopoverDisplayed={isExpanded}
+  attachmentSide={attachmentSide}
+  attachmentAlignment={attachmentAlignment}
+  hasArrow={hasArrow}
+  shouldCloseOnPressOutside={shouldCloseOnPressOutside}
 >
-  <!-- TODO: add data prefix (purpose -> data-purpose)? -->
   <button
     bind:this={buttonRef}
     id={
       (behaviour === 'popover' && generateIdsFrom !== '') ? generateIdsFrom + '--trigger' : $$restProps.id}
-    class={generateClassNamesFrom}
+    class='{generateClassNamesFrom ? `${generateClassNamesFrom}-` : ''}button'
     type='button'
     data-behaviour={behaviour}
     data-purpose={behaviour === 'push' ? purpose : undefined}
     role={behaviour === 'switch' ? 'switch' : undefined}
-    data-attachment-anchor={behaviour === 'popover' ? attachmentAnchor : undefined}
+    data-attachment-side={behaviour === 'popover' ? attachmentSide : undefined}
     data-attachment-alignment={behaviour === 'popover' ? attachmentAlignment : undefined}
     aria-checked={behaviour === 'switch' ? isOn : undefined}
     aria-haspopup={behaviour === 'popover' ? true : undefined}
@@ -98,24 +97,12 @@
     <slot>{label}</slot>
   </button>
   
-  <!-- 
-    TODO: add fade in/out animation 
-    Idea: If animation passed, play it on next tick
-  -->
   {#if behaviour === 'popover'}
-    {#if shouldDrawCaret}
-      <span 
-        class='{generateClassNamesFrom}-popover-caret'
-        style='display: {isExpanded ? "block" : "none"}'
-      ></span>
-    {/if}
-    <aside 
+    <Popover
       id={generateIdsFrom !== '' ? generateIdsFrom : undefined}
-      class='{generateClassNamesFrom}-popover'
       aria-labelledby={generateIdsFrom !== '' ? generateIdsFrom + '--trigger' : undefined}
-      style='display: {isExpanded ? "block" : "none"}'
     >
       <slot name='popover' />
-    </aside>
+    </Popover>
   {/if}
-</ConditionalWrapper>
+</PopoverAnchor>

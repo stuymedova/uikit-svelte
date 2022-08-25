@@ -3,6 +3,8 @@
 // 1.1. Controls
 export { Button } from './components/controls/Button'
 export { Link } from './components/controls/Link'
+export { Modal } from './components/controls/Modal'
+export { PopoverAnchor, Popover } from './components/controls/Popover'
 export { Stepper, IncrementButton, DecrementButton, StepperValue } from './components/controls/Stepper'
 export { Switch } from './components/controls/Switch'
 export { SegmentedControl, Segment } from './components/controls/SegmentedControl'

@@ -1,0 +1,159 @@
+.popover-anchor {
+  position: relative
+}
+
+.popover {
+  visibility: visible;
+  opacity: 100%;
+  pointer-events: all;
+  transition: opacity 300ms;
+
+  position: absolute;
+  box-sizing: border-box;
+  width: 250px;
+  height: auto;
+  padding: 14px 18px 14px 18px;
+  
+  border-radius: 14px;
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+  z-index: 10;
+}
+.popover[data-is-displayed="false"], .popover-arrow[data-is-displayed="false"] {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.popover-anchor[data-attachment-side="top"] > .popover {
+  margin-bottom: 6px;
+}
+.popover-anchor[data-attachment-side="top"][data-attachment-alignment="start"] > .popover {
+  bottom: 100%;
+  left: 0;
+}
+.popover-anchor[data-attachment-side="top"][data-attachment-alignment="middle"] > .popover {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.popover-anchor[data-attachment-side="top"][data-attachment-alignment="end"] > .popover {
+  bottom: 100%;
+  right: 0;
+}
+
+.popover-anchor[data-attachment-side="right"] > .popover {
+  margin-left: 6px;
+}
+.popover-anchor[data-attachment-side="right"][data-attachment-alignment="start"] > .popover {
+  top: 0;
+  left: 100%;
+}
+.popover-anchor[data-attachment-side="right"][data-attachment-alignment="middle"] > .popover {
+  top: 50%;
+  transform: translateY(-50%);
+  left: 100%;
+}
+.popover-anchor[data-attachment-side="right"][data-attachment-alignment="end"] > .popover {
+  bottom: 0;
+  left: 100%;
+}
+
+.popover-anchor[data-attachment-side="bottom"] > .popover {
+  margin-top: 6px;
+}
+.popover-anchor[data-attachment-side="bottom"][data-attachment-alignment="start"] > .popover {
+  top: 100%;
+  left: 0;
+}
+.popover-anchor[data-attachment-side="bottom"][data-attachment-alignment="middle"] > .popover {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.popover-anchor[data-attachment-side="bottom"][data-attachment-alignment="end"] > .popover {
+  top: 100%;
+  right: 0;
+}
+
+.popover-anchor[data-attachment-side="left"] > .popover {
+  margin-right: 6px;
+}
+.popover-anchor[data-attachment-side="left"][data-attachment-alignment="start"] > .popover {
+  top: 0;
+  right: 100%;
+}
+.popover-anchor[data-attachment-side="left"][data-attachment-alignment="middle"] > .popover {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 100%;
+}
+.popover-anchor[data-attachment-side="left"][data-attachment-alignment="end"] > .popover {
+  bottom: 0;
+  right: 100%;
+}
+
+
+.popover-arrow {
+  position: absolute;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.popover-anchor[data-attachment-side="top"] > .popover-arrow {
+  width: 100%;
+	height: 6px;
+
+  left: 0;
+  top: -6px;
+  transform: scaleY(-1);
+}
+.popover-anchor[data-attachment-side="right"] > .popover-arrow {
+  width: 6px;
+  height: 100%;
+
+  top: 0;
+  right: -6px;
+}
+.popover-anchor[data-attachment-side="bottom"] > .popover-arrow {
+  width: 100%;
+	height: 6px;
+
+  left: 0;
+  bottom: -6px;
+}
+.popover-anchor[data-attachment-side="left"] > .popover-arrow {
+  width: 6px;
+  height: 100%;
+
+  top: 0;
+  left: -6px;
+  transform: scaleX(-1);
+}
+
+.popover-arrow::after {
+  content: '';
+  position: absolute;
+	width: 12px;
+	height: 12px;
+	transform-origin: top left;
+	border-radius: 2px 0 0 0;
+
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  background-color: var(--color-background);
+}
+.popover-anchor[data-attachment-side="top"] > .popover-arrow::after,
+.popover-anchor[data-attachment-side="bottom"] > .popover-arrow::after {
+  top: 0;
+	left: 50%;
+  transform: rotate(45deg) skew(4deg, 4deg); 
+}
+.popover-anchor[data-attachment-side="left"] > .popover-arrow::after,
+.popover-anchor[data-attachment-side="right"] > .popover-arrow::after {
+  top: 50%;
+  left: 0;
+  transform: rotate(-45deg) skew(4deg, 4deg); 
+}

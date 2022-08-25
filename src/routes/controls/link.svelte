@@ -1,12 +1,11 @@
+<!-- DEMO 1: Link around an inline element -->
 <script>
 	import '$styles/system-display/lightMode.css'
   import { Wrapper } from '$lib'
   import { Link } from '$lib'
-  // import picture_spring from '$lib/assets/images/spring.jpg'
 </script>
 
 
-<!-- EXAMPLE 1: Link around an inline element -->
 <Wrapper class='component-wrapper'>
   <Link 
     destination='https://github.com/stuymedova/uikit-svelte'
@@ -16,26 +15,8 @@
   </Link>
 </Wrapper>
 
-<!-- EXAMPLE 2: Link around a block element -->
-<!-- <Wrapper class='component-wrapper'>
-  <Link
-    destination='https://github.com/stuymedova/uikit-svelte'
-    shouldBeOpenedInNewTab={true}
-    isInline={false}
-  >
-    <Wrapper class='card-wrapper'>
-      <img class='card-image' src={picture_spring} alt='A tree blooming in late spring' />
-      <Wrapper class='card-caption-wrapper'>
-        <p>Lorem ipsum</p>
-        <p>Turpis egestas pretium aenean pharetra magna. Cum sociis natoque penatibus et magnis dis parturient.</p>
-      </Wrapper>
-    </Wrapper>
-  </Link>
-</Wrapper> -->
-
 
 <style>
-  /* EXAMPLE 1 */
   :global(.component-wrapper) {
 		width: 100%;
 		padding-top: 12px;
@@ -44,10 +25,37 @@
 		align-items: center;
     gap: 12px;
   }
+</style>
 
 
-  /* EXAMPLE 2 */
-  /* :global(.component-wrapper) {
+<!-- DEMO 2: Link around a block element -->
+<!-- <script>
+	import '$styles/system-display/lightMode.css'
+  import { Wrapper } from '$lib'
+  import { Link } from '$lib'
+  import picture_of_a_blooming_tree from '$lib/assets/images/spring.jpg'
+</script>
+
+
+<Wrapper class='component-wrapper'>
+  <Link
+    destination='https://github.com/stuymedova/uikit-svelte'
+    shouldBeOpenedInNewTab={true}
+    isInline={false}
+  >
+    <Wrapper class='card-wrapper'>
+      <img class='card-image' src={picture_of_a_blooming_tree} alt='' />
+      <Wrapper class='card-caption-wrapper'>
+        <p>Lorem ipsum</p>
+        <p>Turpis egestas pretium aenean pharetra magna. Cum sociis natoque penatibus et magnis dis parturient.</p>
+      </Wrapper>
+    </Wrapper>
+  </Link>
+</Wrapper>
+
+
+<style>
+  :global(.component-wrapper) {
 		width: 100%;
 		padding-top: 12px;
 		display: flex;
@@ -85,5 +93,5 @@
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     overflow: hidden;
-  } */
-</style>
+  }
+</style> -->
