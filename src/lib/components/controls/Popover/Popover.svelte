@@ -9,7 +9,6 @@
   // const generateIdsFrom = context.generateIdsFrom // TODO
   const generateClassNamesFrom = context.generateClassNamesFrom
   const hasArrow = context.hasArrow
-  console.log(hasArrow)
 </script>
 
 

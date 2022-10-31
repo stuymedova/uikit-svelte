@@ -42,16 +42,17 @@ Or using a Symbol component as DecrementButton's and IncrementButton's conent:
 import '@stuymedova/uikit-svelte/styles/system-display/lightMode.css'
 import { Stepper, IncrementButton, DecrementButton, StepperValue } from '@stuymedova/uikit-svelte'
 import { Symbol } from '@stuymedova/uikit-svelte' // Additional import
+import { Minus, Plus } from '@stuymedova/uikit-svelte/assets/symbols/system-display' 
 ```
 
 ```html
 <Stepper label='Optional Label'>
   <StepperValue />
   <DecrementButton a11yLabel='Decrement by 1'>
-    <Symbol name='minus' />
+    <Symbol symbol={Minus} />
   </DecrementButton>
   <IncrementButton a11yLabel='Increment by 1'>
-    <Symbol name='plus' />
+    <Symbol symbol={Plus} />
   </IncrementButton>
 </Stepper>
 ```
@@ -98,10 +99,10 @@ Use this option to specify a Stepper's label. This option is not required, if no
 <Stepper label='Optional Label'>
   <StepperValue />
   <DecrementButton a11yLabel='Decrement by 1'>
-    <Symbol name='minus' />
+    <Symbol symbol={Minus} />
   </DecrementButton>
   <IncrementButton a11yLabel='Increment by 1'>
-    <Symbol name='plus' />
+    <Symbol symbol={Plus} />
   </IncrementButton>
 </Stepper>
 ```
@@ -114,10 +115,10 @@ Use this option to specify a Stepper's value.
 <Stepper value={1}>
   <StepperValue />
   <DecrementButton a11yLabel='Decrement by 1'>
-    <Symbol name='minus' />
+    <Symbol symbol={Minus} />
   </DecrementButton>
   <IncrementButton a11yLabel='Increment by 1'>
-    <Symbol name='plus' />
+    <Symbol symbol={Plus} />
   </IncrementButton>
 </Stepper>
 ```
@@ -135,10 +136,10 @@ You can bind to this value to have changes be reflected both in the Stepper comp
 <Stepper bind:value={stepperValue}>
   <StepperValue />
   <DecrementButton a11yLabel='Decrement by 1'>
-    <Symbol name='minus' />
+    <Symbol symbol={Minus} />
   </DecrementButton>
   <IncrementButton a11yLabel='Increment by 1'>
-    <Symbol name='plus' />
+    <Symbol symbol={Plus} />
   </IncrementButton>
 </Stepper>
 
@@ -153,10 +154,10 @@ Use `range` to define the lower and upper bound for possible values.
 <Stepper range={[0, 10]}>
   <StepperValue />
   <DecrementButton a11yLabel='Decrement by 1'>
-    <Symbol name='minus' />
+    <Symbol symbol={Minus} />
   </DecrementButton>
   <IncrementButton a11yLabel='Increment by 1'>
-    <Symbol name='plus' />
+    <Symbol symbol={Plus} />
   </IncrementButton>
 </Stepper>
 ```
@@ -171,10 +172,10 @@ Note: be careful using a floating point number as a step.
 <Stepper step={2}>
   <StepperValue />
   <DecrementButton a11yLabel='Decrement by 2'>
-    <Symbol name='minus' />
+    <Symbol symbol={Minus} />
   </DecrementButton>
   <IncrementButton a11yLabel='Increment by 2'>
-    <Symbol name='plus' />
+    <Symbol symbol={Plus} />
   </IncrementButton>
 </Stepper>
 ```
@@ -185,7 +186,8 @@ Or, alternatively, you can use it as such:
 <script>
 	import '@stuymedova/uikit-svelte/styles/system-display/lightMode.css'
   import { Stepper, IncrementButton, DecrementButton, StepperValue } from '$lib'
-	import { Symbol } from '$lib'
+	import { Symbol } from '@stuymedova/uikit-svelte'
+  import { Minus, Plus } from '@stuymedova/uikit-svelte/assets/symbols/system-display'
 
 	let stepperStep = 2
 </script>
@@ -194,10 +196,10 @@ Or, alternatively, you can use it as such:
 <Stepper bind:step={stepperStep}>
   <StepperValue />
   <DecrementButton a11yLabel='Decrement by {stepperStep}'>
-    <Symbol name='minus' />
+    <Symbol symbol={Minus} />
   </DecrementButton>
   <IncrementButton a11yLabel='Increment by {stepperStep}'>
-    <Symbol name='plus' />
+    <Symbol symbol={Plus} />
   </IncrementButton>
 </Stepper>
 ```
@@ -210,7 +212,8 @@ Use this option to specify if the value should be wrapped. Useful for when you u
 <script>
 	import '@stuymedova/uikit-svelte/styles/system-display/lightMode.css'
   import { Stepper, IncrementButton, DecrementButton, StepperValue } from '$lib'
-	import { Symbol } from '$lib'
+	import { Symbol } from '@stuymedova/uikit-svelte'
+  import { Minus, Plus } from '@stuymedova/uikit-svelte/assets/symbols/system-display'
 
 	let stepperValue = 0
 	const colors = ['orange', 'orangered', 'gray', 'mediumpurple', 'plum']
@@ -219,10 +222,10 @@ Use this option to specify if the value should be wrapped. Useful for when you u
 
 <Stepper bind:value={stepperValue} isWrapped={true} range={[0, colors.length - 1]}>
   <DecrementButton a11yLabel='Decrement by 1'>
-    <Symbol name='minus' />
+    <Symbol symbol={Minus} />
   </DecrementButton>
   <IncrementButton a11yLabel='Increment by 1'>
-    <Symbol name='plus' />
+    <Symbol symbol={Plus} />
   </IncrementButton>
 </Stepper>
 
@@ -246,10 +249,10 @@ Use this option to specify the component's class name (one of the top-most wrapp
 <Stepper generateClassNamesFrom='quantity-stepper'>
   <StepperValue />
   <DecrementButton a11yLabel='Decrement by 1'>
-    <Symbol name='minus' />
+    <Symbol symbol={Minus} />
   </DecrementButton>
   <IncrementButton a11yLabel='Increment by 1'>
-    <Symbol name='plus' />
+    <Symbol symbol={Plus} />
   </IncrementButton>
 </Stepper>
 ```
@@ -314,10 +317,10 @@ Use this option to specify the component's aria-label attribute. Recommended if 
 <Stepper label='Optional Label'>
   <StepperValue />
   <DecrementButton a11yLabel='Set to previous value'>
-    <Symbol name='minus' />
+    <Symbol symbol={Minus} />
   </DecrementButton>
   <IncrementButton a11yLabel='Set to next value'>
-    <Symbol name='plus' />
+    <Symbol symbol={Plus} />
   </IncrementButton>
 </Stepper>
 ```

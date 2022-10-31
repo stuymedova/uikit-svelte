@@ -2,6 +2,7 @@
 // 1. UI Elements
 // 1.1. Controls
 export { Button } from './components/controls/Button'
+export { Disclosure } from './components/controls/Disclosure'
 export { Link } from './components/controls/Link'
 export { Modal } from './components/controls/Modal'
 export { PopoverAnchor, Popover } from './components/controls/Popover'

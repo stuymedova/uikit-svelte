@@ -3,6 +3,7 @@
 	import '$styles/system-display/lightMode.css'
   import { Stepper, IncrementButton, DecrementButton, StepperValue } from '$lib'
 	import { Symbol } from '$lib'
+	import { Minus, Plus } from '$symbols/system-display'
 </script>
 
 
@@ -10,10 +11,10 @@
   <Stepper label='Optional Label'>
 		<StepperValue />
 		<DecrementButton a11yLabel='Decrement by 1'>
-			<Symbol name='minus' />
+			<Symbol symbol={Minus} />
 		</DecrementButton>
 		<IncrementButton a11yLabel='Increment by 1'>
-			<Symbol name='plus' />
+			<Symbol symbol={Plus} />
 		</IncrementButton>
 	</Stepper>
 </div>
@@ -34,8 +35,9 @@
 <!-- DEMO 2: Stepper values are wrapped -->
 <script>
 	import '$styles/system-display/lightMode.css'
-  import { Stepper, IncrementButton, DecrementButton, StepperValue } from '$lib'
+  import { Stepper, IncrementButton, DecrementButton } from '$lib'
 	import { Symbol } from '$lib'
+	import { Minus, Plus } from '$symbols/system-display'
 
 	let stepperValue = 0
 	const colors = ['orange', 'mediumpurple', 'gray', 'orangered', 'plum']
@@ -49,10 +51,10 @@
 
 	<Stepper bind:value={stepperValue} isWrapped={true} range={[0, colors.length - 1]}>
 		<DecrementButton a11yLabel='Decrement by 1'>
-			<Symbol name='minus' />
+			<Symbol symbol={Minus} />
 		</DecrementButton>
 		<IncrementButton a11yLabel='Increment by 1'>
-			<Symbol name='plus' />
+			<Symbol symbol={Plus} />
 		</IncrementButton>
 	</Stepper>
 </div>

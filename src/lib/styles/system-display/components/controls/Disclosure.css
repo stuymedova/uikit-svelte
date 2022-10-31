@@ -1,0 +1,38 @@
+.disclosure {
+  width: 344px;
+  height: auto;
+  background-color: var(--color-background);
+  border-radius: 14px;
+}
+
+.disclosure-button {
+  width: 100%;
+  padding: 14px 16px 14px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: middle;
+}
+
+.disclosure-symbol svg {
+  display: block;
+}
+
+.disclosure-symbol {
+  transform-origin: center;
+  transition-duration: 300ms;
+  will-change: transform;
+}
+.disclosure-symbol.expanded {
+  transform: rotate(90deg);
+}
+
+.disclosure-tray {
+  width: auto;
+  overflow: hidden;
+  transition-duration: 300ms;
+}
+
+.disclosure-content {
+  padding: 0 18px 14px 18px;
+}

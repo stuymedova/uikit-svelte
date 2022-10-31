@@ -41,7 +41,7 @@
 />
 
 <ConditionalWrapper 
-  class='{generateClassNamesFrom ? `${generateClassNamesFrom}-` : ''}popover-anchor'
+  class='{generateClassNamesFrom !== '' ? `${generateClassNamesFrom}-` : ''}popover-anchor'
   predicate={predicate} 
   htmlTag={htmlTag}
   actions={[{ action: pressOutside }]}

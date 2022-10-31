@@ -1,11 +1,12 @@
 <script>
   import '$styles/system-display/lightMode.css'
   import { Symbol } from '$lib'
+  import { Plus } from '$symbols/system-display'
 </script>
 
 
 <div class='component-wrapper'>
-  <p><Symbol name='plus' /> Add to cart</p>
+  <p><Symbol symbol={Plus} /> Add to cart</p>
 </div>
 
 
