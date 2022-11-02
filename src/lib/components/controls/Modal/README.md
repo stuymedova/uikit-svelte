@@ -1,7 +1,0 @@
-# Modal
-
-## Usage
-
-## API
-
-## Demo
