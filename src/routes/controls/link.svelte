@@ -1,6 +1,6 @@
 <!-- DEMO 1: Link around an inline element -->
 <script>
-	import '$styles/system-display/lightMode.css'
+	import '$styles/lightMode.css'
   import { Wrapper } from '$lib'
   import { Link } from '$lib'
 </script>
@@ -30,7 +30,7 @@
 
 <!-- DEMO 2: Link around a block element -->
 <!-- <script>
-	import '$styles/system-display/lightMode.css'
+	import '$styles/lightMode.css'
   import { Wrapper } from '$lib'
   import { Link } from '$lib'
   import picture_of_a_blooming_tree from '$lib/assets/images/spring.jpg'

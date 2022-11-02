@@ -5,9 +5,9 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		alias: {
-			$styles: 'src/lib/styles',
 			$images: 'src/lib/assets/images',
-			$symbols: 'src/lib/assets/symbols'
+			$styles: 'src/lib/system-display/styles',
+			$symbols: 'src/lib/system-display/symbols'
 		}
 	}
 };

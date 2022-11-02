@@ -8,7 +8,7 @@ Tab view is a set of mutually exclusive panes of content, which you can switch b
 
 Include the component on a webpage by adding 
 ```js
-import '@stuymedova/uikit-svelte/styles/system-display/lightMode.css' // Optional, alternatively use darkMode.css or a custom stylesheet
+import '@stuymedova/uikit-svelte/system-display/styles/lightMode.css' // Optional, alternatively use darkMode.css or a custom stylesheet
 import { TabView, TabbedControl, Tab, TabContent, TabPane } from '@stuymedova/uikit-svelte'
 ```
 within the `script` tag of a Svelte file. You can further use the component as such:
@@ -89,7 +89,7 @@ You can bind to this value to have changes to the selected index be reflected bo
 
 ```html
 <script>
-  import '@stuymedova/uikit-svelte/styles/system-display/lightMode.css'
+  import '@stuymedova/uikit-svelte/system-display/styles/lightMode.css'
   import { TabView, TabbedControl, Tab, TabContent, TabPane } from '@stuymedova/uikit-svelte'
 
   let tabViewSelectedIndex = 1

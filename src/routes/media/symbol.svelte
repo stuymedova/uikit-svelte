@@ -1,7 +1,7 @@
 <script>
-  import '$styles/system-display/lightMode.css'
+  import '$styles/lightMode.css'
   import { Symbol } from '$lib'
-  import { Plus } from '$symbols/system-display'
+  import { Plus } from '$symbols'
 </script>
 
 

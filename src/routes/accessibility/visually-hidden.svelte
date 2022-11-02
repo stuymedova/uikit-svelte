@@ -1,4 +1,4 @@
 <script>
-	import '$styles/system-display/lightMode.css'
+	import '$styles/lightMode.css'
   import { VisuallyHidden } from '$lib'
 </script>

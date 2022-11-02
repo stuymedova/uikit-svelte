@@ -1,5 +1,5 @@
 <script>
-	import '$styles/system-display/lightMode.css'
+	import '$styles/lightMode.css'
   import { Button } from '$lib'
 </script>
 

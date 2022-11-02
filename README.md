@@ -38,16 +38,9 @@
 
 * applyActionsToComponent
 
-## Styles
+## Styles and Assets
 
-**System Display/…**
-
-## Assets
-
-**Symbols/System Display**
-
-* Minus
-* Plus
+Default ones are provided under the System Display (`/system-display`) directory. It's expected for users to customize them as necessary and provide them under a custom directory.
 <!-- END TEMPORARY -->
 
 

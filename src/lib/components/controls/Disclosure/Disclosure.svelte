@@ -2,7 +2,7 @@
   import { onMount } from 'svelte'
   import { Button } from '$lib'
   import { Symbol } from '$lib'
-  import { ChevronRight } from '$symbols/system-display'
+  import { ChevronRight } from '$symbols'
   
   export let title = 'Title'
   export let symbol = ChevronRight

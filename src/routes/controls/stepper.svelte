@@ -1,9 +1,9 @@
 <!-- DEMO 1: Stepper values are not wrapped -->
 <!-- <script>
-	import '$styles/system-display/lightMode.css'
+	import '$styles/lightMode.css'
   import { Stepper, IncrementButton, DecrementButton, StepperValue } from '$lib'
 	import { Symbol } from '$lib'
-	import { Minus, Plus } from '$symbols/system-display'
+	import { Minus, Plus } from '$symbols'
 </script>
 
 
@@ -34,10 +34,10 @@
 
 <!-- DEMO 2: Stepper values are wrapped -->
 <script>
-	import '$styles/system-display/lightMode.css'
+	import '$styles/lightMode.css'
   import { Stepper, IncrementButton, DecrementButton } from '$lib'
 	import { Symbol } from '$lib'
-	import { Minus, Plus } from '$symbols/system-display'
+	import { Minus, Plus } from '$symbols'
 
 	let stepperValue = 0
 	const colors = ['orange', 'mediumpurple', 'gray', 'orangered', 'plum']

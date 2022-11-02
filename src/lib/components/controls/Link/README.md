@@ -8,7 +8,7 @@ A control for navigating to a URL.
 
 Include the component on a webpage by adding 
 ```js
-import '@stuymedova/uikit-svelte/styles/system-display/lightMode.css' // Optional, alternatively use darkMode.css or a custom stylesheet
+import '@stuymedova/uikit-svelte/system-display/styles/lightMode.css' // Optional, alternatively use darkMode.css or a custom stylesheet
 import { Link } from '@stuymedova/uikit-svelte'
 ```
 within the `script` tag of a Svelte file. You can further use the component as such:
