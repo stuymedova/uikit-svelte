@@ -1,6 +1,6 @@
 # UIKit Svelte
 
-UIKit Component Library provides accessible components for declaring your app’s user interface, as well as utility functions to augment their behaviour.
+UIKit Component Library provides accessible components for declaring your app’s user interface, as well as gestures and utility functions to augment their behaviour.
 
 <!-- TEMPORARY -->
 ## Component Library
@@ -9,9 +9,9 @@ UIKit Component Library provides accessible components for declaring your app’
 | ------------------- | ------------------ | --------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | ***Accessibility*** | VisuallyHidden     | [Link](src/lib/components/accessibility/VisuallyHidden)   | TBD                                                                             |
 | ***Controls***      | Button             | [Link](src/lib/components/controls/Button)                | [Link](https://stuymedova-uikit-svelte.vercel.app/controls/button)              |
-|                     | Disclosure         | [Link](src/lib/components/controls/Disclosure) (Doc. TBD) | [Link](https://stuymedova-uikit-svelte.vercel.app/controls/disclosure)          |
+|                     | Disclosure*        | [Link](src/lib/components/controls/Disclosure) (Doc. TBD) | [Link](https://stuymedova-uikit-svelte.vercel.app/controls/disclosure)          |
 |                     | Link               | [Link](src/lib/components/controls/Link)                  | [Link](https://stuymedova-uikit-svelte.vercel.app/controls/link)                |
-|                     | Popover            | [Link](src/lib/components/controls/Popover) (Doc. TBD)    | [Link](https://stuymedova-uikit-svelte.vercel.app/controls/popover)             |
+|                     | Popover*           | [Link](src/lib/components/controls/Popover) (Doc. TBD)    | [Link](https://stuymedova-uikit-svelte.vercel.app/controls/popover)             |
 |                     | SegmentedControl   | [Link](src/lib/components/controls/SegmentedControl)      | [Link](https://stuymedova-uikit-svelte.vercel.app/controls/segmented-control)   |
 |                     | Stepper            | [Link](src/lib/components/controls/Stepper)               | [Link](https://stuymedova-uikit-svelte.vercel.app/controls/stepper)             |
 |                     | Switch             | [Link](src/lib/components/controls/Switch)                | [Link](https://stuymedova-uikit-svelte.vercel.app/controls/switch)              |
@@ -20,6 +20,8 @@ UIKit Component Library provides accessible components for declaring your app’
 | ***Media***         | Symbol             | [Link](src/lib/components/media/Symbol)                   | [Link](https://stuymedova-uikit-svelte.vercel.app/controls/symbol)              |
 | ***Utilities***     | ConditionalWrapper | [Link](src/lib/components/utilities/ConditionalWrapper)   | [Link](https://stuymedova-uikit-svelte.vercel.app/controls/conditional-wrapper) |
 |                     | Wrapper            | [Link](src/lib/components/utilities/Wrapper)              | [Link](https://stuymedova-uikit-svelte.vercel.app/controls/wrapper)             |
+
+\* Components are being worked on and need improvement.
 
 ## Functions
 
