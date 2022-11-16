@@ -2,21 +2,29 @@
 	export const SegmentedControl = {}
 </script>
 
-<script>
+<script lang='ts'>
   import { setContext, onMount } from 'svelte'
   import { writable } from 'svelte/store'
 
   export let selectedIndex = 0
-  export let orientation = 'horizontal' // Options: horizontal/vertical
+  export let orientation: 'horizontal' | 'vertical' = 'horizontal'
   export let generateClassNamesFrom = 'segmented-control'
   export let isBackgroundAnimated = true
+
+  type Segment = {
+    index: number
+    isDisabled: boolean
+    length?: number
+    offset?: number
+  }
+
+  const segments: Segment[] = []
   
   let focusedSegmentIndex = writable(selectedIndex)
   let selectedSegmentIndex = writable(selectedIndex) // Selected Segment is one that is focused and not disabled
-  let segments = []
   let indexesIterator = -1
-  let backgroundLength = 0
-  let backgroundOffset = 0
+  let backgroundLength: number | undefined = 0
+  let backgroundOffset: number | undefined = 0
 
   $: selectedIndex = $selectedSegmentIndex
 
@@ -30,7 +38,11 @@
       indexesIterator += 1
       return indexesIterator
     },
-    addSegment: (index, isDisabled, length = undefined, offset = undefined) => {
+    addSegment: (
+      index: number, 
+      isDisabled: boolean, 
+      length: number | undefined = undefined, 
+      offset: number | undefined = undefined) => {
       if (index === $selectedSegmentIndex) {
         if (isDisabled) {
           console.warn('Segmented Control: Avoid initially selecting a disabled Segment.')
@@ -43,12 +55,12 @@
       }
 
       if (isBackgroundAnimated) {
-        segments = [...segments, { index, isDisabled, length, offset }]
+        segments.push({ index, isDisabled, length, offset })
       } else {
-        segments = [...segments, { index, isDisabled }]
+        segments.push({ index, isDisabled })
       }
     },
-    setSelected: (segmentIndex) => {
+    setSelected: (segmentIndex: number) => {
       if (segmentIndex >= 0 && segmentIndex < segments.length) {
         $focusedSegmentIndex = segmentIndex
 

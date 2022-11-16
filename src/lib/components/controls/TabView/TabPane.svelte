@@ -35,7 +35,7 @@
   aria-labelledby={
     ($$restProps["aria-labelledby"]) ? $$restProps["aria-labelledby"] :
     (generateIdsFrom !== '') ? `${generateIdsFrom}-item-${index}--trigger` : undefined}
-  tabindex={isSelected ? '0' : '-1'}
+  aria-hidden={isSelected ? undefined : true}
   {...$$restProps}
 >
   <slot />

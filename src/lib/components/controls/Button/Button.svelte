@@ -70,10 +70,9 @@
     type='button'
     data-behaviour={behaviour}
     data-purpose={behaviour === 'push' ? purpose : undefined}
-    role={behaviour === 'switch' ? 'switch' : undefined}
     data-attachment-side={behaviour === 'popover' ? attachmentSide : undefined}
     data-attachment-alignment={behaviour === 'popover' ? attachmentAlignment : undefined}
-    aria-checked={behaviour === 'switch' ? isOn : undefined}
+    aria-pressed={behaviour === 'switch' ? isOn : undefined}
     aria-haspopup={behaviour === 'popover' ? true : undefined}
     aria-expanded={behaviour === 'popover' ? isExpanded : undefined}
     aria-controls={(behaviour === 'popover' && generateIdsFrom !== '') ? generateIdsFrom : undefined}

@@ -20,6 +20,7 @@ export { ConditionalWrapper } from './components/utilities/ConditionalWrapper'
 // 2. Layout
 
 // 3. Accessibility
+export { HiddenFromScreenReaders } from './components/accessibility/HiddenFromScreenReaders'
 export { VisuallyHidden } from './components/accessibility/VisuallyHidden'
 
 

@@ -1,8 +1,8 @@
 <script>
-  export let htmlTag = 'span'
+  export let renderAs = 'span'
 </script>
 
 
-<svelte:element this={htmlTag} class='visually-hidden'>
+<svelte:element this={renderAs} class='visually-hidden'>
   <slot />
 </svelte:element>

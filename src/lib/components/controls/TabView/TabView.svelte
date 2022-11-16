@@ -11,8 +11,9 @@
   export let generateClassNamesFrom = 'tab-view'
   export let controlPosition = 'top' // Options: top/left/bottom/right
 
+  const tabPanes = []
+
   let selectedTabIndex = writable(selectedIndex)
-  let tabPanes = []
   let tabIndexesIterator = -1
   let tabPaneIndexesIterator = -1
   let tabContentWidth = writable(0)
@@ -40,7 +41,7 @@
         $tabContentHeight = height
       }
       
-      tabPanes = [...tabPanes, { index, width, height }]
+      tabPanes.push({ index, width, height })
     },
     setSelected: (tabIndex) => {
       $selectedTabIndex = tabIndex
@@ -64,7 +65,6 @@
 
 <div 
   class='tab-view' 
-  role='tablist' 
   data-control-position={controlPosition}
   {...$$restProps}
   on:click
