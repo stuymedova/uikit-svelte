@@ -12,9 +12,11 @@
     "@sveltejs/kit": "next",
     "@sveltejs/package": "next",
     "svelte": "^3.44.0",
-    "tslib": "^2.3.1",
-    "typescript": "^4.8.2",
-    "vite": "^3.1.0"
+		"svelte-check": "^2.7.1",
+		"svelte-preprocess": "^4.10.6",
+		"tslib": "^2.3.1",
+		"typescript": "^4.7.4",
+		"vite": "^3.1.0"
   },
   "repository": "github:stuymedova/uikit-svelte",
   "keywords": [
