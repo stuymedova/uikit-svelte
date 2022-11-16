@@ -8,9 +8,9 @@ Hides the element visually, while leaving it visible to assistive technology suc
 
 ## API
 
-***htmlTag***
+***renderAs***
 
-Use this option to specify the HTML tag with which to render a visually hidden element. For example, you may want to render it as a "span", an "h1" tag, or a "figcaption". By default, set to "span".
+Use this option to specify the element as which to render a visually hidden element. For example, you may want to render it as a "span", an "h1" element, or a "figcaption". By default, set to a "span".
 
 ## Demo
 

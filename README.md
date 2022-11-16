@@ -5,21 +5,22 @@ UIKit Component Library provides accessible components for declaring your app’
 <!-- TEMPORARY -->
 ## Component Library
 
-| Type                | Component          | Source and Documentation                                  | Preview                                                                         |
-| ------------------- | ------------------ | --------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| ***Accessibility*** | VisuallyHidden     | [Link](src/lib/components/accessibility/VisuallyHidden)   | TBD                                                                             |
-| ***Controls***      | Button             | [Link](src/lib/components/controls/Button)                | [Link](https://stuymedova-uikit-svelte.vercel.app/controls/button)              |
-|                     | Disclosure*        | [Link](src/lib/components/controls/Disclosure) (Doc. TBD) | [Link](https://stuymedova-uikit-svelte.vercel.app/controls/disclosure)          |
-|                     | Link               | [Link](src/lib/components/controls/Link)                  | [Link](https://stuymedova-uikit-svelte.vercel.app/controls/link)                |
-|                     | Popover*           | [Link](src/lib/components/controls/Popover) (Doc. TBD)    | [Link](https://stuymedova-uikit-svelte.vercel.app/controls/popover)             |
-|                     | SegmentedControl   | [Link](src/lib/components/controls/SegmentedControl)      | [Link](https://stuymedova-uikit-svelte.vercel.app/controls/segmented-control)   |
-|                     | Stepper            | [Link](src/lib/components/controls/Stepper)               | [Link](https://stuymedova-uikit-svelte.vercel.app/controls/stepper)             |
-|                     | Switch             | [Link](src/lib/components/controls/Switch)                | [Link](https://stuymedova-uikit-svelte.vercel.app/controls/switch)              |
-|                     | TabView            | [Link](src/lib/components/controls/TabView)               | [Link](https://stuymedova-uikit-svelte.vercel.app/controls/tab-view)            |
-| ***Layout***        | TBD                | TBD                                                       | TBD                                                                             |
-| ***Media***         | Symbol             | [Link](src/lib/components/media/Symbol)                   | [Link](https://stuymedova-uikit-svelte.vercel.app/controls/symbol)              |
-| ***Utilities***     | ConditionalWrapper | [Link](src/lib/components/utilities/ConditionalWrapper)   | [Link](https://stuymedova-uikit-svelte.vercel.app/controls/conditional-wrapper) |
-|                     | Wrapper            | [Link](src/lib/components/utilities/Wrapper)              | [Link](https://stuymedova-uikit-svelte.vercel.app/controls/wrapper)             |
+| Type                | Component                   | Source and Documentation                                                    | Preview                                                                         |
+| ------------------- | --------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| ***Accessibility*** | VisuallyHidden              | [Link](src/lib/components/accessibility/VisuallyHidden) (Doc. TBD)          | TBD                                                                             |
+|                     | HiddenFromScreenReaders     | [Link](src/lib/components/accessibility/HiddenFromScreenReaders) (Doc. TBD) | TBD                                                                             |
+| ***Controls***      | Button                      | [Link](src/lib/components/controls/Button)                                  | [Link](https://stuymedova-uikit-svelte.vercel.app/controls/button)              |
+|                     | Disclosure*                 | [Link](src/lib/components/controls/Disclosure) (Doc. TBD)                   | [Link](https://stuymedova-uikit-svelte.vercel.app/controls/disclosure)          |
+|                     | Link                        | [Link](src/lib/components/controls/Link)                                    | [Link](https://stuymedova-uikit-svelte.vercel.app/controls/link)                |
+|                     | Popover*                    | [Link](src/lib/components/controls/Popover) (Doc. TBD)                      | [Link](https://stuymedova-uikit-svelte.vercel.app/controls/popover)             |
+|                     | SegmentedControl            | [Link](src/lib/components/controls/SegmentedControl)                        | [Link](https://stuymedova-uikit-svelte.vercel.app/controls/segmented-control)   |
+|                     | Stepper                     | [Link](src/lib/components/controls/Stepper)                                 | [Link](https://stuymedova-uikit-svelte.vercel.app/controls/stepper)             |
+|                     | Switch                      | [Link](src/lib/components/controls/Switch)                                  | [Link](https://stuymedova-uikit-svelte.vercel.app/controls/switch)              |
+|                     | TabView                     | [Link](src/lib/components/controls/TabView)                                 | [Link](https://stuymedova-uikit-svelte.vercel.app/controls/tab-view)            |
+| ***Layout***        | TBD                         | TBD                                                                         | TBD                                                                             |
+| ***Media***         | Symbol                      | [Link](src/lib/components/media/Symbol)                                     | [Link](https://stuymedova-uikit-svelte.vercel.app/controls/symbol)              |
+| ***Utilities***     | ConditionalWrapper          | [Link](src/lib/components/utilities/ConditionalWrapper)                     | [Link](https://stuymedova-uikit-svelte.vercel.app/controls/conditional-wrapper) |
+|                     | Wrapper                     | [Link](src/lib/components/utilities/Wrapper)                                | [Link](https://stuymedova-uikit-svelte.vercel.app/controls/wrapper)             |
 
 \* Components are being worked on and need improvement.
 
