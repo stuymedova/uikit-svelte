@@ -4,8 +4,10 @@
   "description": "[WIP] UIKit Component Library — Svelte implementation",
   "scripts": {
     "dev": "vite dev",
-    "build": "svelte-kit sync && svelte-package",
-    "release": "npm run build && cd package && npm publish"
+    "build": "vite build",
+    "preview": "vite preview",
+    "package": "svelte-kit sync && svelte-package",
+    "release": "npm run package && cd package && npm publish"
   },
   "devDependencies": {
     "@sveltejs/adapter-vercel": "next",
