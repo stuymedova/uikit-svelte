@@ -101,4 +101,4 @@ npm install
 npm run dev
 ```
 
-The demo will be available at http://localhost:3000/controls/switch. Navigate to `src/routes/controls/switch.svelte` to make any changes.
+The demo will be available at http://localhost:xxxx/components/controls/switch. Navigate to `src/routes/components/controls/switch.svelte` to make any changes.

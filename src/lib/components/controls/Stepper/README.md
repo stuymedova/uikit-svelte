@@ -335,4 +335,4 @@ npm install
 npm run dev
 ```
 
-The demo will be available at http://localhost:3000/controls/stepper. Navigate to `src/routes/controls/stepper.svelte` to make any changes.
+The demo will be available at http://localhost:xxxx/components/controls/stepper. Navigate to `src/routes/components/controls/stepper.svelte` to make any changes.

@@ -33,7 +33,7 @@
 	import '$styles/lightMode.css'
   import { Wrapper } from '$lib'
   import { Link } from '$lib'
-  import picture_of_a_blooming_tree from '$lib/assets/images/spring.jpg'
+  import pictureOfABloomingTree from '$lib/assets/images/spring.jpg'
 </script>
 
 
@@ -44,7 +44,7 @@
     isInline={false}
   >
     <Wrapper class='card-wrapper'>
-      <img class='card-image' src={picture_of_a_blooming_tree} alt='' />
+      <img class='card-image' src={pictureOfABloomingTree} alt='' />
       <Wrapper class='card-caption-wrapper'>
         <p>Lorem ipsum</p>
         <p>Turpis egestas pretium aenean pharetra magna. Cum sociis natoque penatibus et magnis dis parturient.</p>

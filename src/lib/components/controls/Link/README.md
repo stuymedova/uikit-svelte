@@ -81,4 +81,4 @@ npm install
 npm run dev
 ```
 
-The demo will be available at http://localhost:3000/controls/link. Navigate to `src/routes/controls/link.svelte` to make any changes.
+The demo will be available at http://localhost:xxxx/components/controls/link. Navigate to `src/routes/components/controls/link.svelte` to make any changes.

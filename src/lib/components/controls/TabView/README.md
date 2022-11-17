@@ -397,4 +397,4 @@ npm install
 npm run dev
 ```
 
-The demo will be available at http://localhost:3000/controls/tab-view. Navigate to `src/routes/controls/tab-view.svelte` to make any changes.
+The demo will be available at http://localhost:xxxx/components/controls/tab-view. Navigate to `src/routes/components/controls/tab-view.svelte` to make any changes.

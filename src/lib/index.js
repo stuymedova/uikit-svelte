@@ -14,8 +14,8 @@ export { TabView, TabbedControl, Tab, TabContent, TabPane } from './components/c
 export { Symbol } from './components/media/Symbol'
 
 // 1.3 Utilities
-export { Wrapper } from './components/utilities/Wrapper'
 export { ConditionalWrapper } from './components/utilities/ConditionalWrapper'
+export { Wrapper } from './components/utilities/Wrapper'
 
 // 2. Layout
 
