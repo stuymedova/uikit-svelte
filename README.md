@@ -33,9 +33,9 @@ UIKit Component Library provides accessible components for declaring your app’
 | ***Utilities*** | applyAction  | [Link](src/lib/functions/utilities/applyAction)  | No preview |
 |                 | applyActions | [Link](src/lib/functions/utilities/applyActions) | No preview |
 
-## Styles and Assets
+## Styles and Symbols
 
-Default ones are provided under the System Display (`src/lib/system-display`) directory. It's expected for users to customize them as necessary and provide under a custom directory.
+Default ones are provided under the System Display (`src/lib/assets/system-display`) directory. It's expected for users to customize them as necessary and provide under a custom directory.
 <!-- END TEMPORARY -->
 
 

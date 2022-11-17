@@ -8,7 +8,7 @@ Stepper is a control that increments and decrements a value within specified ran
 
 Include the component on a webpage by adding 
 ```js
-import '@stuymedova/uikit-svelte/system-display/styles/lightMode.css' // Optional, alternatively use darkMode.css or a custom stylesheet
+import '@stuymedova/uikit-svelte/assets/system-display/styles/lightMode.css' // Optional, alternatively use darkMode.css or a custom stylesheet
 import { Stepper, IncrementButton, DecrementButton, StepperValue } from '@stuymedova/uikit-svelte'
 ```
 within the `script` tag of a Svelte file. You can further use the component as such:
@@ -39,10 +39,10 @@ within the `script` tag of a Svelte file. You can further use the component as s
 Or using a Symbol component as DecrementButton's and IncrementButton's conent:
 
 ```js
-import '@stuymedova/uikit-svelte/system-display/styles/lightMode.css'
+import '@stuymedova/uikit-svelte/assets/system-display/styles/lightMode.css'
 import { Stepper, IncrementButton, DecrementButton, StepperValue } from '@stuymedova/uikit-svelte'
 import { Symbol } from '@stuymedova/uikit-svelte' // Additional import
-import { Minus, Plus } from '@stuymedova/uikit-svelte/system-display/symbols' 
+import { Minus, Plus } from '@stuymedova/uikit-svelte/assets/system-display/symbols' 
 ```
 
 ```html
@@ -127,7 +127,7 @@ You can bind to this value to have changes be reflected both in the Stepper comp
 
 ```html
 <script>
-  import '@stuymedova/uikit-svelte/system-display/styles/lightMode.css'
+  import '@stuymedova/uikit-svelte/assets/system-display/styles/lightMode.css'
   import { Stepper, IncrementButton, DecrementButton, StepperValue } from '@stuymedova/uikit-svelte'
 
   let stepperValue = 10
@@ -184,10 +184,10 @@ Or, alternatively, you can use it as such:
 
 ```html
 <script>
-	import '@stuymedova/uikit-svelte/system-display/styles/lightMode.css'
+	import '@stuymedova/uikit-svelte/assets/system-display/styles/lightMode.css'
   import { Stepper, IncrementButton, DecrementButton, StepperValue } from '$lib'
 	import { Symbol } from '@stuymedova/uikit-svelte'
-  import { Minus, Plus } from '@stuymedova/uikit-svelte/system-display/symbols'
+  import { Minus, Plus } from '@stuymedova/uikit-svelte/assets/system-display/symbols'
 
 	let stepperStep = 2
 </script>
@@ -210,10 +210,10 @@ Use this option to specify if the value should be wrapped. Useful for when you u
 
 ```html
 <script>
-	import '@stuymedova/uikit-svelte/system-display/styles/lightMode.css'
+	import '@stuymedova/uikit-svelte/assets/system-display/styles/lightMode.css'
   import { Stepper, IncrementButton, DecrementButton, StepperValue } from '$lib'
 	import { Symbol } from '@stuymedova/uikit-svelte'
-  import { Minus, Plus } from '@stuymedova/uikit-svelte/system-display/symbols'
+  import { Minus, Plus } from '@stuymedova/uikit-svelte/assets/system-display/symbols'
 
 	let stepperValue = 0
 	const colors = ['orange', 'orangered', 'gray', 'mediumpurple', 'plum']

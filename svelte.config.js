@@ -10,8 +10,8 @@ const config = {
 		adapter: vercel(),
 		alias: {
 			$images: 'src/lib/assets/images',
-			$styles: 'src/lib/system-display/styles',
-			$symbols: 'src/lib/system-display/symbols'
+			$styles: 'src/lib/assets/system-display/styles',
+			$symbols: 'src/lib/assets/system-display/symbols'
 		}
 	}
 };
