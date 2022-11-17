@@ -5,20 +5,20 @@ UIKit Component Library provides accessible components for declaring your app’
 <!-- TEMPORARY -->
 ## Component Library
 
-| Type                | Component                   | Source and Documentation                                                    | Preview                                                                         |
-| ------------------- | --------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| ***Accessibility*** | VisuallyHidden              | [Link](src/lib/components/accessibility/VisuallyHidden) (Doc. TBD)          | TBD                                                                             |
-|                     | HiddenFromScreenReaders     | [Link](src/lib/components/accessibility/HiddenFromScreenReaders) (Doc. TBD) | TBD                                                                             |
-| ***Controls***      | Button                      | [Link](src/lib/components/controls/Button)                                  | [Link](https://stuymedova-uikit-svelte.vercel.app/components/controls/button)              |
-|                     | Disclosure*                 | [Link](src/lib/components/controls/Disclosure) (Doc. TBD)                   | [Link](https://stuymedova-uikit-svelte.vercel.app/components/controls/disclosure)          |
-|                     | Link                        | [Link](src/lib/components/controls/Link)                                    | [Link](https://stuymedova-uikit-svelte.vercel.app/components/controls/link)                |
-|                     | Popover*                    | [Link](src/lib/components/controls/Popover) (Doc. TBD)                      | [Link](https://stuymedova-uikit-svelte.vercel.app/components/controls/popover)             |
-|                     | SegmentedControl            | [Link](src/lib/components/controls/SegmentedControl)                        | [Link](https://stuymedova-uikit-svelte.vercel.app/components/controls/segmented-control)   |
-|                     | Stepper                     | [Link](src/lib/components/controls/Stepper)                                 | [Link](https://stuymedova-uikit-svelte.vercel.app/components/controls/stepper)             |
-|                     | Switch                      | [Link](src/lib/components/controls/Switch)                                  | [Link](https://stuymedova-uikit-svelte.vercel.app/components/controls/switch)              |
-|                     | TabView                     | [Link](src/lib/components/controls/TabView)                                 | [Link](https://stuymedova-uikit-svelte.vercel.app/components/controls/tab-view)            |
-| ***Layout***        | TBD                         | TBD                                                                         | TBD                                                                             |
-| ***Media***         | Symbol                      | [Link](src/lib/components/media/Symbol)                                     | [Link](https://stuymedova-uikit-svelte.vercel.app/components/media/symbol)              |
+| Type                | Component                   | Source and Documentation                                                    | Preview                                                                                     |
+| ------------------- | --------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| ***Accessibility*** | VisuallyHidden              | [Link](src/lib/components/accessibility/VisuallyHidden) (Doc. TBD)          | TBD                                                                                         |
+|                     | HiddenFromScreenReaders     | [Link](src/lib/components/accessibility/HiddenFromScreenReaders) (Doc. TBD) | TBD                                                                                         |
+| ***Controls***      | Button                      | [Link](src/lib/components/controls/Button)                                  | [Link](https://stuymedova-uikit-svelte.vercel.app/components/controls/button)               |
+|                     | Disclosure*                 | [Link](src/lib/components/controls/Disclosure) (Doc. TBD)                   | [Link](https://stuymedova-uikit-svelte.vercel.app/components/controls/disclosure)           |
+|                     | Link                        | [Link](src/lib/components/controls/Link)                                    | [Link](https://stuymedova-uikit-svelte.vercel.app/components/controls/link)                 |
+|                     | Popover*                    | [Link](src/lib/components/controls/Popover) (Doc. TBD)                      | [Link](https://stuymedova-uikit-svelte.vercel.app/components/controls/popover)              |
+|                     | SegmentedControl            | [Link](src/lib/components/controls/SegmentedControl)                        | [Link](https://stuymedova-uikit-svelte.vercel.app/components/controls/segmented-control)    |
+|                     | Stepper                     | [Link](src/lib/components/controls/Stepper)                                 | [Link](https://stuymedova-uikit-svelte.vercel.app/components/controls/stepper)              |
+|                     | Switch                      | [Link](src/lib/components/controls/Switch)                                  | [Link](https://stuymedova-uikit-svelte.vercel.app/components/controls/switch)               |
+|                     | TabView                     | [Link](src/lib/components/controls/TabView)                                 | [Link](https://stuymedova-uikit-svelte.vercel.app/components/controls/tab-view)             |
+| ***Layout***        | TBD                         | TBD                                                                         | TBD                                                                                         |
+| ***Media***         | Symbol                      | [Link](src/lib/components/media/Symbol)                                     | [Link](https://stuymedova-uikit-svelte.vercel.app/components/media/symbol)                  |
 | ***Utilities***     | ConditionalWrapper          | [Link](src/lib/components/utilities/ConditionalWrapper)                     | [Link](https://stuymedova-uikit-svelte.vercel.app/components/utilities/conditional-wrapper) |
 |                     | Wrapper                     | [Link](src/lib/components/utilities/Wrapper)                                | [Link](https://stuymedova-uikit-svelte.vercel.app/components/utilities/wrapper)             |
 
@@ -26,11 +26,12 @@ UIKit Component Library provides accessible components for declaring your app’
 
 ## Functions
 
-| Type            | Function                | Source (Documentation TBD)                                  |
-| --------------- | ----------------------- | ----------------------------------------------------------- |
-| ***Gestures***  | longPress               | [Link](src/lib/functions/gestures/longPress)                |
-|                 | pressOutside            | [Link](src/lib/functions/gestures/pressOutside)             |
-| ***Utilities*** | applyActionsToComponent | [Link](src/lib/functions/utilities/applyActionsToComponent) |
+| Type            | Function     | Source (Documentation TBD)                       | Preview    |
+| --------------- | ------------ | ------------------------------------------------ | ---------- |
+| ***Gestures***  | longPress    | [Link](src/lib/functions/gestures/longPress)     | TBD        |
+|                 | pressOutside | [Link](src/lib/functions/gestures/pressOutside)  | TBD        |
+| ***Utilities*** | applyAction  | [Link](src/lib/functions/utilities/applyAction)  | No preview |
+|                 | applyActions | [Link](src/lib/functions/utilities/applyActions) | No preview |
 
 ## Styles and Assets
 

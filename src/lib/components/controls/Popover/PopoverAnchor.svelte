@@ -9,7 +9,7 @@
   import { pressOutside } from '$lib'
 
   export let predicate = true
-  export let htmlTag = 'div'
+  export let renderAs = 'div'
 
   export let isPopoverDisplayed = false
   export let generateIdsFrom = '' // TODO: generate ids automatically
@@ -43,8 +43,8 @@
 <ConditionalWrapper 
   class='{generateClassNamesFrom !== '' ? `${generateClassNamesFrom}-` : ''}popover-anchor'
   predicate={predicate} 
-  htmlTag={htmlTag}
-  actions={[{ action: pressOutside }]}
+  renderAs={renderAs}
+  action={{ action: pressOutside }}
   data-attachment-side={attachmentSide}
   data-attachment-alignment={attachmentAlignment}
   {...$$restProps}

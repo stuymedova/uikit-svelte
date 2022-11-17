@@ -30,4 +30,5 @@ export { longPress } from './functions/gestures/longPress'
 export { pressOutside } from './functions/gestures/pressOutside'
 
 // 2. Utilities
-export { applyActionsToComponent } from './functions/utilities/applyActionsToComponent'
+export { applyAction } from './functions/utilities/applyAction'
+export { applyActions } from './functions/utilities/applyActions'

@@ -1,15 +1,17 @@
 <script>
-  import { applyActionsToComponent } from '$lib'
+  import { applyAction, applyActions } from '$lib'
 
-  export let htmlTag = 'div'
+  export let renderAs = 'div'
+  export let action = null
   export let actions = null
 </script>
 
 
 <svelte:element 
-  this={htmlTag}
+  this={renderAs}
   class='wrapper'
-  use:applyActionsToComponent={actions}
+  use:applyAction={action}
+  use:applyActions={actions}
   {...$$restProps}
   on:longPress
   on:pressOutside

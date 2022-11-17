@@ -1,15 +1,17 @@
-export function applyActionsToComponent(node, passedActions) {
+export function applyActions(node, passedActions) {
   if (!passedActions) return
 
-  const decoupledActions = passedActions.map((passedAction) => {
+  const returnValuesOfActions = []
+
+  for (const passedAction of passedActions) {
     const { action, parameter } = passedAction
-    return action(node, parameter)
-  })
+    returnValuesOfActions.push(action(node, parameter))
+  }
 
   // TODO: return "update" method
   return {
     destroy() {
-      for (const action of decoupledActions) {
+      for (const action of returnValuesOfActions) {
         if (typeof action.destroy === 'function') {
           action.destroy()
         }
