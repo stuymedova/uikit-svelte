@@ -33,9 +33,9 @@
 }
 
 /* Applies only if button behaviour is set to 'switch' or 'popover' */
-.button[aria-checked='false'], .button[aria-expanded='false'] {
+.button[aria-pressed='false'], .button[aria-expanded='false'] {
   background-color: var(--color-background);
 }
-.button[aria-checked='true'], .button[aria-expanded='true'] {
+.button[aria-pressed='true'], .button[aria-expanded='true'] {
   background-color: var(--color-background-selected);
 }
