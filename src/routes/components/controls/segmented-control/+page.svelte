@@ -1,5 +1,5 @@
 <script>
-	import '$styles/lightMode.css'
+	import '$styles/main.css'
   import { SegmentedControl, Segment } from '$lib'
 </script>
 

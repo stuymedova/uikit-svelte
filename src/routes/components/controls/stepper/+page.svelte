@@ -1,6 +1,6 @@
 <!-- DEMO 1: Stepper values are not wrapped -->
 <!-- <script>
-	import '$styles/lightMode.css'
+	import '$styles/main.css'
   import { Stepper, IncrementButton, DecrementButton, StepperValue } from '$lib'
 	import { Symbol } from '$lib'
 	import { Minus, Plus } from '$symbols'
@@ -34,7 +34,7 @@
 
 <!-- DEMO 2: Stepper values are wrapped -->
 <script>
-	import '$styles/lightMode.css'
+	import '$styles/main.css'
   import { Stepper, IncrementButton, DecrementButton } from '$lib'
 	import { Symbol } from '$lib'
 	import { Minus, Plus } from '$symbols'
@@ -45,7 +45,7 @@
 
 
 <div class='component-wrapper'>
-	<div 
+	<div
 		style='width: 44px; height: 44px; border-radius: 100%; background-color: {colors[stepperValue]};'
 	></div>
 

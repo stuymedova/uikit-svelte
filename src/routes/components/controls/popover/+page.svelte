@@ -1,5 +1,5 @@
 <script>
-	import '$styles/lightMode.css'
+	import '$styles/main.css'
   import { PopoverAnchor, Popover } from '$lib'
 </script>
 

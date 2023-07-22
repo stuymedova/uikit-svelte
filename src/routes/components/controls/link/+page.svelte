@@ -1,13 +1,13 @@
 <!-- DEMO 1: Link around an inline element -->
 <script>
-	import '$styles/lightMode.css'
+	import '$styles/main.css'
   import { Wrapper } from '$lib'
   import { Link } from '$lib'
 </script>
 
 
 <Wrapper class='component-wrapper'>
-  <Link 
+  <Link
     destination='https://github.com/stuymedova/uikit-svelte'
     shouldBeOpenedInNewTab={true}
   >
@@ -30,7 +30,7 @@
 
 <!-- DEMO 2: Link around a block element -->
 <!-- <script>
-	import '$styles/lightMode.css'
+	import '$styles/main.css'
   import { Wrapper } from '$lib'
   import { Link } from '$lib'
   import pictureOfABloomingTree from '$lib/assets/images/spring.jpg'

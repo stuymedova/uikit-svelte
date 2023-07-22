@@ -1,5 +1,5 @@
 <script>
-	import '$styles/lightMode.css'
+	import '$styles/main.css'
   import { Button } from '$lib'
 </script>
 
@@ -17,7 +17,7 @@
 
   <div class='component-wrapper'>
     <p>Popover button</p>
-    
+
     <!-- TODO: note in documentation that an id needs to be specified per component once, the button will have an id posfixed by '--trigger' and a popover will have an id unchanged -->
     <Button behaviour='popover' generateIdsFrom='popover'>
       Label
