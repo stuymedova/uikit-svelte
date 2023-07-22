@@ -6,9 +6,9 @@ Segmented control is a set of two or more segments, each of which functions as a
 
 ## Usage
 
-Include the component on a webpage by adding 
+Include the component on a webpage by adding
 ```js
-import '@stuymedova/uikit-svelte/assets/system-display/styles/lightMode.css' // Optional, alternatively use darkMode.css or a custom stylesheet
+import '@stuymedova/uikit-svelte/assets/system-display/styles/main.css' // Optional, alternatively use a custom stylesheet
 import { SegmentedControl, Segment } from '@stuymedova/uikit-svelte'
 ```
 within the `script` tag of a Svelte file. You can further use the component as such:
@@ -51,7 +51,7 @@ You can bind to this value to have changes to the selected index be reflected bo
 
 ```html
 <script>
-  import '@stuymedova/uikit-svelte/assets/system-display/styles/lightMode.css'
+  import '@stuymedova/uikit-svelte/assets/system-display/styles/main.css'
   import { SegmentedControl, Segment } from '@stuymedova/uikit-svelte'
 
   let segmentedControlSelectedIndex = 1
@@ -79,7 +79,7 @@ Use this option to specify an orientation of the Segmented Control. Accepted val
 
 ***isBackgroundAnimated*** (not reactive)
 
-Use this option to specify whether or not a background should be animated. Set to `true` by default. 
+Use this option to specify whether or not a background should be animated. Set to `true` by default.
 
 ```html
 <SegmentedControl isBackgroundAnimated={false}>

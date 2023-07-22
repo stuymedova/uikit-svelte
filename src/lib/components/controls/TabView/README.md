@@ -6,9 +6,9 @@ Tab view is a set of mutually exclusive panes of content, which you can switch b
 
 ## Usage
 
-Include the component on a webpage by adding 
+Include the component on a webpage by adding
 ```js
-import '@stuymedova/uikit-svelte/assets/system-display/styles/lightMode.css' // Optional, alternatively use darkMode.css or a custom stylesheet
+import '@stuymedova/uikit-svelte/assets/system-display/styles/main.css' // Optional, alternatively use a custom stylesheet
 import { TabView, TabbedControl, Tab, TabContent, TabPane } from '@stuymedova/uikit-svelte'
 ```
 within the `script` tag of a Svelte file. You can further use the component as such:
@@ -40,11 +40,11 @@ The generated HTML will be as such:
 ```html
 <div class="tab-view" role="tablist">
   <div class="tab-view-tabbed-control" role="tablist" aria-orientation="horizontal" data-is-background-animated="false">
-    <button id="sample-text-item-0--trigger" class="button tab-view-tabbed-control-item" type="button" data-behaviour="push" role="tab" aria-controls="sample-text-item-0" aria-disabled="false" aria-selected="true" tabindex="0">First</button> 
-    <button id="sample-text-item-1--trigger" class="button tab-view-tabbed-control-item" type="button" data-behaviour="push" role="tab" aria-controls="sample-text-item-1" aria-disabled="false" aria-selected="false" tabindex="-1">Second</button> 
-    <button id="sample-text-item-2--trigger" class="button tab-view-tabbed-control-item" type="button" data-behaviour="push" role="tab" aria-controls="sample-text-item-2" aria-disabled="false" aria-selected="false" tabindex="-1">Third</button> 
+    <button id="sample-text-item-0--trigger" class="button tab-view-tabbed-control-item" type="button" data-behaviour="push" role="tab" aria-controls="sample-text-item-0" aria-disabled="false" aria-selected="true" tabindex="0">First</button>
+    <button id="sample-text-item-1--trigger" class="button tab-view-tabbed-control-item" type="button" data-behaviour="push" role="tab" aria-controls="sample-text-item-1" aria-disabled="false" aria-selected="false" tabindex="-1">Second</button>
+    <button id="sample-text-item-2--trigger" class="button tab-view-tabbed-control-item" type="button" data-behaviour="push" role="tab" aria-controls="sample-text-item-2" aria-disabled="false" aria-selected="false" tabindex="-1">Third</button>
   </div>
-  
+
   <div class="tab-view-tab-content">
     <div id="sample-text-item-0" class="tab-view-tab-pane selected" role="tabpanel" aria-labelledby="sample-text-item-0--trigger" tabindex="0" style="opacity: 1">Turpis egestas pretium aenean pharetra magna. Cum sociis natoque penatibus et magnis dis parturient. Enim sed faucibus turpis in eu mi. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Nisi scelerisque eu ultrices vitae.</div>
     <div id="sample-text-item-1" class="tab-view-tab-pane" role="tabpanel" aria-labelledby="sample-text-item-1--trigger" tabindex="-1" style="opacity: 0">This is a viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Sed aliquam ultrices mauris. Phasellus magna. Fusce egestas elit eget lorem. Pellentesque auctor neque nec urna.</div>
@@ -89,7 +89,7 @@ You can bind to this value to have changes to the selected index be reflected bo
 
 ```html
 <script>
-  import '@stuymedova/uikit-svelte/assets/system-display/styles/lightMode.css'
+  import '@stuymedova/uikit-svelte/assets/system-display/styles/main.css'
   import { TabView, TabbedControl, Tab, TabContent, TabPane } from '@stuymedova/uikit-svelte'
 
   let tabViewSelectedIndex = 1
@@ -150,11 +150,11 @@ The component's HTML output looks as such:
 ```html
 <div class="tab-view" role="tablist">
   <div class="tab-view-tabbed-control" role="tablist" aria-orientation="horizontal" data-is-background-animated="false">
-    <button id="sample-text-item-0--trigger" class="button tab-view-tabbed-control-item" type="button" data-behaviour="push" role="tab" aria-controls="sample-text-item-0" aria-disabled="false" aria-selected="true" tabindex="0">First</button> 
-    <button id="sample-text-item-1--trigger" class="button tab-view-tabbed-control-item" type="button" data-behaviour="push" role="tab" aria-controls="sample-text-item-1" aria-disabled="false" aria-selected="false" tabindex="-1">Second</button> 
-    <button id="sample-text-item-2--trigger" class="button tab-view-tabbed-control-item" type="button" data-behaviour="push" role="tab" aria-controls="sample-text-item-2" aria-disabled="false" aria-selected="false" tabindex="-1">Third</button> 
+    <button id="sample-text-item-0--trigger" class="button tab-view-tabbed-control-item" type="button" data-behaviour="push" role="tab" aria-controls="sample-text-item-0" aria-disabled="false" aria-selected="true" tabindex="0">First</button>
+    <button id="sample-text-item-1--trigger" class="button tab-view-tabbed-control-item" type="button" data-behaviour="push" role="tab" aria-controls="sample-text-item-1" aria-disabled="false" aria-selected="false" tabindex="-1">Second</button>
+    <button id="sample-text-item-2--trigger" class="button tab-view-tabbed-control-item" type="button" data-behaviour="push" role="tab" aria-controls="sample-text-item-2" aria-disabled="false" aria-selected="false" tabindex="-1">Third</button>
   </div>
-  
+
   <div class="tab-view-tab-content">
     <div id="sample-text-item-0" class="tab-view-tab-pane selected" role="tabpanel" aria-labelledby="sample-text-item-0--trigger" tabindex="0" style="opacity: 1">Turpis egestas pretium aenean pharetra magna. Cum sociis natoque penatibus et magnis dis parturient. Enim sed faucibus turpis in eu mi. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Nisi scelerisque eu ultrices vitae.</div>
     <div id="sample-text-item-1" class="tab-view-tab-pane" role="tabpanel" aria-labelledby="sample-text-item-1--trigger" tabindex="-1" style="opacity: 0">This is a viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Sed aliquam ultrices mauris. Phasellus magna. Fusce egestas elit eget lorem. Pellentesque auctor neque nec urna.</div>
@@ -194,11 +194,11 @@ By default set to "tab-view". If, for instance, set to "information-tab-view", t
 ```html
 <div class="information-tab-view" role="tablist">
   <div class="information-tab-view-tabbed-control" role="tablist" aria-orientation="horizontal" data-is-background-animated="false">
-    <button id="sample-text-item-0--trigger" class="button information-tab-view-tabbed-control-item" type="button" data-behaviour="push" role="tab" aria-controls="sample-text-item-0" aria-disabled="false" aria-selected="true" tabindex="0">First</button> 
-    <button id="sample-text-item-1--trigger" class="button information-tab-view-tabbed-control-item" type="button" data-behaviour="push" role="tab" aria-controls="sample-text-item-1" aria-disabled="false" aria-selected="false" tabindex="-1">Second</button> 
-    <button id="sample-text-item-2--trigger" class="button information-tab-view-tabbed-control-item" type="button" data-behaviour="push" role="tab" aria-controls="sample-text-item-2" aria-disabled="false" aria-selected="false" tabindex="-1">Third</button> 
+    <button id="sample-text-item-0--trigger" class="button information-tab-view-tabbed-control-item" type="button" data-behaviour="push" role="tab" aria-controls="sample-text-item-0" aria-disabled="false" aria-selected="true" tabindex="0">First</button>
+    <button id="sample-text-item-1--trigger" class="button information-tab-view-tabbed-control-item" type="button" data-behaviour="push" role="tab" aria-controls="sample-text-item-1" aria-disabled="false" aria-selected="false" tabindex="-1">Second</button>
+    <button id="sample-text-item-2--trigger" class="button information-tab-view-tabbed-control-item" type="button" data-behaviour="push" role="tab" aria-controls="sample-text-item-2" aria-disabled="false" aria-selected="false" tabindex="-1">Third</button>
   </div>
-  
+
   <div class="information-tab-view-tab-pane">
     <div id="sample-text-item-0" class="information-tab-view-tab-content selected" role="tabpanel" aria-labelledby="sample-text-item-0--trigger" tabindex="0" style="opacity: 1">Turpis egestas pretium aenean pharetra magna. Cum sociis natoque penatibus et magnis dis parturient. Enim sed faucibus turpis in eu mi. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Nisi scelerisque eu ultrices vitae.</div>
     <div id="sample-text-item-1" class="information-tab-view-tab-content" role="tabpanel" aria-labelledby="sample-text-item-1--trigger" tabindex="-1" style="opacity: 0">This is a viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Sed aliquam ultrices mauris. Phasellus magna. Fusce egestas elit eget lorem. Pellentesque auctor neque nec urna.</div>
@@ -265,7 +265,7 @@ Use this option to specify an orientation of the Tabbed Control. Accepted values
 
 <!-- TODO: styles for when the background is animated -->
 
-Use this option to specify whether or not a background should be animated. Set to `false` by default. 
+Use this option to specify whether or not a background should be animated. Set to `false` by default.
 
 ```html
 <TabView generateIdsFrom='sample-text' isBackgroundAnimated={true}>
@@ -294,13 +294,13 @@ If an animated background is required, it will be rendered, resulting in an HTML
 ```html
 <div class="tab-view" role="tablist">
   <div class="tab-view-tabbed-control" role="tablist" aria-orientation="horizontal" data-is-background-animated="false">
-    <button id="sample-text-item-0--trigger" class="button tab-view-tabbed-control-item" type="button" data-behaviour="push" role="tab" aria-controls="sample-text-item-0" aria-disabled="false" aria-selected="true" tabindex="0">First</button> 
-    <button id="sample-text-item-1--trigger" class="button tab-view-tabbed-control-item" type="button" data-behaviour="push" role="tab" aria-controls="sample-text-item-1" aria-disabled="false" aria-selected="false" tabindex="-1">Second</button> 
-    <button id="sample-text-item-2--trigger" class="button tab-view-tabbed-control-item" type="button" data-behaviour="push" role="tab" aria-controls="sample-text-item-2" aria-disabled="false" aria-selected="false" tabindex="-1">Third</button> 
+    <button id="sample-text-item-0--trigger" class="button tab-view-tabbed-control-item" type="button" data-behaviour="push" role="tab" aria-controls="sample-text-item-0" aria-disabled="false" aria-selected="true" tabindex="0">First</button>
+    <button id="sample-text-item-1--trigger" class="button tab-view-tabbed-control-item" type="button" data-behaviour="push" role="tab" aria-controls="sample-text-item-1" aria-disabled="false" aria-selected="false" tabindex="-1">Second</button>
+    <button id="sample-text-item-2--trigger" class="button tab-view-tabbed-control-item" type="button" data-behaviour="push" role="tab" aria-controls="sample-text-item-2" aria-disabled="false" aria-selected="false" tabindex="-1">Third</button>
     <!-- TODO: testing -->
     <div class="tab-view-tabbed-control-background" role="presentation" style="width: 75px; transform: translateX(2px);"></div>
   </div>
-  
+
   <div class="tab-view-tab-content">
     <div id="sample-text-item-0" class="tab-view-tab-pane selected" role="tabpanel" aria-labelledby="sample-text-item-0--trigger" tabindex="0" style="opacity: 1">Turpis egestas pretium aenean pharetra magna. Cum sociis natoque penatibus et magnis dis parturient. Enim sed faucibus turpis in eu mi. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Nisi scelerisque eu ultrices vitae.</div>
     <div id="sample-text-item-1" class="tab-view-tab-pane" role="tabpanel" aria-labelledby="sample-text-item-1--trigger" tabindex="-1" style="opacity: 0">This is a viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Sed aliquam ultrices mauris. Phasellus magna. Fusce egestas elit eget lorem. Pellentesque auctor neque nec urna.</div>

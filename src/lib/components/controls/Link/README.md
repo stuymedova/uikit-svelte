@@ -6,15 +6,15 @@ A control for navigating to a URL.
 
 ## Usage
 
-Include the component on a webpage by adding 
+Include the component on a webpage by adding
 ```js
-import '@stuymedova/uikit-svelte/assets/system-display/styles/lightMode.css' // Optional, alternatively use darkMode.css or a custom stylesheet
+import '@stuymedova/uikit-svelte/assets/system-display/styles/main.css' // Optional, alternatively use a custom stylesheet
 import { Link } from '@stuymedova/uikit-svelte'
 ```
 within the `script` tag of a Svelte file. You can further use the component as such:
 
 ```html
-<Link 
+<Link
   destination='https://github.com/stuymedova/uikit-svelte'
   shouldOpenInNewTab={true}
 >
@@ -59,7 +59,7 @@ Use this option to specify the Link's destination URL. As already shown above, t
 Use this option to specify if a Link should be opened in a new tab. If set to `true`, a link recieves additional attributes `target="_blank"` and `rel="noopener noreferrer"`. By default set to `false`.
 
 ```html
-<Link 
+<Link
   destination='https://github.com/stuymedova/uikit-svelte'
   shouldBeOpenedInNewTab={true}
 >

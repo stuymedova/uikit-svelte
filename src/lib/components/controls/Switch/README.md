@@ -6,9 +6,9 @@ A control that toggles between on and off states.
 
 ## Usage
 
-Include the component on a webpage by adding 
+Include the component on a webpage by adding
 ```js
-import '@stuymedova/uikit-svelte/assets/system-display/styles/lightMode.css' // Optional, alternatively use darkMode.css or a custom stylesheet
+import '@stuymedova/uikit-svelte/assets/system-display/styles/main.css' // Optional, alternatively use a custom stylesheet
 import { Switch } from '@stuymedova/uikit-svelte'
 ```
 within the `script` tag of a Svelte file. You can further use the component as such:
@@ -52,7 +52,7 @@ You can bind to this value to have changes to the Switch's state be reflected bo
 
 ```html
 <script>
-  import '@stuymedova/uikit-svelte/assets/system-display/styles/lightMode.css'
+  import '@stuymedova/uikit-svelte/assets/system-display/styles/main.css'
   import { Switch } from '@stuymedova/uikit-svelte'
 
   let isSwitchOn = false
@@ -73,7 +73,7 @@ Use this option to disable changing a Switch's state.
 
 ***generateClassNamesFrom***
 
-Use this option to specify the component's class name (one of the top-most wrapper and of each child that inherits its class name). 
+Use this option to specify the component's class name (one of the top-most wrapper and of each child that inherits its class name).
 
 ```html
 <Switch generateClassNamesFrom='mode-switch' />

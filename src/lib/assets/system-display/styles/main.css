@@ -1,4 +1,5 @@
 @import 'variables/textStyles.css';
+@import 'variables/lightColorScheme.css';
 @import 'variables/darkColorScheme.css';
 
 @import 'site/reset.css';
